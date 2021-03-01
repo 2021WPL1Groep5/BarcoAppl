@@ -23,6 +23,7 @@ namespace BarcoApplicatie
         public MainWindow()
         {
             InitializeComponent();
+            //Koen
         }
     }
 }
