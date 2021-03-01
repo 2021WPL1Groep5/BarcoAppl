@@ -24,6 +24,7 @@ namespace BarcoApplicatie
         {
             InitializeComponent();
             //Koen
+            //Nikki
         }
     }
 }
