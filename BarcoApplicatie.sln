@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcoApplicatie", "BarcoApplicatie\BarcoApplicatie.csproj", "{647DC0BB-63CC-4A90-9E05-40736C1EF587}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{647DC0BB-63CC-4A90-9E05-40736C1EF587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647DC0BB-63CC-4A90-9E05-40736C1EF587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647DC0BB-63CC-4A90-9E05-40736C1EF587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647DC0BB-63CC-4A90-9E05-40736C1EF587}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78CF77E8-5801-4456-AAF7-B4CA92381F96}
+	EndGlobalSection
+EndGlobal
