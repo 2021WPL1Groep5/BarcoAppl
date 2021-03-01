@@ -23,7 +23,7 @@ namespace BarcoApplicatie
         public MainWindow()
         {
             InitializeComponent();
-            // Mathias
+            //Mathias
             //Koen
             //Nikki
             //Mohamed
