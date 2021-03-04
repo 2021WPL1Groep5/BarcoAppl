@@ -78,7 +78,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtNetWeight1" HorizontalAlignment="Left" Margin="233,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtNetWeight1" TextChanged="txtNetWeight1_TextChanged" HorizontalAlignment="Left" Margin="233,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
