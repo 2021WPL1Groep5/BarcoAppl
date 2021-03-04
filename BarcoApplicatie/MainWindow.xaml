@@ -12,6 +12,7 @@
         <Label x:Name="lblResult" Content="" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top"/>
         <Border BorderThickness="1" BorderBrush="#FFF10000" HorizontalAlignment="Center" Height="56" VerticalAlignment="Top" Width="1920" Background="#FFF10000"/>
         <CheckBox x:Name="Checkbox_Yes" Content="YES" HorizontalAlignment="Left" Margin="233,353,0,0" VerticalAlignment="Top" Checked="Checkbox_Yes_Checked" Background="#FF45494A" Foreground="White"/>
+
         <CheckBox x:Name="Checkbox_No" Content="NO" HorizontalAlignment="Left" Margin="286,353,0,0" VerticalAlignment="Top" Checked="Checkbox_No_Checked" Background="#FF45494A" Foreground="White"/>
         <Label Content="EUT PROJECTNAME (NICKNAME)" HorizontalAlignment="Left" Margin="11,193,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="PROJECT NUMBER (SAP/Hydra)" HorizontalAlignment="Left" Margin="15,162,0,0" VerticalAlignment="Top" Foreground="White"/>
@@ -36,11 +37,9 @@
         </TextBox>
         <Label Content="NATURE OF TEST(S) TO PERFORM" HorizontalAlignment="Left" Margin="16,506,0,0" VerticalAlignment="Top" Foreground="White"/>
         <ComboBox x:Name="cmbDivision" HorizontalAlignment="Left" Height="18" Margin="233,104,0,0" VerticalAlignment="Top" Width="120" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" SelectionChanged="cmbDivision_SelectionChanged"/>
-        <DatePicker x:Name="ExpectedEndDate" HorizontalAlignment="Left" Height="26" Margin="233,317,0,0" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" Foreground="#FFFF">
+        <DatePicker x:Name="ExpectedEndDate" HorizontalAlignment="Left" Height="26" Margin="233,317,0,0" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Foreground="White" Text="#FFFFFF" ForceCursor="True">
             <DatePicker.CalendarStyle>
-                <Style TargetType="{x:Type Calendar}">
-                    <Setter Property="Background" Value="#FF45494A" />
-                </Style>
+                <Style/>
             </DatePicker.CalendarStyle>
             <DatePicker.Resources>
                 <Style TargetType="DatePickerTextBox">
@@ -249,7 +248,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <CheckBox x:Name="cbEmcEut1" Content="" HorizontalAlignment="Left" Margin="207,526,0,0" VerticalAlignment="Top" Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEmcEut1" Content="" HorizontalAlignment="Left" Margin="207,526,0,0" VerticalAlignment="Top" Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3
                                 " ScaleY="2"/>
@@ -261,207 +260,207 @@
         <Label Content="EUT4&#xA;" HorizontalAlignment="Left" Margin="320,506,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>
         <Label Content="EUT5&#xA;" HorizontalAlignment="Left" Margin="357,506,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>
         <Label Content="EUT6&#xA;" HorizontalAlignment="Left" Margin="394,506,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>
-        <CheckBox x:Name="cbEnviromental1" Content="" HorizontalAlignment="Left" Margin="207,544,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEnviromental1" Content="" HorizontalAlignment="Left" Margin="207,549,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbReliability1" Content="" HorizontalAlignment="Left" Margin="207,562,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbReliability1" Content="" HorizontalAlignment="Left" Margin="207,572,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbProductSafety1" Content="" HorizontalAlignment="Left" Margin="207,580,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbProductSafety1" Content="" HorizontalAlignment="Left" Margin="207,595,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbPackaging1" Content="" HorizontalAlignment="Left" Margin="207,598,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbPackaging1" Content="" HorizontalAlignment="Left" Margin="207,618,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbGreenCompilance1" Content="" HorizontalAlignment="Left" Margin="207,616,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbGreenCompilance1" Content="" HorizontalAlignment="Left" Margin="207,641,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbEnviromental" Content="" HorizontalAlignment="Left" Margin="170,544,0,0" VerticalAlignment="Top"  Background="#FF626262" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEnviromental" Content="" HorizontalAlignment="Left" Margin="170,549,0,0" VerticalAlignment="Top"  Background="#FF626262" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbReliability" Content="" HorizontalAlignment="Left" Margin="170,562,0,0" VerticalAlignment="Top"  Background="#FF626262" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbReliability" Content="" HorizontalAlignment="Left" Margin="170,572,0,0" VerticalAlignment="Top"  Background="#FF626262" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbProductSafety" Content="" HorizontalAlignment="Left" Margin="170,580,0,0" VerticalAlignment="Top"  Background="#FF626262" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbProductSafety" Content="" HorizontalAlignment="Left" Margin="170,595,0,0" VerticalAlignment="Top"  Background="#FF626262" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbPackaging" Content="" HorizontalAlignment="Left" Margin="170,598,0,0" VerticalAlignment="Top"  Background="#FF626262" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbPackaging" Content="" HorizontalAlignment="Left" Margin="170,618,0,0" VerticalAlignment="Top"  Background="#FF626262" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbGreenCompilance" Content="" HorizontalAlignment="Left" Margin="170,616,0,0" VerticalAlignment="Top"  Background="#FF626262" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbGreenCompilance" Content="" HorizontalAlignment="Left" Margin="170,641,0,0" VerticalAlignment="Top"  Background="#FF626262" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbEmcEut" Content="" HorizontalAlignment="Left" Margin="170,526,0,0" VerticalAlignment="Top"  Background="#FF626262" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEmcEut" Content="" HorizontalAlignment="Left" Margin="170,526,0,0" VerticalAlignment="Top"  Background="#FF626262" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbEmcEut3" Content="" HorizontalAlignment="Left" Margin="281,526,0,0" VerticalAlignment="Top" Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEmcEut3" Content="" HorizontalAlignment="Left" Margin="281,526,0,0" VerticalAlignment="Top" Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbEnviromental3" Content="" HorizontalAlignment="Left" Margin="281,544,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEnviromental3" Content="" HorizontalAlignment="Left" Margin="281,549,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbReliability3" Content="" HorizontalAlignment="Left" Margin="281,562,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbReliability3" Content="" HorizontalAlignment="Left" Margin="281,572,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbProductSafety3" Content="" HorizontalAlignment="Left" Margin="281,580,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbProductSafety3" Content="" HorizontalAlignment="Left" Margin="281,595,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbPackaging3" Content="" HorizontalAlignment="Left" Margin="281,598,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbPackaging3" Content="" HorizontalAlignment="Left" Margin="281,618,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbGreenCompilance3" Content="" HorizontalAlignment="Left" Margin="281,616,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbGreenCompilance3" Content="" HorizontalAlignment="Left" Margin="281,641,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbEnviromental2" Content="" HorizontalAlignment="Left" Margin="244,544,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEnviromental2" Content="" HorizontalAlignment="Left" Margin="244,549,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbReliability2" Content="" HorizontalAlignment="Left" Margin="244,562,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbReliability2" Content="" HorizontalAlignment="Left" Margin="244,572,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbProductSafety2" Content="" HorizontalAlignment="Left" Margin="244,580,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbProductSafety2" Content="" HorizontalAlignment="Left" Margin="244,595,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbPackaging2" Content="" HorizontalAlignment="Left" Margin="244,598,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbPackaging2" Content="" HorizontalAlignment="Left" Margin="244,618,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbGreenCompilance2" Content="" HorizontalAlignment="Left" Margin="244,616,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbGreenCompilance2" Content="" HorizontalAlignment="Left" Margin="244,641,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbEmcEut2" Content="" HorizontalAlignment="Left" Margin="244,526,0,0" VerticalAlignment="Top" Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEmcEut2" Content="" HorizontalAlignment="Left" Margin="244,526,0,0" VerticalAlignment="Top" Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbEmcEut5" Content="" HorizontalAlignment="Left" Margin="355,526,0,0" VerticalAlignment="Top" Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEmcEut5" Content="" HorizontalAlignment="Left" Margin="355,526,0,0" VerticalAlignment="Top" Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbEnviromental5" Content="" HorizontalAlignment="Left" Margin="355,544,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEnviromental5" Content="" HorizontalAlignment="Left" Margin="355,549,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbReliability5" Content="" HorizontalAlignment="Left" Margin="355,562,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbReliability5" Content="" HorizontalAlignment="Left" Margin="355,572,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbProductSafety5" Content="" HorizontalAlignment="Left" Margin="355,580,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbProductSafety5" Content="" HorizontalAlignment="Left" Margin="355,595,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbPackaging5" Content="" HorizontalAlignment="Left" Margin="355,598,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbPackaging5" Content="" HorizontalAlignment="Left" Margin="355,618,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbGreenCompilance5" Content="" HorizontalAlignment="Left" Margin="355,616,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbGreenCompilance5" Content="" HorizontalAlignment="Left" Margin="355,641,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbEnviromental4" Content="" HorizontalAlignment="Left" Margin="318,544,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEnviromental4" Content="" HorizontalAlignment="Left" Margin="318,549,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbReliability4" Content="" HorizontalAlignment="Left" Margin="318,562,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbReliability4" Content="" HorizontalAlignment="Left" Margin="318,572,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbProductSafety4" Content="" HorizontalAlignment="Left" Margin="318,580,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbProductSafety4" Content="" HorizontalAlignment="Left" Margin="318,595,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbPackaging4" Content="" HorizontalAlignment="Left" Margin="318,598,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbPackaging4" Content="" HorizontalAlignment="Left" Margin="318,618,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbGreenCompilance4" Content="" HorizontalAlignment="Left" Margin="318,616,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbGreenCompilance4" Content="" HorizontalAlignment="Left" Margin="318,641,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbEmcEut4" Content="" HorizontalAlignment="Left" Margin="318,526,0,0" VerticalAlignment="Top" Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEmcEut4" Content="" HorizontalAlignment="Left" Margin="318,526,0,0" VerticalAlignment="Top" Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbEnviromental6" Content="" HorizontalAlignment="Left" Margin="392,544,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEnviromental6" Content="" HorizontalAlignment="Left" Margin="392,549,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbReliability6" Content="" HorizontalAlignment="Left" Margin="392,562,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbReliability6" Content="" HorizontalAlignment="Left" Margin="392,572,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbProductSafety6" Content="" HorizontalAlignment="Left" Margin="392,580,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbProductSafety6" Content="" HorizontalAlignment="Left" Margin="392,595,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbPackaging6" Content="" HorizontalAlignment="Left" Margin="392,598,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbPackaging6" Content="" HorizontalAlignment="Left" Margin="392,618,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbGreenCompilance6" Content="" HorizontalAlignment="Left" Margin="392,616,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbGreenCompilance6" Content="" HorizontalAlignment="Left" Margin="392,641,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
         </CheckBox>
-        <CheckBox x:Name="cbEmcEut6" Content="" HorizontalAlignment="Left" Margin="392,526,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
+        <CheckBox x:Name="cbEmcEut6" Content="" HorizontalAlignment="Left" Margin="392,526,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="14" BorderThickness="0.1,0.5,0.1,0.5">
             <CheckBox.LayoutTransform>
                 <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
             </CheckBox.LayoutTransform>
@@ -471,38 +470,8 @@
         <Label Content="RELIABILITY" HorizontalAlignment="Left" Margin="75,560,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="PRODUCT SAFETY" HorizontalAlignment="Left" Margin="54,578,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="PACKAGING" HorizontalAlignment="Left" Margin="73,596,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="GREEN COMPILANCE" HorizontalAlignment="Left" Margin="49,614,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="EUT DORE SEEN AVAILABILITY DATE" HorizontalAlignment="Left" Margin="10,632,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <CheckBox Content="" HorizontalAlignment="Left" Margin="207,634,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
-            <CheckBox.LayoutTransform>
-                <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
-            </CheckBox.LayoutTransform>
-        </CheckBox>
-        <CheckBox Content="" HorizontalAlignment="Left" Margin="281,634,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
-            <CheckBox.LayoutTransform>
-                <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
-            </CheckBox.LayoutTransform>
-        </CheckBox>
-        <CheckBox Content="" HorizontalAlignment="Left" Margin="244,634,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
-            <CheckBox.LayoutTransform>
-                <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
-            </CheckBox.LayoutTransform>
-        </CheckBox>
-        <CheckBox Content="" HorizontalAlignment="Left" Margin="355,634,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
-            <CheckBox.LayoutTransform>
-                <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
-            </CheckBox.LayoutTransform>
-        </CheckBox>
-        <CheckBox Content="" HorizontalAlignment="Left" Margin="318,634,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
-            <CheckBox.LayoutTransform>
-                <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
-            </CheckBox.LayoutTransform>
-        </CheckBox>
-        <CheckBox Content="" HorizontalAlignment="Left" Margin="392,634,0,0" VerticalAlignment="Top"  Background="#FF45494A" Foreground="White" Width="14" Height="11" BorderThickness="0.1,0.5,0.1,0.5">
-            <CheckBox.LayoutTransform>
-                <ScaleTransform ScaleX="3                                 " ScaleY="2"/>
-            </CheckBox.LayoutTransform>
-        </CheckBox>
+        <Label Content="GREEN COMPILANCE" HorizontalAlignment="Left" Margin="49,632,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="EUT DORE SEEN AVAILABILITY DATE" HorizontalAlignment="Left" Margin="0,669,0,0" VerticalAlignment="Top" Foreground="White" Width="202"/>
         <Label Content="Special remarks (optional):" HorizontalAlignment="Left" Margin="48,699,0,0" VerticalAlignment="Top" Foreground="White"/>
         <TextBox x:Name="txtSpecialRemarks" HorizontalAlignment="Left" Margin="53,730,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="420" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="107">
             <TextBox.RenderTransform>
@@ -518,7 +487,7 @@
         <ComboBox x:Name="cmbJobNature" HorizontalAlignment="Left" Height="18" Margin="233,135,0,0" VerticalAlignment="Top" Width="120" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" SelectionChanged="cmbJobNature_SelectionChanged"/>
         <Label Content="PVG" HorizontalAlignment="Left" Margin="464,488,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>
         <Label Content="RESPONSIBLE" HorizontalAlignment="Left" Margin="439,505,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>
-        <TextBox x:Name="txtPvgResponsibleEmc" HorizontalAlignment="Left" Margin="434,528,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtPvgResponsibleEmc" HorizontalAlignment="Left" Margin="434,528,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="24">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -528,17 +497,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtPvgResponsibleEnviromental" HorizontalAlignment="Left" Margin="434,546,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="-4.583"/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform X="-0.72"/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="txtEutPartnumber1_Copy2" HorizontalAlignment="Left" Margin="434,564,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtEutPartnumber1_Copy2" HorizontalAlignment="Left" Margin="434,574,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="24">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -548,7 +507,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtEutPartnumber1_Copy3" HorizontalAlignment="Left" Margin="434,582,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtEutPartnumber1_Copy3" HorizontalAlignment="Left" Margin="434,598,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="22">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -558,7 +517,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtEutPartnumber1_Copy4" HorizontalAlignment="Left" Margin="434,600,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtEutPartnumber1_Copy4" HorizontalAlignment="Left" Margin="434,620,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="24">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -568,7 +527,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtEutPartnumber1_Copy5" HorizontalAlignment="Left" Margin="434,618,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtEutPartnumber1_Copy5" HorizontalAlignment="Left" Margin="434,644,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="23">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -578,7 +537,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtEutPartnumber1_Copy6" HorizontalAlignment="Left" Margin="434,636,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtPvgEnviromental" HorizontalAlignment="Left" Margin="434,552,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="22">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -588,5 +547,96 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
+        <DatePicker x:Name="DateEut1" HorizontalAlignment="Left" Height="26" Margin="209,669,0,0" VerticalAlignment="Top" Width="38" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Background" Value="#FF45494A" />
+                </Style>
+            </DatePicker.Resources>
+            <DatePicker.Foreground>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </DatePicker.Foreground>
+            <DatePicker.CalendarStyle>
+                <Style/>
+            </DatePicker.CalendarStyle>
+        </DatePicker>
+        <DatePicker x:Name="DateEut2" HorizontalAlignment="Left" Height="26" Margin="246,669,0,0" VerticalAlignment="Top" Width="38" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Background" Value="#FF45494A" />
+                </Style>
+            </DatePicker.Resources>
+            <DatePicker.Foreground>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </DatePicker.Foreground>
+            <DatePicker.CalendarStyle>
+                <Style/>
+            </DatePicker.CalendarStyle>
+        </DatePicker>
+        <DatePicker x:Name="DateEut3" HorizontalAlignment="Left" Height="26" Margin="283,669,0,0" VerticalAlignment="Top" Width="38" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True">
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Background" Value="#FF45494A" />
+                </Style>
+            </DatePicker.Resources>
+            <DatePicker.Foreground>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </DatePicker.Foreground>
+            <DatePicker.CalendarStyle>
+                <Style/>
+            </DatePicker.CalendarStyle>
+        </DatePicker>
+        <DatePicker x:Name="DateEut4" HorizontalAlignment="Left" Height="26" Margin="320,669,0,0" VerticalAlignment="Top" Width="38" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" >
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Background" Value="#FF45494A" />
+                </Style>
+            </DatePicker.Resources>
+            <DatePicker.Foreground>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </DatePicker.Foreground>
+            <DatePicker.CalendarStyle>
+                <Style/>
+            </DatePicker.CalendarStyle>
+        </DatePicker>
+        <DatePicker x:Name="DateEut5" HorizontalAlignment="Left" Height="26" Margin="357,669,0,0" VerticalAlignment="Top" Width="38" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" >
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Background" Value="#FF45494A" />
+                </Style>
+            </DatePicker.Resources>
+            <DatePicker.Foreground>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </DatePicker.Foreground>
+            <DatePicker.CalendarStyle>
+                <Style/>
+            </DatePicker.CalendarStyle>
+        </DatePicker>
+        <DatePicker x:Name="DateEut6" HorizontalAlignment="Left" Height="26" Margin="394,669,0,0" VerticalAlignment="Top" Width="38" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" >
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Background" Value="#FF45494A" />
+                </Style>
+            </DatePicker.Resources>
+            <DatePicker.Foreground>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </DatePicker.Foreground>
+            <DatePicker.CalendarStyle>
+                <Style/>
+            </DatePicker.CalendarStyle>
+        </DatePicker>
+        <DatePicker x:Name="DatePvg" HorizontalAlignment="Left" Height="26" Margin="434,669,0,0" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" >
+            <DatePicker.Resources>
+                <Style TargetType="{x:Type DatePickerTextBox}">
+                    <Setter Property="Background" Value="#FF45494A" />
+                </Style>
+            </DatePicker.Resources>
+            <DatePicker.Foreground>
+                <SolidColorBrush Color="White" Opacity="0"/>
+            </DatePicker.Foreground>
+            <DatePicker.CalendarStyle>
+                <Style/>
+            </DatePicker.CalendarStyle>
+        </DatePicker>
     </Grid>
 </Window>
