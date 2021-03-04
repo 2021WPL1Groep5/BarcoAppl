@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BarcoApplicatie.BibModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,51 +21,33 @@ namespace BarcoApplicatie
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static BarcoDBContext context = new BarcoDBContext();
+
         public MainWindow()
         {
             InitializeComponent();
-            //Mathias
-            //Koen
-            //Nikki
-            //Mohamed
-            //Robbe
-            
-        }
-
-        private void Checkbox_Yes_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Checkbox_No_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cmbDivision_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void cmbJobNature_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
         }
 
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
-            
+            addInitialsToDataBase(txtRequesterInitials.Text);
+            addJobNatureToDatabase(cmbJobNature.Text);
         }
 
-        private void txtNetWeight1_TextChanged(object sender, TextChangedEventArgs e)
+        private static void addInitialsToDataBase(string initialen)
         {
-
-         if (System.Text.RegularExpressions.Regex.IsMatch(txtNetWeight1.Text, "[^0-9]" + "." + "[^0-9]"))
-         {
-          MessageBox.Show("Please enter only numbers.");
-          txtNetWeight1.Text = txtNetWeight1.Text.Remove(txtNetWeight1.Text.Length - 1);
-         }
-
+            Person person = new Person { Afkorting = initialen };
+            context.Add(person);
+            context.SaveChanges();
         }
+
+        private static void addJobNatureToDatabase(string comboBoxItem)
+        {
+            RqJobNature jobNature = new RqJobNature { Nature = comboBoxItem };
+            context.Add(jobNature);
+            context.SaveChanges();
+        }
+
     }
 }

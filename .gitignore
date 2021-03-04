@@ -3,6 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+BarcoAppl/BarcoApplicatie/Constants.cs
+
 # User-specific files
 *.rsuser
 *.suo
