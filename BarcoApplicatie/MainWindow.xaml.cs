@@ -32,12 +32,13 @@ namespace BarcoApplicatie
         private void Request()
         {
             RqRequest request = new RqRequest();
+            request.JrNumber = "0001";
             request.Requester = txtRequesterInitials.Text;
             request.BarcoDivision = cmbDivision.Text;
             request.JobNature = cmbJobNature.Text;
             request.EutProjectname = txtProjectName.Text;
             request.EutPartnumbers = txtEutPartnumber1.Text;
-            request.ExpectedEnddate = new DateTime();
+            request.ExpectedEnddate = ExpectedEndDate.SelectedDate;
             request.InternRequest = false;
             request.GrossWeight = Convert.ToInt16(txtGrossWeight1.Text);
             request.NetWeight = Convert.ToInt16(txtNetWeight1.Text);
