@@ -52,11 +52,25 @@ namespace BarcoApplicatie
         private void txtNetWeight1_TextChanged(object sender, TextChangedEventArgs e)
         {
 
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtNetWeight1.Text, "[^0-9]" + "." + "[^0-9]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtNetWeight1.Text, "[^0-9-.]"))
             {
                 MessageBox.Show("Please enter only numbers.");
                 txtNetWeight1.Text = txtNetWeight1.Text.Remove(txtNetWeight1.Text.Length - 1);
             }
+
+        }
+               
+        private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtProjectNumber.Text, "[^0-9-E]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txtProjectNumber.Text = txtProjectNumber.Text.Remove(txtProjectNumber.Text.Length - 1);
+            }
+        }
+
+        private void cmbDivision_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
 
@@ -66,11 +80,6 @@ namespace BarcoApplicatie
         }
 
         private void Checkbox_No_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void cmbDivision_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
