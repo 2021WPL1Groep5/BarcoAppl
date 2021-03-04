@@ -35,7 +35,10 @@
             </TextBox.RenderTransform>
         </TextBox>
         <Label Content="NATURE OF TEST(S) TO PERFORM" HorizontalAlignment="Left" Margin="16,506,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <ComboBox x:Name="cmbDivision" HorizontalAlignment="Left" Height="18" Margin="233,104,0,0" VerticalAlignment="Top" Width="120" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B"/>
+        <ComboBox x:Name="cmbDivision" HorizontalAlignment="Left" Height="18" Margin="233,104,0,0" VerticalAlignment="Top" Width="120" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B">
+            <ComboBoxItem Content="test1"/>
+            <ComboBoxItem Content="test2"/>
+        </ComboBox>
         <DatePicker x:Name="ExpectedEndDate" HorizontalAlignment="Left" Height="26" Margin="233,317,0,0" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" Foreground="#FF45494A">
             <DatePicker.CalendarStyle>
                 <Style TargetType="{x:Type Calendar}">

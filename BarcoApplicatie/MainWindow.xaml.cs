@@ -29,25 +29,31 @@ namespace BarcoApplicatie
 
         }
 
+        private void Request()
+        {
+            RqRequest request = new RqRequest();
+            request.Requester = txtRequesterInitials.Text;
+            request.BarcoDivision = cmbDivision.Text;
+            request.JobNature = cmbJobNature.Text;
+            request.EutProjectname = txtProjectName.Text;
+            request.EutPartnumbers = txtEutPartnumber1.Text;
+            request.ExpectedEnddate = new DateTime();
+            request.InternRequest = false;
+            request.GrossWeight = Convert.ToInt16(txtGrossWeight1.Text);
+            request.NetWeight = Convert.ToInt16(txtNetWeight1.Text);
+
+            if (Checkbox_Yes.IsChecked == true)
+            {
+                request.Battery = true;
+            }
+
+            context.Add(request);
+            context.SaveChanges();            
+        }
+
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
-            addInitialsToDataBase(txtRequesterInitials.Text);
-            addJobNatureToDatabase(cmbJobNature.Text);
+            Request();
         }
-
-        private static void addInitialsToDataBase(string initialen)
-        {
-            Person person = new Person { Afkorting = initialen };
-            context.Add(person);
-            context.SaveChanges();
-        }
-
-        private static void addJobNatureToDatabase(string comboBoxItem)
-        {
-            RqJobNature jobNature = new RqJobNature { Nature = comboBoxItem };
-            context.Add(jobNature);
-            context.SaveChanges();
-        }
-
     }
 }
