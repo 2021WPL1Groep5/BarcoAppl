@@ -23,11 +23,13 @@ namespace BarcoApplicatie
         public MainWindow()
         {
             InitializeComponent();
-            //Mathias
-            //Koen
-            //Nikki
-            //Mohamed
-            //Robbe
+
+            BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Images/barcoLogo.png"));
+
+            capturedPhoto.Source = bitmapImage;
+
+
+
         }
 
         private void Checkbox_Yes_Checked(object sender, RoutedEventArgs e)
