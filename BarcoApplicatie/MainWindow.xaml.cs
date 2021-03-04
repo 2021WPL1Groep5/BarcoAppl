@@ -30,52 +30,21 @@ namespace BarcoApplicatie
             insertJobNatureIntoComboBox();
         }
 
-        private void insertDivisionIntoComboBox()
+        private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var divisions = context.RqBarcoDivision.ToList();
+            if (txtRequesterInitials.Text.All(chr => char.IsLetter(chr)));
 
-            foreach (RqBarcoDivision division in divisions)
-            {
-                cmbDivision.Items.Add(division.Afkorting);
-            }
+            Console.WriteLine(txtRequesterInitials.Text.ToUpper()); 
         }
 
-        private void insertJobNatureIntoComboBox()
+        private void txtProjectName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            var jobNatures = context.RqJobNature.ToList();
-
-            foreach (RqJobNature jobNature in jobNatures)
-            {
-                cmbJobNature.Items.Add(jobNature.Nature);
-            }
+            if (txtProjectName.Text.All(chr => char.IsLetter(chr)));
         }
 
-        private void Request()
+        private void txtLinkToTestplan_TextChanged(object sender, TextChangedEventArgs e)
         {
-            RqRequest request = new RqRequest();
-            request.JrNumber = "0002";
-            request.Requester = txtRequesterInitials.Text;
-            request.BarcoDivision = cmbDivision.Text;
-            request.JobNature = cmbJobNature.Text;
-            request.EutProjectname = txtProjectName.Text;
-            request.EutPartnumbers = txtEutPartnumber1.Text;
-            request.ExpectedEnddate = ExpectedEndDate.SelectedDate;
-            request.InternRequest = false;
-            request.GrossWeight = Convert.ToInt16(txtGrossWeight1.Text);
-            request.NetWeight = Convert.ToInt16(txtNetWeight1.Text);
-
-            if (Checkbox_Yes.IsChecked == true)
-            {
-                request.Battery = true;
-            }
-
-            context.Add(request);
-            context.SaveChanges();            
-        }
-
-        private void btnSendJob_Click(object sender, RoutedEventArgs e)
-        {
-            Request();
+            txtLinkToTestplan.Text = string.Concat(txtLinkToTestplan.Text.Where(char.IsLetterOrDigit));
         }
     }
 }
