@@ -8,6 +8,7 @@ namespace BarcoApplicatie
     {
         //change to personal connection
         public static string CONNECTION_STRING =
-           "Server=DESKTOP-MB87VP9\\VIVES; Database= Barco2021; Trusted_Connection=True;";
+           "Server=DESKTOP-MB87VP9\\VIVES; Database=BarcoDB; Trusted_Connection=True;";
     }
+    
 }
