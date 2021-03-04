@@ -638,5 +638,7 @@
                 <Style/>
             </DatePicker.CalendarStyle>
         </DatePicker>
+        <Image Height="100" Width="100"/>
+        <Image Height="100" Width="100"/>
     </Grid>
 </Window>
