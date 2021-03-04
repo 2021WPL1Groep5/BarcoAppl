@@ -32,7 +32,7 @@ namespace BarcoApplicatie
         private void Request()
         {
             RqRequest request = new RqRequest();
-            request.JrNumber = "0001";
+            request.JrNumber = "0002";
             request.Requester = txtRequesterInitials.Text;
             request.BarcoDivision = cmbDivision.Text;
             request.JobNature = cmbJobNature.Text;
