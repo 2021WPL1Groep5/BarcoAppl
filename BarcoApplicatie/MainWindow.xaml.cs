@@ -30,5 +30,21 @@ namespace BarcoApplicatie
             //Robbe
         }
 
+        private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtRequesterInitials.Text.All(chr => char.IsLetter(chr)));
+
+            Console.WriteLine(txtRequesterInitials.Text.ToUpper()); 
+        }
+
+        private void txtProjectName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtProjectName.Text.All(chr => char.IsLetter(chr)));
+        }
+
+        private void txtLinkToTestplan_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

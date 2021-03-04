@@ -1,9 +1,9 @@
-﻿ <Window x:Class="TellerApp.MainWindow"
+﻿ <Window x:Class="BarcoApplicatie.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TellerApp"
+        xmlns:local="clr-namespace:BarcoApplicatie"
         mc:Ignorable="d"
         Title="MainWindow" Height="875" Width="900
         
@@ -23,7 +23,7 @@
         <Label Content="GROSS WEIGHT (kg)" HorizontalAlignment="Left" Margin="44,274,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="EXPECTED END DATE" HorizontalAlignment="Left" Margin="43,317,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="BATTERIES INSIDE" HorizontalAlignment="Left" Margin="50,348,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <TextBox x:Name="txtRequesterInitials" HorizontalAlignment="Left" Margin="233,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtRequesterInitials" HorizontalAlignment="Left" Margin="233,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtRequesterInitials_TextChanged">
 
             <TextBox.RenderTransform>
                 <TransformGroup>
@@ -58,7 +58,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtProjectName"  HorizontalAlignment="Left" Margin="233,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtProjectName"  HorizontalAlignment="Left" Margin="233,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtProjectName_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -239,7 +239,7 @@
             </TextBox.RenderTransform>
         </TextBox>
         <Label Content="LINK TO TESTPLAN" HorizontalAlignment="Left" Margin="48,431,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <TextBox x:Name="txtLinkToTestplan"  HorizontalAlignment="Left" Margin="233,433,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="22">
+        <TextBox x:Name="txtLinkToTestplan"  HorizontalAlignment="Left" Margin="233,433,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="434" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="22" TextChanged="txtLinkToTestplan_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
