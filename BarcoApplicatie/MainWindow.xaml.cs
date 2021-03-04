@@ -28,6 +28,7 @@ namespace BarcoApplicatie
             //Nikki
             //Mohamed
             //Robbe
+            
         }
 
         private void Checkbox_Yes_Checked(object sender, RoutedEventArgs e)
@@ -52,7 +53,7 @@ namespace BarcoApplicatie
 
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }
