@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BarcoApplicatie.BibModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,34 +21,33 @@ namespace BarcoApplicatie
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static BarcoDBContext context = new BarcoDBContext();
+
         public MainWindow()
         {
             InitializeComponent();
-            //Mathias
-            //Koen
-            //Nikki
-            //Mohamed
-            //Robbe
+
         }
 
-        private void Checkbox_Yes_Checked(object sender, RoutedEventArgs e)
+        private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
-
+            addInitialsToDataBase(txtRequesterInitials.Text);
+            addJobNatureToDatabase(cmbJobNature.Text);
         }
 
-        private void Checkbox_No_Checked(object sender, RoutedEventArgs e)
+        private static void addInitialsToDataBase(string initialen)
         {
-
+            Person person = new Person { Afkorting = initialen };
+            context.Add(person);
+            context.SaveChanges();
         }
 
-        private void cmbDivision_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private static void addJobNatureToDatabase(string comboBoxItem)
         {
-
+            RqJobNature jobNature = new RqJobNature { Nature = comboBoxItem };
+            context.Add(jobNature);
+            context.SaveChanges();
         }
 
-        private void cmbJobNature_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }

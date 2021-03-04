@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 namespace BarcoApplicatie.BibModels
 {
-    public partial class Person
+    public class Person
     {
+        private static BarcoDBContext context = new BarcoDBContext();
         public Person()
         {
             RqBarcoDivisionPerson = new HashSet<RqBarcoDivisionPerson>();
