@@ -26,7 +26,28 @@ namespace BarcoApplicatie
         public MainWindow()
         {
             InitializeComponent();
+            insertDivisionIntoComboBox();
+            insertJobNatureIntoComboBox();
+        }
 
+        private void insertDivisionIntoComboBox()
+        {
+            var divisions = context.RqBarcoDivision.ToList();
+
+            foreach (RqBarcoDivision division in divisions)
+            {
+                cmbDivision.Items.Add(division.Afkorting);
+            }
+        }
+
+        private void insertJobNatureIntoComboBox()
+        {
+            var jobNatures = context.RqJobNature.ToList();
+
+            foreach (RqJobNature jobNature in jobNatures)
+            {
+                cmbJobNature.Items.Add(jobNature.Nature);
+            }
         }
 
         private void Request()
