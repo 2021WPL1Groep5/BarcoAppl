@@ -23,11 +23,6 @@ namespace BarcoApplicatie
         public MainWindow()
         {
             InitializeComponent();
-            //Mathias
-            //Koen
-            //Nikki
-            //Mohamed
-            //Robbe
         }
 
         private void Checkbox_Yes_Checked(object sender, RoutedEventArgs e)

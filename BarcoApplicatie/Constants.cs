@@ -6,7 +6,8 @@ namespace BarcoApplicatie
 {
     public class Constants
     {
+        //change to personal connection
         public static string CONNECTION_STRING =
-           "Server=LAPTOP\\VIVES; Database= BarcoDB; Trusted_Connection=True;";
+           "Server=DESKTOP-20TBGJO\SQLEXPRESS; Database= Barco2021; Trusted_Connection=True;";
     }
 }
