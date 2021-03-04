@@ -36,7 +36,7 @@
         </TextBox>
         <Label Content="NATURE OF TEST(S) TO PERFORM" HorizontalAlignment="Left" Margin="16,506,0,0" VerticalAlignment="Top" Foreground="White"/>
         <ComboBox x:Name="cmbDivision" HorizontalAlignment="Left" Height="18" Margin="233,104,0,0" VerticalAlignment="Top" Width="120" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" SelectionChanged="cmbDivision_SelectionChanged"/>
-        <DatePicker x:Name="ExpectedEndDate" HorizontalAlignment="Left" Height="26" Margin="233,317,0,0" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" Foreground="#FF45494A">
+        <DatePicker x:Name="ExpectedEndDate" HorizontalAlignment="Left" Height="26" Margin="233,317,0,0" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" Foreground="#FFFF">
             <DatePicker.CalendarStyle>
                 <Style TargetType="{x:Type Calendar}">
                     <Setter Property="Background" Value="#FF45494A" />
@@ -514,7 +514,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="btnSendJob" Content="SEND JOB REQUEST TO PVG" HorizontalAlignment="Left" Height="116" Margin="633,749,0,0" VerticalAlignment="Top" Width="269" Background="#FFF10000"/>
+        <Button x:Name="btnSendJob" Click="btnSendJob_Click" Content="SEND JOB REQUEST TO PVG" HorizontalAlignment="Left" Height="116" Margin="633,749,0,0" VerticalAlignment="Top" Width="269" Background="#FFF10000"/>
         <ComboBox x:Name="cmbJobNature" HorizontalAlignment="Left" Height="18" Margin="233,135,0,0" VerticalAlignment="Top" Width="120" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" SelectionChanged="cmbJobNature_SelectionChanged"/>
         <Label Content="PVG" HorizontalAlignment="Left" Margin="464,488,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>
         <Label Content="RESPONSIBLE" HorizontalAlignment="Left" Margin="439,505,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>

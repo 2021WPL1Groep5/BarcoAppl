@@ -49,5 +49,10 @@ namespace BarcoApplicatie
         {
 
         }
+
+        private void btnSendJob_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
