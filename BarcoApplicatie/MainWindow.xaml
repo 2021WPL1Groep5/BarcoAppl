@@ -629,7 +629,7 @@
                 <Style/>
             </DatePicker.CalendarStyle>
         </DatePicker>
-        <DatePicker x:Name="DatePvg" HorizontalAlignment="Left" Height="26" Margin="434,669,0,0" VerticalAlignment="Top" Width="92" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" >
+        <DatePicker x:Name="DatePvg" HorizontalAlignment="Left" Height="26" Margin="434,669,0,0" VerticalAlignment="Top" Width="159" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" >
             <DatePicker.Resources>
                 <Style TargetType="{x:Type DatePickerTextBox}">
                     <Setter Property="Background" Value="#FF45494A" />
