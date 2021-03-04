@@ -10,4 +10,5 @@ namespace BarcoApplicatie
         public static string CONNECTION_STRING =
            "Server=LAPTOP\\VIVES; Database= BarcoDB; Trusted_Connection=True;";
     }
+    
 }
