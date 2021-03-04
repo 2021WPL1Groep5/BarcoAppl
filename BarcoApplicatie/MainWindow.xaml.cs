@@ -30,5 +30,24 @@ namespace BarcoApplicatie
             //Robbe
         }
 
+        private void Checkbox_Yes_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Checkbox_No_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void cmbDivision_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void cmbJobNature_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
