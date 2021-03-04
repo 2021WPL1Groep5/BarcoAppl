@@ -29,26 +29,29 @@ namespace BarcoApplicatie
 
         }
 
-        private void btnSendJob_Click(object sender, RoutedEventArgs e)
+        private void Request()
         {
-            addInitialsToDataBase(txtRequesterInitials.Text);
-            addJobNatureToDatabase(cmbJobNature.Text);
-        }
+            RqRequest request = new RqRequest();
+            request.JrNumber = "0002";
+            request.Requester = txtRequesterInitials.Text;
+            request.BarcoDivision = cmbDivision.Text;
+            request.JobNature = cmbJobNature.Text;
+            request.EutProjectname = txtProjectName.Text;
+            request.EutPartnumbers = txtEutPartnumber1.Text;
+            request.ExpectedEnddate = ExpectedEndDate.SelectedDate;
+            request.InternRequest = false;
+            request.GrossWeight = Convert.ToInt16(txtGrossWeight1.Text);
+            request.NetWeight = Convert.ToInt16(txtNetWeight1.Text);
 
-        private static void addInitialsToDataBase(string initialen)
-        {
-            Person person = new Person { Afkorting = initialen };
-            context.Add(person);
-            context.SaveChanges();
-        }
+            if (Checkbox_Yes.IsChecked == true)
+            {
+                request.Battery = true;
+            }
 
-        private static void addJobNatureToDatabase(string comboBoxItem)
-        {
-            RqJobNature jobNature = new RqJobNature { Nature = comboBoxItem };
-            context.Add(jobNature);
-            context.SaveChanges();
+            context.Add(request);
+            context.SaveChanges();            
         }
-
+        
         private void txtNetWeight1_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -59,7 +62,7 @@ namespace BarcoApplicatie
             }
 
         }
-               
+
         private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(txtProjectNumber.Text, "[^0-9-E]"))
@@ -80,6 +83,16 @@ namespace BarcoApplicatie
         }
 
         private void Checkbox_No_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnSendJob_Click(object sender, RoutedEventArgs e)
+        {
+            Request();
+        }
+
+        private void cmbJobNature_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
