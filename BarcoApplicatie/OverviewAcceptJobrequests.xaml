@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BarcoApplicatie"
         mc:Ignorable="d"
-        Title="OverviewJobrequests" Height="450" Width="800">
+        Title="OverviewJobrequests" Height="840" Width="900">
     <Grid Background="#FF3C3F41" OpacityMask="White" Margin="-2,0,0,-6">
         <Image x:Name="capturedPhoto" Width="200" Height="75" Margin="2,-7,700,762"/>
         <Border BorderThickness="1" BorderBrush="#FFF10000" HorizontalAlignment="Center" Height="56" VerticalAlignment="Top" Width="913" Background="#FFF10000"/>
@@ -49,10 +49,12 @@
         <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,796,0,0" />
         <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,816,0,0" />
         <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,836,0,0" />
-        <Label Content="Job nature" HorizontalAlignment="Left" Margin="257,53,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="EUT Projectname" HorizontalAlignment="Left" Margin="536,53,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Request date" HorizontalAlignment="Left" Margin="15,53,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Job nature" HorizontalAlignment="Left" Margin="209,53,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="EUT Projectname" HorizontalAlignment="Center" Margin="0,53,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="Request date" HorizontalAlignment="Left" Margin="611,53,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="End date" HorizontalAlignment="Left" Margin="819,53,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Button Content="Button" Margin="0,76,136,734" Opacity="0"/>
         <ListBox Margin="0,76,0,0" BorderThickness="0.5,0.25" Background="Transparent" BorderBrush="#FF707070" Foreground="White"/>
+        <Label Content="JR number" HorizontalAlignment="Left" Margin="15,53,0,0" VerticalAlignment="Top" Foreground="White"/>
     </Grid>
 </Window>

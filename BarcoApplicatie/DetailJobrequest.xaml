@@ -1,11 +1,13 @@
-﻿<Window x:Class="BarcoApplicatie.AcceptJobrequest"
+﻿<Window x:Class="BarcoApplicatie.DetailJobrequest"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BarcoApplicatie"
         mc:Ignorable="d"
-        Title="AcceptJobrequest" Height="840" Width="900">
+        Title="DetailJobrequest" Height="840" Width="900
+        
+		">
     <Grid Background="#FF3C3F41" OpacityMask="White" Margin="-2,0,0,-6">
 
         <Label x:Name="lblResult" Content="" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top"/>
@@ -461,7 +463,6 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="btnAcceptJob" Click="btnSendJob_Click" Content="ACCEPT JOB REQUEST" HorizontalAlignment="Left" Height="47" Margin="579,697,0,0" VerticalAlignment="Top" Width="269" Foreground="White" Background="#FF3E8603"/>
         <Label Content="PVG" HorizontalAlignment="Left" Margin="786,446,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>
         <Label Content="RESPONSIBLE" HorizontalAlignment="Left" Margin="761,463,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>
         <TextBox x:Name="txtPvgResponsibleEmc" HorizontalAlignment="Left" Margin="757,485,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="24">
@@ -615,7 +616,6 @@
                 <Style/>
             </DatePicker.CalendarStyle>
         </DatePicker>
-        <Image x:Name="capturedPhoto" Width="200" Height="75" Margin="2,-7,700,762"/>
         <TextBox x:Name="txtDivision" HorizontalAlignment="Left" Margin="233,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
 
             <TextBox.RenderTransform>
@@ -638,7 +638,31 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="btnRefuseJob" Click="btnSendJob_Click" Content="REFUSE JOB REQUEST" HorizontalAlignment="Left" Height="47" Margin="579,766,0,0" VerticalAlignment="Top" Width="269" Foreground="White" Background="#FFF10000"/>
+        <Image x:Name="capturedPhoto" Width="200" Height="75" Margin="2,-7,700,762"/>
+        <TextBox x:Name="txtRequesterInitials_Copy" HorizontalAlignment="Left" Margin="782,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="txtRequesterInitials_Copy1" HorizontalAlignment="Left" Margin="782,74,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Label Content="REQUEST DATE" HorizontalAlignment="Left" Margin="688,52,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label Content="JR NUMBER" HorizontalAlignment="Left" Margin="697,70,0,0" VerticalAlignment="Top" Foreground="White"/>
 
     </Grid>
 </Window>

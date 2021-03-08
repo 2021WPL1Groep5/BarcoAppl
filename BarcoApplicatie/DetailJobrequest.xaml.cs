@@ -13,11 +13,11 @@ using System.Windows.Shapes;
 namespace BarcoApplicatie
 {
     /// <summary>
-    /// Interaction logic for OverviewJobrequests.xaml
+    /// Interaction logic for DetailJobrequest.xaml
     /// </summary>
-    public partial class OverviewJobrequests : Window
+    public partial class DetailJobrequest : Window
     {
-        public OverviewJobrequests()
+        public DetailJobrequest()
         {
             InitializeComponent();
         }
