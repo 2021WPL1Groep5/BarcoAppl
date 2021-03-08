@@ -33,15 +33,23 @@ namespace BarcoApplicatie
         //Koen
         private void insertDivisionIntoComboBox()
         {
-            if (txtRequesterInitials.Text.All(chr => char.IsLetter(chr)));
+            var divisions = context.RqBarcoDivision.ToList();
 
-            Console.WriteLine(txtRequesterInitials.Text.ToUpper()); 
+            foreach (RqBarcoDivision division in divisions)
+            {
+                cmbDivision.Items.Add(division.Afkorting);
+            }
         }
 
         //Koen
         private void insertJobNatureIntoComboBox()
         {
-            if (txtProjectName.Text.All(chr => char.IsLetter(chr)));
+            var jobNatures = context.RqJobNature.ToList();
+
+            foreach (RqJobNature jobNature in jobNatures)
+            {
+                cmbJobNature.Items.Add(jobNature.Nature);
+            }
         }
 
         //Koen
@@ -65,7 +73,7 @@ namespace BarcoApplicatie
             }
 
             context.Add(request);
-            context.SaveChanges();            
+            context.SaveChanges();
         }
 
         //Koen/
