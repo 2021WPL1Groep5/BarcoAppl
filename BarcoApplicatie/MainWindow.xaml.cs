@@ -51,7 +51,14 @@ namespace BarcoApplicatie
 
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
+            ViewJobrequest ViewJobrequest = new ViewJobrequest();
+            ViewJobrequest.Show();
+        }
 
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            HomeScreen HomeScreen = new HomeScreen();
+            HomeScreen.Show();
         }
     }
 }
