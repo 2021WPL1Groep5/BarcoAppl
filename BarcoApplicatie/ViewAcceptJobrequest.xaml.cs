@@ -13,13 +13,16 @@ using System.Windows.Shapes;
 namespace BarcoApplicatie
 {
     /// <summary>
-    /// Interaction logic for OverviewJobrequests.xaml
+    /// Interaction logic for ViewAcceptJobrequest.xaml
     /// </summary>
-    public partial class OverviewJobrequests : Window
+    public partial class ViewAcceptJobrequest : Window
     {
-        public OverviewJobrequests()
+        public ViewAcceptJobrequest()
         {
             InitializeComponent();
+
+            BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Images/barcoLogo.png"));
+            capturedPhoto.Source = bitmapImage;
         }
     }
 }

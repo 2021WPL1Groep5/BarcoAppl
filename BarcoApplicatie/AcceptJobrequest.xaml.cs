@@ -26,5 +26,15 @@ namespace BarcoApplicatie
         {
 
         }
+
+        private void Checkbox_Yes_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Checkbox_No_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
