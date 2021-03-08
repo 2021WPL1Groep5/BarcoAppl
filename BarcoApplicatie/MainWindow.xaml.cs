@@ -69,25 +69,26 @@ namespace BarcoApplicatie
             dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         }
 
-        public void isFilledIn(CheckBox item)   //cbEmcEut
-        {
-            if (item.IsChecked == false)        //cbEmcEut
-            {
-                int iNumber = 0;
-                for (int i = 0; i < 6; i++)
-                {
-                    //string itemValue = item.content.ToString();
-                    iNumber += iNumber++;
+        //public void isFilledIn(CheckBox item)   //cbEmcEut
+        //{
+        //    if (item.IsChecked == false)        //cbEmcEut
+        //    {
+        //        int iNumber = 0;
+        //        for (int i = 0; i < 6; i++)
+        //        {
+        //            iNumber++;
 
-                    string sItem = item.Name;
+        //            string sItem = item.Name;
+        //            string sNumber = Convert.ToString(iNumber);
 
+        //            sItem = sItem + sNumber;
 
-                    string sNumber = Convert.ToString(iNumber);
+        //            //item.Name veranderd niet!!
+        //            item.Name = sItem;
+        //            item.IsEnabled = false; //cbEmcEut1.IsEnabled = false;
 
-                    sItem = sItem + sNumber;
-                   item.IsEnabled = false;
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
     }
 }
