@@ -30,6 +30,7 @@ namespace BarcoApplicatie
             insertJobNatureIntoComboBox();
         }
 
+        //Koen
         private void insertDivisionIntoComboBox()
         {
             var divisions = context.RqBarcoDivision.ToList();
@@ -40,6 +41,7 @@ namespace BarcoApplicatie
             }
         }
 
+        //Koen
         private void insertJobNatureIntoComboBox()
         {
             var jobNatures = context.RqJobNature.ToList();
@@ -50,6 +52,7 @@ namespace BarcoApplicatie
             }
         }
 
+        //Koen
         private void Request()
         {
             RqRequest request = new RqRequest();
@@ -70,7 +73,7 @@ namespace BarcoApplicatie
             }
 
             context.Add(request);
-            context.SaveChanges();            
+            context.SaveChanges();
         }
         
         private void txtNetWeight1_TextChanged(object sender, TextChangedEventArgs e)
@@ -110,6 +113,7 @@ namespace BarcoApplicatie
 
         }
 
+        //Koen/
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
             Request();

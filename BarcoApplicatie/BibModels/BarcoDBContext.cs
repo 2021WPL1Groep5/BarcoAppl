@@ -23,9 +23,8 @@ namespace BarcoApplicatie.BibModels
         public virtual DbSet<RqOptionel> RqOptionel { get; set; }
         public virtual DbSet<RqRequest> RqRequest { get; set; }
         public virtual DbSet<RqRequestDetail> RqRequestDetail { get; set; }
-        public virtual DbSet<RqRequestDetailv1> RqRequestDetailv1 { get; set; }
         public virtual DbSet<RqTestDevision> RqTestDevision { get; set; }
-        public virtual DbSet<RqTestDevisionv1> RqTestDevisionv1 { get; set; }
+        public virtual DbSet<TestDevision> TestDevision { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -106,17 +105,9 @@ namespace BarcoApplicatie.BibModels
                     .HasColumnName("afkPerson")
                     .HasMaxLength(10);
 
-                entity.HasOne(d => d.AfkDevisionNavigation)
-                    .WithMany(p => p.RqBarcoDivisionPerson)
-                    .HasForeignKey(d => d.AfkDevision)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("Rq_BarcoDivisionPerson_Rq_BarcoDivision_FK");
-
-                entity.HasOne(d => d.AfkPersonNavigation)
-                    .WithMany(p => p.RqBarcoDivisionPerson)
-                    .HasForeignKey(d => d.AfkPerson)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("Rq_BarcoDivisionPerson_Person_FK");
+                entity.Property(e => e.Pvggroup)
+                    .HasColumnName("PVGGroup")
+                    .HasMaxLength(10);
             });
 
             modelBuilder.Entity<RqJobNature>(entity =>
@@ -250,32 +241,6 @@ namespace BarcoApplicatie.BibModels
                     .HasConstraintName("Rq_RequestDetail_Rq_TestDevision_FK");
             });
 
-            modelBuilder.Entity<RqRequestDetailv1>(entity =>
-            {
-                entity.ToTable("Rq_RequestDetailv1");
-
-                entity.Property(e => e.Id).HasColumnName("id");
-
-                entity.Property(e => e.EutforeSeenDate)
-                    .HasColumnName("EUTForeSeenDate")
-                    .HasColumnType("datetime");
-
-                entity.Property(e => e.JrNumber)
-                    .IsRequired()
-                    .HasColumnName("jr_number")
-                    .HasMaxLength(10);
-
-                entity.Property(e => e.Pvgresp)
-                    .IsRequired()
-                    .HasColumnName("PVGresp")
-                    .HasMaxLength(10);
-
-                entity.Property(e => e.TestDevision)
-                    .IsRequired()
-                    .HasColumnName("test_Devision")
-                    .HasMaxLength(3);
-            });
-
             modelBuilder.Entity<RqTestDevision>(entity =>
             {
                 entity.HasKey(e => e.Afkorting)
@@ -292,20 +257,15 @@ namespace BarcoApplicatie.BibModels
                     .HasMaxLength(50);
             });
 
-            modelBuilder.Entity<RqTestDevisionv1>(entity =>
+            modelBuilder.Entity<TestDevision>(entity =>
             {
-                entity.HasKey(e => e.Afkorting)
-                    .HasName("Rq_TestDevisionv1_PK");
+                entity.Property(e => e.Id)
+                    .HasColumnName("ID")
+                    .ValueGeneratedNever();
 
-                entity.ToTable("Rq_TestDevisionv1");
-
-                entity.Property(e => e.Afkorting)
-                    .HasColumnName("afkorting")
-                    .HasMaxLength(3);
-
-                entity.Property(e => e.Naam)
-                    .HasColumnName("naam")
-                    .HasMaxLength(50);
+                entity.Property(e => e.Name)
+                    .IsRequired()
+                    .HasMaxLength(510);
             });
 
             OnModelCreatingPartial(modelBuilder);
