@@ -30,21 +30,48 @@ namespace BarcoApplicatie
             insertJobNatureIntoComboBox();
         }
 
-        private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
+        //Koen
+        private void insertDivisionIntoComboBox()
         {
             if (txtRequesterInitials.Text.All(chr => char.IsLetter(chr)));
 
             Console.WriteLine(txtRequesterInitials.Text.ToUpper()); 
         }
 
-        private void txtProjectName_TextChanged(object sender, TextChangedEventArgs e)
+        //Koen
+        private void insertJobNatureIntoComboBox()
         {
             if (txtProjectName.Text.All(chr => char.IsLetter(chr)));
         }
 
-        private void txtLinkToTestplan_TextChanged(object sender, TextChangedEventArgs e)
+        //Koen
+        private void Request()
         {
-            txtLinkToTestplan.Text = string.Concat(txtLinkToTestplan.Text.Where(char.IsLetterOrDigit));
+            RqRequest request = new RqRequest();
+            request.JrNumber = "0002";
+            request.Requester = txtRequesterInitials.Text;
+            request.BarcoDivision = cmbDivision.Text;
+            request.JobNature = cmbJobNature.Text;
+            request.EutProjectname = txtProjectName.Text;
+            request.EutPartnumbers = txtEutPartnumber1.Text;
+            request.ExpectedEnddate = ExpectedEndDate.SelectedDate;
+            request.InternRequest = false;
+            request.GrossWeight = Convert.ToInt16(txtGrossWeight1.Text);
+            request.NetWeight = Convert.ToInt16(txtNetWeight1.Text);
+
+            if (Checkbox_Yes.IsChecked == true)
+            {
+                request.Battery = true;
+            }
+
+            context.Add(request);
+            context.SaveChanges();            
+        }
+
+        //Koen/
+        private void btnSendJob_Click(object sender, RoutedEventArgs e)
+        {
+            Request();
         }
     }
 }
