@@ -10,6 +10,7 @@ namespace BarcoApplicatie
     {
         public string txtProjectNumber { get; set; }
         public string txtNetWeight { get; set; }
+        public string txtGrossWeight { get; set; }
 
         public NummerProject(string txtprojectnr )
         {
@@ -26,6 +27,15 @@ namespace BarcoApplicatie
             {
                 MessageBox.Show("Please enter only numbers.");
                 txtnetweight = txtnetweight.Remove(txtnetweight.Length - 1);
+            }
+        }
+
+        public grossWeight(string txtgrossweight)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtgrossweight, "[^0-9-,]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txtgrossweight = txtgrossweight.Remove(txtgrossweight.Length - 1);
             }
         }
 

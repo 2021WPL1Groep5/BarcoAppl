@@ -75,7 +75,7 @@ namespace BarcoApplicatie
         
         private void txtNetWeight1_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
             if (System.Text.RegularExpressions.Regex.IsMatch(txtNetWeight1.Text, "[^0-9-.]"))
             {
                 MessageBox.Show("Please enter only numbers.");
