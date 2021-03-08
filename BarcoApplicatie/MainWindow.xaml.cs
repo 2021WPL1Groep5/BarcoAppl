@@ -25,7 +25,6 @@ namespace BarcoApplicatie
             InitializeComponent();
 
             BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "Images/barcoLogo.png"));
-
             capturedPhoto.Source = bitmapImage;
 
 
