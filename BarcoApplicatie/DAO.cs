@@ -52,8 +52,8 @@ namespace BarcoApplicatie
             request.EutPartnumbers = partNumber;
             request.ExpectedEnddate = date;
             request.InternRequest = false;
-            request.GrossWeight = Convert.ToInt16(grossWeight);
-            request.NetWeight = Convert.ToInt16(netWeight);
+            request.GrossWeight = grossWeight;
+            request.NetWeight = netWeight;
 
             if (checkbox.IsChecked == true)
             {

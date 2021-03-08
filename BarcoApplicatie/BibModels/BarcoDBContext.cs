@@ -21,12 +21,6 @@ namespace BarcoApplicatie.BibModels
         public virtual DbSet<RqBarcoDivisionPerson> RqBarcoDivisionPerson { get; set; }
         public virtual DbSet<RqJobNature> RqJobNature { get; set; }
         public virtual DbSet<RqOptionel> RqOptionel { get; set; }
-
-        internal void Add()
-        {
-            throw new NotImplementedException();
-        }
-
         public virtual DbSet<RqRequest> RqRequest { get; set; }
         public virtual DbSet<RqRequestDetail> RqRequestDetail { get; set; }
         public virtual DbSet<RqTestDevision> RqTestDevision { get; set; }
@@ -143,12 +137,6 @@ namespace BarcoApplicatie.BibModels
                 entity.Property(e => e.Remarks)
                     .HasColumnName("remarks")
                     .HasMaxLength(1000);
-
-                entity.HasOne(d => d.IdRequestNavigation)
-                    .WithMany(p => p.RqOptionel)
-                    .HasForeignKey(d => d.IdRequest)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("Rq_Optionel_Rq_Request_FK");
             });
 
             modelBuilder.Entity<RqRequest>(entity =>
@@ -180,7 +168,9 @@ namespace BarcoApplicatie.BibModels
                     .HasColumnName("expectedEnddate")
                     .HasColumnType("datetime");
 
-                entity.Property(e => e.GrossWeight).HasColumnName("grossWeight");
+                entity.Property(e => e.GrossWeight)
+                    .HasColumnName("grossWeight")
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.HydraProjectNr)
                     .HasColumnName("hydraProjectNr")
@@ -201,7 +191,9 @@ namespace BarcoApplicatie.BibModels
                     .HasColumnName("JR_Status")
                     .HasMaxLength(30);
 
-                entity.Property(e => e.NetWeight).HasColumnName("netWeight");
+                entity.Property(e => e.NetWeight)
+                    .HasColumnName("netWeight")
+                    .HasMaxLength(100);
 
                 entity.Property(e => e.RequestDate)
                     .HasColumnName("request_date")

@@ -9,7 +9,5 @@ namespace BarcoApplicatie.BibModels
         public string Link { get; set; }
         public string Remarks { get; set; }
         public int IdRequest { get; set; }
-
-        public virtual RqRequest IdRequestNavigation { get; set; }
     }
 }
