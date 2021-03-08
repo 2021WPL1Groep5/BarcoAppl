@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections;
+
 
 namespace BarcoApplicatie
 {
@@ -21,11 +23,13 @@ namespace BarcoApplicatie
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static BarcoDBContext context = new BarcoDBContext();
+        private DAO dao;
 
         public MainWindow()
         {
             InitializeComponent();
+            dao = DAO.Instance();
+
             insertDivisionIntoComboBox();
             insertJobNatureIntoComboBox();
         }
@@ -33,7 +37,7 @@ namespace BarcoApplicatie
         //Koen
         private void insertDivisionIntoComboBox()
         {
-            var divisions = context.RqBarcoDivision.ToList();
+            List<RqBarcoDivision> divisions = dao.getAllDivisions();
 
             foreach (RqBarcoDivision division in divisions)
             {
@@ -44,7 +48,7 @@ namespace BarcoApplicatie
         //Koen
         private void insertJobNatureIntoComboBox()
         {
-            var jobNatures = context.RqJobNature.ToList();
+            List<RqJobNature> jobNatures = dao.getAllJobNatures();
 
             foreach (RqJobNature jobNature in jobNatures)
             {
@@ -52,34 +56,15 @@ namespace BarcoApplicatie
             }
         }
 
+
         //Koen
-        private void Request()
-        {
-            RqRequest request = new RqRequest();
-            request.JrNumber = "0002";
-            request.Requester = txtRequesterInitials.Text;
-            request.BarcoDivision = cmbDivision.Text;
-            request.JobNature = cmbJobNature.Text;
-            request.EutProjectname = txtProjectName.Text;
-            request.EutPartnumbers = txtEutPartnumber1.Text;
-            request.ExpectedEnddate = ExpectedEndDate.SelectedDate;
-            request.InternRequest = false;
-            request.GrossWeight = Convert.ToInt16(txtGrossWeight1.Text);
-            request.NetWeight = Convert.ToInt16(txtNetWeight1.Text);
-
-            if (Checkbox_Yes.IsChecked == true)
-            {
-                request.Battery = true;
-            }
-
-            context.Add(request);
-            context.SaveChanges();            
-        }
-
-        //Koen/
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
-            Request();
+            dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text, 
+                txtProjectName.Text, txtEutPartnumber1.Text, ExpectedEndDate.SelectedDate, 
+                txtGrossWeight1.Text, txtNetWeight1.Text, Checkbox_Yes);
+
+            dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         }
     }
 }
