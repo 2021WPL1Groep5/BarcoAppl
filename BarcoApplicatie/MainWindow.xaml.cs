@@ -71,7 +71,7 @@ namespace BarcoApplicatie
             ViewJobrequest.Show();
         }
 
-            dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
+        dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
             HomeScreen HomeScreen = new HomeScreen();
