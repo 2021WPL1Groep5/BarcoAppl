@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections;
+
 
 namespace BarcoApplicatie
 {
@@ -21,11 +23,13 @@ namespace BarcoApplicatie
     /// </summary>
     public partial class MainWindow : Window 
     {
-        private static BarcoDBContext context = new BarcoDBContext();
+        private DAO dao;
 
         public MainWindow()
         {
             InitializeComponent();
+            dao = DAO.Instance();
+
             insertDivisionIntoComboBox();
             insertJobNatureIntoComboBox();
         }
@@ -33,7 +37,7 @@ namespace BarcoApplicatie
         //Koen
         private void insertDivisionIntoComboBox()
         {
-            var divisions = context.RqBarcoDivision.ToList();
+            List<RqBarcoDivision> divisions = dao.getAllDivisions();
 
             foreach (RqBarcoDivision division in divisions)
             {
@@ -44,7 +48,7 @@ namespace BarcoApplicatie
         //Koen
         private void insertJobNatureIntoComboBox()
         {
-            var jobNatures = context.RqJobNature.ToList();
+            List<RqJobNature> jobNatures = dao.getAllJobNatures();
 
             foreach (RqJobNature jobNature in jobNatures)
             {
@@ -53,75 +57,59 @@ namespace BarcoApplicatie
         }
 
         //Koen
-        private void Request()
-        {
-            RqRequest request = new RqRequest();
-            request.JrNumber = "0002";
-            request.Requester = txtRequesterInitials.Text;
-            request.BarcoDivision = cmbDivision.Text;
-            request.JobNature = cmbJobNature.Text;
-            request.EutProjectname = txtProjectName.Text;
-            request.EutPartnumbers = txtEutPartnumber1.Text;
-            request.ExpectedEnddate = ExpectedEndDate.SelectedDate;
-            request.InternRequest = false;
-            request.GrossWeight = Convert.ToInt16(txtGrossWeight1.Text);
-            request.NetWeight = Convert.ToInt16(txtNetWeight1.Text);
-
-            if (Checkbox_Yes.IsChecked == true)
-            {
-                request.Battery = true;
-            }
-
-            context.Add(request);
-            context.SaveChanges();
-        }
-        
-        private void txtNetWeight1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            /*
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtNetWeight1.Text, "[^0-9-.]"))
-            {
-                MessageBox.Show("Please enter only numbers.");
-                txtNetWeight1.Text = txtNetWeight1.Text.Remove(txtNetWeight1.Text.Length - 1);
-            }
-            */
-        }
-
-        private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            /*
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtProjectNumber.Text, "[^0-9-E]"))
-            {
-                MessageBox.Show("Please enter only numbers or a E.");
-                txtProjectNumber.Text = txtProjectNumber.Text.Remove(txtProjectNumber.Text.Length - 1);
-            }
-            */
-        }
-
-        private void cmbDivision_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void Checkbox_Yes_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Checkbox_No_Checked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        //Koen/
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
-            Request();
+            dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text, 
+                txtProjectName.Text, txtEutPartnumber1.Text, ExpectedEndDate.SelectedDate, 
+                txtGrossWeight1.Text, txtNetWeight1.Text, Checkbox_Yes);
+
+            dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         }
 
-        private void cmbJobNature_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
+        /*
+        public void RequesterInitials(string txtrequesterinitials)
+        {
+              txtRequesterInitials.Text = txtrequesterinitials.ToUpper();
+            
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtrequesterinitials, "[^A-Z-a-z]"))
+            {
+                MessageBox.Show("Please enter only letters.");
+                txtrequesterinitials = txtrequesterinitials.Remove(txtrequesterinitials.Length - 1);
+                txtRequesterInitials.Text = txtrequesterinitials.ToUpper();
+            }
+        }
+        */
+        public void EutPartnumber(string txteutpartnr)
+        {
+            txteutpartnr = txtEutPartnumber1.Text;
+            if (System.Text.RegularExpressions.Regex.IsMatch(txteutpartnr, "[^0-9-A-Z-.]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txteutpartnr = txteutpartnr.Remove(txteutpartnr.Length - 1);
+            }
+        }
+
+        public void ChangeWeight(string changeweight)
+        {
+            txtNetWeight1.Text = changeweight;
+            txtGrossWeight2.Text = changeweight;
+            if (System.Text.RegularExpressions.Regex.IsMatch(changeweight, "[^0-9-,]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                changeweight = changeweight.Remove(changeweight.Length - 1);
+            }
+        }
+
+        private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtRequesterInitials.Text, "[^A-Z-a-z]"))
+            {
+                MessageBox.Show("Please enter only letters.");
+                txtRequesterInitials.Text = txtRequesterInitials.Text.Remove(txtRequesterInitials.Text.Length - 1);
+            }
+            txtRequesterInitials.Text.ToUpper();
         }
     }
 }

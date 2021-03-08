@@ -7,27 +7,32 @@ namespace BarcoApplicatie
 {
     class ErrorHandling
     {
-
-        public void errorInitials()
+        public void errorhandling()
         {
 
         }
 
         public string txtRequesterInitials { get; set; }
         public string txtProjectNumber { get; set; }
-        public string txtEutPartnumber { get; set; }
-        public string txtNetWeight { get; set; }
-        public string txtGrossWeight { get; set; }
-
+        public string txtEutPartnumber1 { get; set; }
+        public string txtNetWeight1 { get; set; }
+        public string txtGrossWeight1 { get; set; }
+        /*
         public void RequesterInitials(string txtrequesterinitials)
         {
             txtRequesterInitials = txtrequesterinitials.ToUpper();
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtrequesterinitials, "[^A-Z]"))
+            {
+                MessageBox.Show("Please enter only letters.");
+                //txtrequesterinitials = txtrequesterinitials.Remove(txtrequesterinitials.Length - 1);
+                
+            }
         }
-
+        */
         public void EutPartnumber(string txteutpartnr)
         {
-            txtEutPartnumber = txteutpartnr;
-            if (System.Text.RegularExpressions.Regex.IsMatch(txteutpartnr, "[^0-9]"))
+            txtEutPartnumber1 = txteutpartnr;
+            if (System.Text.RegularExpressions.Regex.IsMatch(txteutpartnr, "[^0-9-A-Z-.]"))
             {
                 MessageBox.Show("Please enter only numbers.");
                 txteutpartnr = txteutpartnr.Remove(txteutpartnr.Length - 1);
@@ -39,30 +44,20 @@ namespace BarcoApplicatie
             txtProjectNumber = txtprojectnr;
             if (System.Text.RegularExpressions.Regex.IsMatch(txtprojectnr, "[^0-9-E-.]"))
             {
-                MessageBox.Show("Please enter only numbers or a E.");
+                MessageBox.Show("Please enter only numbers or E.");
                 txtprojectnr = txtprojectnr.Remove(txtprojectnr.Length - 1);
             }
         }
 
-        public void netWeight(string txtnetweight)
+        public void ChangeWeight(string changeweight)
         {
-            txtNetWeight = txtnetweight;
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtnetweight, "[^0-9-,]"))
+            txtNetWeight1 = changeweight;
+            txtGrossWeight1 = changeweight;
+            if (System.Text.RegularExpressions.Regex.IsMatch(changeweight, "[^0-9-,]"))
             {
                 MessageBox.Show("Please enter only numbers.");
-                txtnetweight = txtnetweight.Remove(txtnetweight.Length - 1);
+                changeweight = changeweight.Remove(changeweight.Length - 1);
             }
         }
-
-        public void grossWeight(string txtgrossweight)
-        {
-            txtGrossWeight = txtgrossweight;
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtgrossweight, "[^0-9-,]"))
-            {
-                MessageBox.Show("Please enter only numbers.");
-                txtgrossweight = txtgrossweight.Remove(txtgrossweight.Length - 1);
-            }
-        }
-
     }
 }
