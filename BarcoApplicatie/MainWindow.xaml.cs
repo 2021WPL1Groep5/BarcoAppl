@@ -76,7 +76,7 @@ namespace BarcoApplicatie
             context.SaveChanges();            
         }
 
-        //Koen
+        //Koen/
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
             Request();
