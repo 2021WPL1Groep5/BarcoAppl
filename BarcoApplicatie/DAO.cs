@@ -74,5 +74,13 @@ namespace BarcoApplicatie
             context.RqOptionel.Add(optional);
             context.SaveChanges();
         }
+
+        public void addingDateToEUT(DatePicker date)
+        {
+            Eut eut = new Eut();
+            eut.AvailableDate = date.SelectedDate;
+            context.Add(eut);
+            context.SaveChanges();
+        }
     }
 }

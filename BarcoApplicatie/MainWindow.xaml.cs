@@ -81,6 +81,8 @@ namespace BarcoApplicatie
                 Checkbox_Yes);
 
             dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
+
+            dao.addingDateToEUT(DateEut1);
         }
     }
 }
