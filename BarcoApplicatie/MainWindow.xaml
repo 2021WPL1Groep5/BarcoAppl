@@ -9,7 +9,10 @@
         
 		">
     <Grid Background="#FF3C3F41" OpacityMask="White" Margin="-2,0,0,-6">
-        
+        <Grid.Style>
+            <Style/>
+        </Grid.Style>
+
         <Label x:Name="lblResult" Content="" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top"/>
         <Border BorderThickness="1" BorderBrush="#FFF10000" HorizontalAlignment="Center" Height="56" VerticalAlignment="Top" Width="1920" Background="#FFF10000"/>
         <CheckBox x:Name="Checkbox_Yes" Content="YES" HorizontalAlignment="Left" Margin="233,353,0,0" VerticalAlignment="Top" Checked="Checkbox_Yes_Checked" Background="#FF45494A" Foreground="White"/>
@@ -38,12 +41,7 @@
         </TextBox>
         <Label Content="NATURE OF TEST(S) TO PERFORM" HorizontalAlignment="Left" Margin="25,463,0,0" VerticalAlignment="Top" Foreground="White"/>
         <ComboBox x:Name="cmbDivision" HorizontalAlignment="Left" Height="18" Margin="233,104,0,0" VerticalAlignment="Top" Width="120" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" SelectionChanged="cmbDivision_SelectionChanged">
-            <Popup x:Name="Popup">
-                <Border x:Name="PopupBorder"
-                    Background="HotPink"
-                    BorderBrush="HotPink"
-                    />
-            </Popup>
+
         </ComboBox>
         <DatePicker x:Name="ExpectedEndDate" HorizontalAlignment="Left" Height="26" Margin="233,317,0,0" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Foreground="White" Text="#FFFFFF" ForceCursor="True">
             <DatePicker.CalendarStyle>
