@@ -21,6 +21,12 @@ namespace BarcoApplicatie.BibModels
         public virtual DbSet<RqBarcoDivisionPerson> RqBarcoDivisionPerson { get; set; }
         public virtual DbSet<RqJobNature> RqJobNature { get; set; }
         public virtual DbSet<RqOptionel> RqOptionel { get; set; }
+
+        internal void Add()
+        {
+            throw new NotImplementedException();
+        }
+
         public virtual DbSet<RqRequest> RqRequest { get; set; }
         public virtual DbSet<RqRequestDetail> RqRequestDetail { get; set; }
         public virtual DbSet<RqTestDevision> RqTestDevision { get; set; }
