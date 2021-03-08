@@ -28,6 +28,10 @@ namespace BarcoApplicatie
         public MainWindow()
         {
             InitializeComponent();
+
+            BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
+            capturedPhoto.Source = bitmapImage;
+
             dao = DAO.Instance();
 
             insertDivisionIntoComboBox();
