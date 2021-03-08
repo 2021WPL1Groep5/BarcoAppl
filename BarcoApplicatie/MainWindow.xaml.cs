@@ -32,6 +32,8 @@ namespace BarcoApplicatie
 
             insertDivisionIntoComboBox();
             insertJobNatureIntoComboBox();
+
+            isFilledIn(cbEmcEut);
         }
 
         //Koen
@@ -65,6 +67,27 @@ namespace BarcoApplicatie
                 txtGrossWeight1.Text, txtNetWeight1.Text, Checkbox_Yes);
 
             dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
+        }
+
+        public void isFilledIn(CheckBox item)   //cbEmcEut
+        {
+            if (item.IsChecked == false)        //cbEmcEut
+            {
+                int iNumber = 0;
+                for (int i = 0; i < 6; i++)
+                {
+                    //string itemValue = item.content.ToString();
+                    iNumber += iNumber++;
+
+                    string sItem = item.Name;
+
+
+                    string sNumber = Convert.ToString(iNumber);
+
+                    sItem = sItem + sNumber;
+                   item.IsEnabled = false;
+                }
+            }
         }
     }
 }

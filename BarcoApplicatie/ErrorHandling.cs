@@ -11,7 +11,5 @@ namespace BarcoApplicatie
         {
 
         }
-
-        public void 
     }
 }
