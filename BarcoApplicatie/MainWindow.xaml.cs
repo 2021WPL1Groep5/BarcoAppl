@@ -67,8 +67,15 @@ namespace BarcoApplicatie
             dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text, 
                 txtProjectName.Text, txtEutPartnumber1.Text, ExpectedEndDate.SelectedDate, 
                 txtGrossWeight1.Text, txtNetWeight1.Text, Checkbox_Yes);
+            ViewJobrequest ViewJobrequest = new ViewJobrequest();
+            ViewJobrequest.Show();
+        }
 
             dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            HomeScreen HomeScreen = new HomeScreen();
+            HomeScreen.Show();
         }
     }
 }
