@@ -34,5 +34,11 @@ namespace BarcoApplicatie
         {
 
         }
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            HomeScreen HomeScreen = new HomeScreen();
+            HomeScreen.Show();
+        }
     }
 }

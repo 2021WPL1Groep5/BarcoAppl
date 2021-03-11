@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="DetailJobrequest" Height="840" Width="900
         
-		">
+		" WindowStartupLocation="CenterScreen">
     <Grid Background="#FF3C3F41" OpacityMask="White" Margin="-2,0,0,-6">
 
         <Label x:Name="lblResult" Content="" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top"/>
@@ -663,6 +663,6 @@
         </TextBox>
         <Label Content="REQUEST DATE" HorizontalAlignment="Left" Margin="688,52,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="JR NUMBER" HorizontalAlignment="Left" Margin="697,70,0,0" VerticalAlignment="Top" Foreground="White"/>
-
+        <Button x:Name="btnHome" Click="btnHome_Click" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Height="56" Margin="1,0,0,0" VerticalAlignment="Top" Width="202"/>
     </Grid>
 </Window>
