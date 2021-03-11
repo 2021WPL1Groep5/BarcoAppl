@@ -100,6 +100,7 @@ namespace BarcoApplicatie
             }
         }
         */
+
         public void EutPartnumber(string txteutpartnr)
         {
             txteutpartnr = txtEutPartnumber1.Text;
@@ -123,13 +124,21 @@ namespace BarcoApplicatie
 
         private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
             if (System.Text.RegularExpressions.Regex.IsMatch(txtRequesterInitials.Text, "[^A-Z-a-z]"))
             {
                 MessageBox.Show("Please enter only letters.");
                 txtRequesterInitials.Text = txtRequesterInitials.Text.Remove(txtRequesterInitials.Text.Length - 1);
             }
             txtRequesterInitials.Text.ToUpper();
+        }
+
+        private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtProjectNumber.Text, "[^0-9-E-.]"))
+            {
+                MessageBox.Show("Please enter only letters.");
+                txtProjectNumber.Text = txtProjectNumber.Text.Remove(txtProjectNumber.Text.Length - 1);
+            }
         }
     }
 }

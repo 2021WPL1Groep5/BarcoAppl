@@ -52,7 +52,7 @@
                 </Style>
             </DatePicker.Resources>
         </DatePicker>
-        <TextBox x:Name="txtProjectNumber" HorizontalAlignment="Left" Margin="233,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtProjectNumber" HorizontalAlignment="Left" Margin="233,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtProjectNumber_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -82,7 +82,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtNetWeight1" HorizontalAlignment="Left" Margin="233,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtNetWeight1" HorizontalAlignment="Left" Margin="233,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -624,6 +624,10 @@
             </DatePicker.CalendarStyle>
         </DatePicker>
         <Image x:Name="capturedPhoto" Width="200" Height="75" Margin="2,-7,700,762"/>
+        <Label x:Name="Erroprojectnr" HorizontalAlignment="Left" Margin="369,166,0,0" VerticalAlignment="Top" Height="18" Width="233"/>
+        <Label x:Name="ErrorDate" HorizontalAlignment="Left" Margin="369,320,0,0" VerticalAlignment="Top" Width="233" Height="20
+               "/>
+        <Label x:Name="Errorprojectname" HorizontalAlignment="Left" Margin="369,197,0,0" VerticalAlignment="Top" Height="18" Width="233"/>
 
     </Grid>
 </Window>
