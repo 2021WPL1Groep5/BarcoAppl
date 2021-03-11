@@ -1,4 +1,4 @@
-﻿using BarcoApplicatie.BibModels;
+﻿using BarcoApplicatie.NewBibModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +28,10 @@ namespace BarcoApplicatie
         public MainWindow()
         {
             InitializeComponent();
+
+            BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
+            capturedPhoto.Source = bitmapImage;
+
             dao = DAO.Instance();
 
             insertDivisionIntoComboBox();
@@ -59,9 +63,25 @@ namespace BarcoApplicatie
         //Koen
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
-            dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text, 
-                txtProjectName.Text, txtEutPartnumber1.Text, ExpectedEndDate.SelectedDate, 
-                txtGrossWeight1.Text, txtNetWeight1.Text, Checkbox_Yes);
+            dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
+               txtProjectName.Text,
+               "part1: " + txtEutPartnumber1.Text + "; " +
+               "part2: " + txtEutPartnumber2.Text + "; " +
+               "part3: " + txtEutPartnumber3.Text + "; " +
+               "part4: " + txtEutPartnumber4.Text + "; " +
+               "part5: " + txtEutPartnumber5.Text + "; ",
+               ExpectedEndDate.SelectedDate,
+               "Gross1: " + txtGrossWeight1.Text + "; " +
+               "Gross2: " + txtGrossWeight2.Text + "; " +
+               "Gross3: " + txtGrossWeight3.Text + "; " +
+               "Gross4: " + txtGrossWeight4.Text + "; " +
+               "Gross5: " + txtGrossWeight4.Text + "; ",
+               "Net1: " + txtNetWeight1.Text + "; " +
+               "Net2: " + txtNetWeight2.Text + "; " +
+               "Net3: " + txtNetWeight3.Text + "; " +
+               "Net4: " + txtNetWeight4.Text + "; " +
+               "Net5: " + txtNetWeight5.Text + "; ",
+               Checkbox_Yes);
 
             dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         }
