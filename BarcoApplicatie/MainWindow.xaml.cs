@@ -21,7 +21,7 @@ namespace BarcoApplicatie
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window 
     {
         private DAO dao;
 
@@ -60,7 +60,6 @@ namespace BarcoApplicatie
             }
         }
 
-
         //Koen
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
@@ -85,6 +84,52 @@ namespace BarcoApplicatie
                Checkbox_Yes);
 
             dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
+        }
+
+
+        /*
+        public void RequesterInitials(string txtrequesterinitials)
+        {
+              txtRequesterInitials.Text = txtrequesterinitials.ToUpper();
+            
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtrequesterinitials, "[^A-Z-a-z]"))
+            {
+                MessageBox.Show("Please enter only letters.");
+                txtrequesterinitials = txtrequesterinitials.Remove(txtrequesterinitials.Length - 1);
+                txtRequesterInitials.Text = txtrequesterinitials.ToUpper();
+            }
+        }
+        */
+        public void EutPartnumber(string txteutpartnr)
+        {
+            txteutpartnr = txtEutPartnumber1.Text;
+            if (System.Text.RegularExpressions.Regex.IsMatch(txteutpartnr, "[^0-9-A-Z-.]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txteutpartnr = txteutpartnr.Remove(txteutpartnr.Length - 1);
+            }
+        }
+
+        public void ChangeWeight(string changeweight)
+        {
+            txtNetWeight1.Text = changeweight;
+            txtGrossWeight2.Text = changeweight;
+            if (System.Text.RegularExpressions.Regex.IsMatch(changeweight, "[^0-9-,]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                changeweight = changeweight.Remove(changeweight.Length - 1);
+            }
+        }
+
+        private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtRequesterInitials.Text, "[^A-Z-a-z]"))
+            {
+                MessageBox.Show("Please enter only letters.");
+                txtRequesterInitials.Text = txtRequesterInitials.Text.Remove(txtRequesterInitials.Text.Length - 1);
+            }
+            txtRequesterInitials.Text.ToUpper();
         }
     }
 }
