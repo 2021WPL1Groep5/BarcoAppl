@@ -28,14 +28,14 @@ namespace BarcoApplicatie
         public MainWindow()
         {
             InitializeComponent();
-
-            BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
-            capturedPhoto.Source = bitmapImage;
-
             dao = DAO.Instance();
 
             insertDivisionIntoComboBox();
             insertJobNatureIntoComboBox();
+
+            BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
+            capturedPhoto.Source = bitmapImage;
+
         }
 
         //Koen
@@ -63,27 +63,38 @@ namespace BarcoApplicatie
         //Koen
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
-            dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
-               txtProjectName.Text,
-               "part1: " + txtEutPartnumber1.Text + "; " +
-               "part2: " + txtEutPartnumber2.Text + "; " +
-               "part3: " + txtEutPartnumber3.Text + "; " +
-               "part4: " + txtEutPartnumber4.Text + "; " +
-               "part5: " + txtEutPartnumber5.Text + "; ",
-               ExpectedEndDate.SelectedDate,
-               "Gross1: " + txtGrossWeight1.Text + "; " +
-               "Gross2: " + txtGrossWeight2.Text + "; " +
-               "Gross3: " + txtGrossWeight3.Text + "; " +
-               "Gross4: " + txtGrossWeight4.Text + "; " +
-               "Gross5: " + txtGrossWeight4.Text + "; ",
-               "Net1: " + txtNetWeight1.Text + "; " +
-               "Net2: " + txtNetWeight2.Text + "; " +
-               "Net3: " + txtNetWeight3.Text + "; " +
-               "Net4: " + txtNetWeight4.Text + "; " +
-               "Net5: " + txtNetWeight5.Text + "; ",
-               Checkbox_Yes);
+            ViewJobrequest ViewJobrequest = new ViewJobrequest();
+            ViewJobrequest.Show();
 
-            dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
+            dao.Request(txtRequesterInitials1.Text, cmbDivision.Text, cmbJobNature.Text,
+                txtProjectName1.Text, txtEutPartnumber6.Text, ExpectedEndDate.SelectedDate,
+                txtGrossWeight6.Text, txtNetWeight6.Text, Checkbox_Yes);
+        }
+            
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            HomeScreen HomeScreen = new HomeScreen();
+            HomeScreen.Show();
+            dao.addingOptionalInput(txtLinkToTestplan1.Text, txtSpecialRemarks1.Text);
+        }
+
+        //move to errorhandling
+        public void PVGresponsible()
+        {
+            //this is not available in MainWindow
+            cmbPvgResposibleEmc.IsEnabled = false;
+            cmbPvgResponsibleEnviromental.IsEnabled = false;
+            cmbPvgRepsonsibleReliability.IsEnabled = false;
+            cmbPvgResponsibleProductSafety.IsEnabled = false;
+            cmbPvgResponsiblePackaging.IsEnabled = false;
+            cmbPvgResponsibleGreenCompilance.IsEnabled = false;
+        }
+
+        //move to errorhandling
+        public void isEnabled()
+        {
+
         }
 
 

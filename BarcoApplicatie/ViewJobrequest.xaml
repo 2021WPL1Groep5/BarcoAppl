@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BarcoApplicatie"
         mc:Ignorable="d"
-        Title="ViewJobrequest" Height="840" Width="900">
+        Title="ViewJobrequest" Height="840" Width="900" WindowStartupLocation="CenterScreen">
 
     <Grid Background="#FF3C3F41" OpacityMask="White" Margin="-2,0,0,-6">
         <Image x:Name="capturedPhoto" Width="200" Height="75" Margin="2,-7,700,762"/>
@@ -55,5 +55,6 @@
         <Label Content="Request date" HorizontalAlignment="Left" Margin="15,53,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="End date" HorizontalAlignment="Left" Margin="819,53,0,0" VerticalAlignment="Top" Foreground="White"/>
         <ListBox Margin="0,76,0,0" BorderThickness="0.5,0.25" Background="Transparent" BorderBrush="#FF707070" Foreground="White"/>
+        <Button x:Name="btnHome" Click="btnHome_Click" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Height="56" Margin="1,0,0,0" VerticalAlignment="Top" Width="202"/>
     </Grid>
 </Window>
