@@ -21,25 +21,7 @@ namespace BarcoApplicatie
 
     public static class Utils 
     {
-        public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
-        {
-            if (depObj != null)
-            {
-                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
-                {
-                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
-                    if (child != null && child is T)
-                    {
-                        yield return (T)child;
-                    }
-
-                    foreach (T childOfChild in FindVisualChildren<T>(child))
-                    {
-                        yield return childOfChild;
-                    }
-                }
-            }
-        }
+        
     }
 
     /// <summary>
@@ -60,10 +42,10 @@ namespace BarcoApplicatie
 
             BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
             capturedPhoto.Source = bitmapImage;
-
         }
 
-        //Koen
+        ///////////////////////////////////////////////////////Load ComboBox///////////////////////////////////////////////////////
+
         private void insertDivisionIntoComboBox()
         {
             List<RqBarcoDivision> divisions = dao.getAllDivisions();
@@ -73,8 +55,6 @@ namespace BarcoApplicatie
                 cmbDivision.Items.Add(division.Afkorting);
             }
         }
-
-        //Koen
         private void insertJobNatureIntoComboBox()
         {
             List<RqJobNature> jobNatures = dao.getAllJobNatures();
@@ -84,9 +64,8 @@ namespace BarcoApplicatie
                 cmbJobNature.Items.Add(jobNature.Nature);
             }
         }
+        ///////////////////////////////////////////////////////Import data///////////////////////////////////////////////////////
 
-
-        //Koen
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
             ViewJobrequest ViewJobrequest = new ViewJobrequest();
@@ -105,19 +84,27 @@ namespace BarcoApplicatie
             dao.addingOptionalInput(txtLinkToTestplan1.Text, txtSpecialRemarks1.Text);
         }
 
-        //fixed in gui
-        public void PVGresponsible()
-        {
-            //this is not available in MainWindow
-            cmbPvgResposibleEmc.IsEnabled = false;
-            cmbPvgResponsibleEnviromental.IsEnabled = false;
-            cmbPvgRepsonsibleReliability.IsEnabled = false;
-            cmbPvgResponsibleProductSafety.IsEnabled = false;
-            cmbPvgResponsiblePackaging.IsEnabled = false;
-            cmbPvgResponsibleGreenCompilance.IsEnabled = false;
-        }
+        ///////////////////////////////////////////////////////Checkbox///////////////////////////////////////////////////////
 
-        //toggleCheckbox
+        public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child != null && child is T)
+                    {
+                        yield return (T)child;
+                    }
+
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
+        }
         public void toggleCheckboxes(string checkboxName, string exceptions ,bool toggle)
         {
             foreach (CheckBox checkBox in Utils.FindVisualChildren<CheckBox>(this))
@@ -130,7 +117,6 @@ namespace BarcoApplicatie
                 }
             }
         }
-
         public void toggle_click(CheckBox name, string cbname)
         {
             if (name.IsChecked == true)
@@ -142,7 +128,6 @@ namespace BarcoApplicatie
                 toggleCheckboxes(cbname, name.Name, false);
             }
         }
-
         private void cbEmcEut_Click(object sender, RoutedEventArgs e)
         {
             errorHandling.toggle_click(cbEmcEut, "cbEmcEut");
@@ -151,22 +136,18 @@ namespace BarcoApplicatie
         {
             errorHandling.toggle_click(cbEnviromental, "cbEnviromental");
         }
-
         private void cbReliability_Click(object sender, RoutedEventArgs e)
         {
             errorHandling.toggle_click(cbReliability, "cbReliability");
         }
-
         private void cbProductSafety_Click(object sender, RoutedEventArgs e)
         {
             errorHandling.toggle_click(cbProductSafety, "cbProductSafety");
         }
-
         private void cbPackaging_Click(object sender, RoutedEventArgs e)
         {
             errorHandling.toggle_click(cbPackaging, "cbPackaging");
         }
-
         private void cbGreenCompilance_Click(object sender, RoutedEventArgs e)
         {
             errorHandling.toggle_click(cbGreenCompilance, "cbGreenCompilance");
