@@ -1,4 +1,4 @@
-﻿using BarcoApplicatie.NewBibModels;
+﻿using BarcoApplicatie.BibModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,7 +45,7 @@ namespace BarcoApplicatie
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window 
     {
         private DAO dao;
         private ErrorHandling errorHandling = new ErrorHandling();
@@ -85,8 +85,8 @@ namespace BarcoApplicatie
             }
         }
 
-
         //Koen
+        /*
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
             dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
@@ -215,8 +215,151 @@ namespace BarcoApplicatie
         }
         private void cbGreenCompilance_Click(object sender, RoutedEventArgs e)
         {
-            toggle_click(cbGreenCompilance, "cbGreenCompilance");
-        }        
+
+        }
+
+
+        /*
+        public void RequesterInitials(string txtrequesterinitials)
+        {
+              txtRequesterInitials.Text = txtrequesterinitials.ToUpper();
+            
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtrequesterinitials, "[^A-Z-a-z]"))
+            {
+                MessageBox.Show("Please enter only letters.");
+                txtrequesterinitials = txtrequesterinitials.Remove(txtrequesterinitials.Length - 1);
+                txtRequesterInitials.Text = txtrequesterinitials.ToUpper();
+            }
+        }
+        */
+
+
+        public void ControlInput(string canBe, TextBox box, Label label, string content)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(box.Text, canBe))
+            {
+                label.Content = content;
+                box.Text = box.Text.Remove(box.Text.Length - 1);
+            }
+
+        }
+
+        // elk tekstvak de input met de functie controleren en aanpassen
+        private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^A-Z-a-z]", txtRequesterInitials1, initialsErrorLabel, "Please enter letters only.");
+
+            txtRequesterInitials1.Text.ToUpper();
+        }
+        
+        
+        private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^A-Z-a-z-0-9]", txtProjectNumber1 , projectNumberErrorLabel, "Please enter numbers and letters only.");
+        }
+
+       
+        public void EutPartnumber(string txteutpartnr)
+        {
+           
+        }
+
+        public void ChangeWeight(string changeweight)
+        {
+            
+        }
+
+      
+
+       
+
+        private void txtProjectName1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+       
+        
+        private void txtEutPartnumber1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtEutPartnumber1, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtEutPartnumber2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtEutPartnumber2, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtEutPartnumber3_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtEutPartnumber3, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtEutPartnumber4_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtEutPartnumber4, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtEutPartnumber5_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtEutPartnumber5, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtNetWeight1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtNetWeight1, numbersErrorLabel, "Please enter numbers only.");
+            
+        }
+
+        private void txtNetWeight2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtNetWeight2, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtNetWeight3_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtNetWeight3, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtNetWeight4_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtNetWeight4, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtNetWeight5_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtNetWeight5, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtGrossWeight1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtGrossWeight1, numbersErrorLabel, "Please enter numbers only.");
+            
+        }
+
+        private void txtGrossWeight2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtGrossWeight2, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtGrossWeight3_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtGrossWeight3, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtGrossWeight4_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtGrossWeight4, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtGrossWeight5_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtGrossWeight5, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void btnSendJob_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
 
