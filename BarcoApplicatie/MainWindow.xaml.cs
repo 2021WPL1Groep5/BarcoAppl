@@ -1,4 +1,4 @@
-﻿using BarcoApplicatie.BibModels;
+﻿using BarcoApplicatie.NewBibModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,14 +30,14 @@ namespace BarcoApplicatie
             InitializeComponent();
             dao = DAO.Instance();
 
-            insertDivisionIntoComboBox();
-            insertJobNatureIntoComboBox();
+            //insertDivisionIntoComboBox();
+            //insertJobNatureIntoComboBox();
 
             BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
             capturedPhoto.Source = bitmapImage;
 
         }
-
+        /*
         //Koen
         private void insertDivisionIntoComboBox()
         {
@@ -59,7 +59,7 @@ namespace BarcoApplicatie
                 cmbJobNature.Items.Add(jobNature.Nature);
             }
         }
-
+        */
         //Koen
         /*
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
@@ -81,6 +81,7 @@ namespace BarcoApplicatie
         }
 
         //move to errorhandling
+        /*
         public void PVGresponsible()
         {
             //this is not available in MainWindow
@@ -97,7 +98,7 @@ namespace BarcoApplicatie
         {
 
         }
-
+        */
 
         /*
         public void RequesterInitials(string txtrequesterinitials)
@@ -127,7 +128,7 @@ namespace BarcoApplicatie
         // elk tekstvak de input met de functie controleren en aanpassen
         private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^A-Z-a-z]", txtRequesterInitials1, initialsErrorLabel, "Please enter letters only.");
+            ControlInput("[^A-Z-a-z]", txtRequesterInitials1, InitialErrorLabel, "Please enter letters only.");
 
             txtRequesterInitials1.Text.ToUpper();
         }
@@ -135,27 +136,17 @@ namespace BarcoApplicatie
         
         private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^A-Z-a-z-0-9]", txtProjectNumber1 , projectNumberErrorLabel, "Please enter numbers and letters only.");
+            ControlInput("[^0-9]", txtProjectNumber, ProjectNumberErrorLabel, "Please enter numbers only.");
         }
 
        
-        public void EutPartnumber(string txteutpartnr)
-        {
-           
-        }
-
-        public void ChangeWeight(string changeweight)
-        {
-            
-        }
-
       
 
        
 
-        private void txtProjectName1_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtProjectName_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+            ControlInput("[^0-9-A-Z-a-z]", txtProjectName, ProjectNameErrorLabel, "Please enter letters and numbers only.");
         }
        
         
@@ -186,57 +177,62 @@ namespace BarcoApplicatie
 
         private void txtNetWeight1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtNetWeight1, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,-.]", txtNetWeight1, numbersErrorLabel, "Please enter numbers or , . only.");
             
         }
 
         private void txtNetWeight2_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtNetWeight2, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,-.]", txtNetWeight2, numbersErrorLabel, "Please enter numbers or , . only.");
         }
 
         private void txtNetWeight3_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtNetWeight3, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,-.]", txtNetWeight3, numbersErrorLabel, "Please enter numbers or , . only.");
         }
 
         private void txtNetWeight4_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtNetWeight4, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,-.]", txtNetWeight4, numbersErrorLabel, "Please enter numbers or , . only.");
         }
 
         private void txtNetWeight5_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtNetWeight5, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,-.]", txtNetWeight5, numbersErrorLabel, "Please enter numbers or , . only.");
         }
 
         private void txtGrossWeight1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtGrossWeight1, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,-.]", txtGrossWeight1, numbersErrorLabel, "Please enter numbers or , . only.");
             
         }
 
         private void txtGrossWeight2_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtGrossWeight2, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,-.]", txtGrossWeight2, numbersErrorLabel, "Please enter numbers or , . only.");
         }
 
         private void txtGrossWeight3_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtGrossWeight3, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,-.]", txtGrossWeight3, numbersErrorLabel, "Please enter numbers or , . only.");
         }
 
         private void txtGrossWeight4_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtGrossWeight4, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,-.]", txtGrossWeight4, numbersErrorLabel, "Please enter numbers or , . only.");
         }
 
         private void txtGrossWeight5_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtGrossWeight5, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,-.]", txtGrossWeight5, numbersErrorLabel, "Please enter numbers or , . only.");
         }
 
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void txtProjectName_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
         }

@@ -16,7 +16,7 @@
         <Label x:Name="lblResult1" Content="" HorizontalAlignment="Center" Margin="0,270,0,0" VerticalAlignment="Top"/>
         <Border BorderThickness="1" BorderBrush="#FFF10000" HorizontalAlignment="Center" Height="56" VerticalAlignment="Top" Width="1920" Background="#FFF10000"/>
         <CheckBox x:Name="Checkbox_Yes" Content="YES" HorizontalAlignment="Left" Margin="233,353,0,0" VerticalAlignment="Top" Background="#FF45494A" Foreground="White"/>
-
+        <Image x:Name="capturedPhoto" Width="200" Height="75" Margin="2,-7,700,762"/>
         <CheckBox x:Name="Checkbox_No" Content="NO" HorizontalAlignment="Left" Margin="286,353,0,0" VerticalAlignment="Top" Background="#FF45494A" Foreground="White"/>
         <Label Content="EUT PROJECTNAME (NICKNAME)" HorizontalAlignment="Left" Margin="11,193,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="PROJECT NUMBER (SAP/Hydra)" HorizontalAlignment="Left" Margin="15,162,0,0" VerticalAlignment="Top" Foreground="White"/>
@@ -55,7 +55,7 @@
                 <Style/>
             </DatePicker.CalendarStyle>-->
         </DatePicker>
-        <TextBox x:Name="txtProjectNumber" HorizontalAlignment="Left" Margin="233,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtProjectNumber" HorizontalAlignment="Left" Margin="233,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtProjectNumber_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -65,7 +65,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtProjectName"  HorizontalAlignment="Left" Margin="233,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtProjectName"  HorizontalAlignment="Left" Margin="233,197,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtProjectName_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -601,7 +601,8 @@
 
         </Label>
         <Label x:Name="WeightErrorLabel"  Content="" HorizontalAlignment="Left" Height="25" Margin="402,296,0,0" VerticalAlignment="Top" Width="283" Foreground="Red" />
-        <Label x:Name="ProjectNumberErrorLabel" HorizontalAlignment="Left" Height="25" Margin="356,162,0,0" VerticalAlignment="Top" Width="283" Foreground="Red" />
-        <Label x:Name="ProjectNameErrorLabel" HorizontalAlignment="Left" Height="25" Margin="356,194,0,0" VerticalAlignment="Top" Width="283" Foreground="Red" />
+        <Label x:Name="ProjectNumberErrorLabel" Content="" HorizontalAlignment="Left" Height="25" Margin="356,162,0,0" VerticalAlignment="Top" Width="283" Foreground="Red" />
+        <Label x:Name="ProjectNameErrorLabel" Content="" HorizontalAlignment="Left" Height="25" Margin="356,194,0,0" VerticalAlignment="Top" Width="283" Foreground="Red" />
+        <Label x:Name="numbersErrorLabel" Content="" HorizontalAlignment="Left" Height="25" Margin="399,296,0,0" VerticalAlignment="Top" Width="368" Foreground="Red" />
     </Grid>
 </Window>
