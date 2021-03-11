@@ -122,5 +122,79 @@ namespace BarcoApplicatie
                     cbGreenCompilance3, cbGreenCompilance4, cbGreenCompilance5, cbGreenCompilance6);
             }
         }
+
+        private void btnHome_Click(object sender, RoutedEventArgs e)
+        {
+            HomeScreen HomeScreen = new HomeScreen();
+            HomeScreen.Show();
+            dao.addingOptionalInput(txtLinkToTestplan1.Text, txtSpecialRemarks1.Text);
+        }
+
+        //fixed in gui
+        public void PVGresponsible()
+        {
+            //this is not available in MainWindow
+            cmbPvgResposibleEmc.IsEnabled = false;
+            cmbPvgResponsibleEnviromental.IsEnabled = false;
+            cmbPvgRepsonsibleReliability.IsEnabled = false;
+            cmbPvgResponsibleProductSafety.IsEnabled = false;
+            cmbPvgResponsiblePackaging.IsEnabled = false;
+            cmbPvgResponsibleGreenCompilance.IsEnabled = false;
+        }
+
+        //toggleCheckbox
+        public void toggleCheckboxes(string checkboxName, string exceptions ,bool toggle)
+        {
+            foreach (CheckBox checkBox in Utils.FindVisualChildren<CheckBox>(this))
+            {
+                if( checkBox.Name.Contains(checkboxName)) {
+                    if (!exceptions.Contains(checkBox.Name))
+                    {
+                        checkBox.IsEnabled = toggle;
+                    }
+                }
+            }
+        }
+
+        public void toggle_click(CheckBox name, string cbname)
+        {
+            if (name.IsChecked == true)
+            {
+                toggleCheckboxes(cbname, name.Name, true);
+            }
+            else
+            {
+                toggleCheckboxes(cbname, name.Name, false);
+            }
+        }
+
+        private void cbEmcEut_Click(object sender, RoutedEventArgs e)
+        {
+            toggle_click(cbEmcEut, "cbEmcEut");
+        }
+        private void cbEnviromental_Click(object sender, RoutedEventArgs e)
+        {
+            toggle_click(cbEnviromental, "cbEnviromental");
+        }
+
+        private void cbReliability_Click(object sender, RoutedEventArgs e)
+        {
+            toggle_click(cbReliability, "cbReliability");
+        }
+
+        private void cbProductSafety_Click(object sender, RoutedEventArgs e)
+        {
+            toggle_click(cbProductSafety, "cbProductSafety");
+        }
+
+        private void cbPackaging_Click(object sender, RoutedEventArgs e)
+        {
+            toggle_click(cbPackaging, "cbPackaging");
+        }
+
+        private void cbGreenCompilance_Click(object sender, RoutedEventArgs e)
+        {
+            toggle_click(cbGreenCompilance, "cbGreenCompilance");
+        }        
     }
 }
