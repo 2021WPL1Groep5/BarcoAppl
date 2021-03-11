@@ -1,4 +1,4 @@
-﻿using BarcoApplicatie.BibModels;
+﻿using BarcoApplicatie.NewBibModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +20,10 @@ namespace BarcoApplicatie
 
         private DAO()
         {
-            this.context = new BarcoDBContext();
+            this.context = new BarcoContext();
         }
 
-        private BarcoDBContext context;
+        private BarcoContext context;
 
         public List<RqBarcoDivision> getAllDivisions()
         {
@@ -52,8 +52,8 @@ namespace BarcoApplicatie
             request.EutPartnumbers = partNumber;
             request.ExpectedEnddate = date;
             request.InternRequest = false;
-            request.GrossWeight = Convert.ToInt16(grossWeight);
-            request.NetWeight = Convert.ToInt16(netWeight);
+            request.GrossWeight = grossWeight;
+            request.NetWeight = netWeight;
 
             if (checkbox.IsChecked == true)
             {
@@ -72,6 +72,49 @@ namespace BarcoApplicatie
             optional.Remarks = remarks;
 
             context.RqOptionel.Add(optional);
+            context.SaveChanges();
+        }
+
+        public void addEUT(DateTime? dateEUT1, DateTime? dateEUT2, DateTime? dateEUT3, DateTime? dateEUT4,
+            DateTime? dateEUT5, DateTime? dateEUT6, CheckBox checkBoxEUT1, CheckBox checkBoxEUT2,
+            CheckBox checkBoxEUT3, CheckBox checkBoxEUT4, CheckBox checkBoxEUT5, CheckBox checkBoxEUT6)
+        {
+            Eut eut = new Eut();
+
+            if (checkBoxEUT1.IsChecked == true)
+            {
+                eut.AvailableDateEut1 = dateEUT1;
+            }
+            if (checkBoxEUT2.IsChecked == true)
+            {
+                eut.AvailableDateEut2 = dateEUT2;
+            }
+            if (checkBoxEUT3.IsChecked == true)
+            {
+                eut.AvailableDateEut3 = dateEUT3;
+            }
+            if (checkBoxEUT4.IsChecked == true)
+            {
+                eut.AvailableDateEut4 = dateEUT4;
+            }
+            if (checkBoxEUT5.IsChecked == true)
+            {
+                eut.AvailableDateEut5 = dateEUT5;
+            }
+            if (checkBoxEUT6.IsChecked == true)
+            {
+                eut.AvailableDateEut6 = dateEUT6;
+            }
+
+            context.Eut.Add(eut);
+            context.SaveChanges();
+        }
+
+        public void addEUTOmschrijving(string omschrijving)
+        {
+            Eut eut = new Eut();
+            eut.OmschrijvingEut = omschrijving;
+            context.Eut.Add(eut);
             context.SaveChanges();
         }
     }
