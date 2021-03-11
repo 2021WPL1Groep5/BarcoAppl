@@ -66,16 +66,36 @@ namespace BarcoApplicatie
         {
             ViewJobrequest ViewJobrequest = new ViewJobrequest();
             ViewJobrequest.Show();
+
+            dao.Request(txtRequesterInitials1.Text, cmbDivision.Text, cmbJobNature.Text,
+                txtProjectName1.Text, txtEutPartnumber6.Text, ExpectedEndDate.SelectedDate,
+                txtGrossWeight6.Text, txtNetWeight6.Text, Checkbox_Yes);
         }
-            dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text, 
-                txtProjectName.Text, txtEutPartnumber1.Text, ExpectedEndDate.SelectedDate, 
-                txtGrossWeight1.Text, txtNetWeight1.Text, Checkbox_Yes);
+            
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
             HomeScreen HomeScreen = new HomeScreen();
             HomeScreen.Show();
-            dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
+            dao.addingOptionalInput(txtLinkToTestplan1.Text, txtSpecialRemarks1.Text);
+        }
+
+        //move to errorhandling
+        public void PVGresponsible()
+        {
+            //this is not available in MainWindow
+            cmbPvgResposibleEmc.IsEnabled = false;
+            cmbPvgResponsibleEnviromental.IsEnabled = false;
+            cmbPvgRepsonsibleReliability.IsEnabled = false;
+            cmbPvgResponsibleProductSafety.IsEnabled = false;
+            cmbPvgResponsiblePackaging.IsEnabled = false;
+            cmbPvgResponsibleGreenCompilance.IsEnabled = false;
+        }
+
+        //move to errorhandling
+        public void isEnabled()
+        {
+
         }
     }
 }
