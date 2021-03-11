@@ -78,7 +78,6 @@ namespace BarcoApplicatie
         private void insertJobNatureIntoComboBox()
         {
             List<RqJobNature> jobNatures = dao.getAllJobNatures();
-
             foreach (RqJobNature jobNature in jobNatures)
             {
                 cmbJobNature.Items.Add(jobNature.Nature);
