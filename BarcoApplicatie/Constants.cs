@@ -8,7 +8,7 @@ namespace BarcoApplicatie
     {
         //change to personal connection
         public static string CONNECTION_STRING =
-           "Server=LAPTOP\\VIVES; Database= BarcoDB; Trusted_Connection=True;";
+           "Server=LAPTOP\\VIVES; Database= Barco; Trusted_Connection=True;";
     }
     
 }
