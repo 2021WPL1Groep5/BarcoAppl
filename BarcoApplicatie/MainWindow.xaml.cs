@@ -152,7 +152,7 @@ namespace BarcoApplicatie
         {
             HomeScreen HomeScreen = new HomeScreen();
             HomeScreen.Show();
-            dao.addingOptionalInput(txtLinkToTestplan1.Text, txtSpecialRemarks1.Text);
+            dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         }
 
         //fixed in gui
