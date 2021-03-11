@@ -155,18 +155,7 @@ namespace BarcoApplicatie
             dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         }
 
-        //fixed in gui
-        public void PVGresponsible()
-        {
-            //this is not available in MainWindow
-            cmbPvgResposibleEmc.IsEnabled = false;
-            cmbPvgResponsibleEnviromental.IsEnabled = false;
-            cmbPvgRepsonsibleReliability.IsEnabled = false;
-            cmbPvgResponsibleProductSafety.IsEnabled = false;
-            cmbPvgResponsiblePackaging.IsEnabled = false;
-            cmbPvgResponsibleGreenCompilance.IsEnabled = false;
-        }
-
+        
         //toggleCheckbox
         public void toggleCheckboxes(string checkboxName, string exceptions ,bool toggle)
         {
@@ -192,7 +181,6 @@ namespace BarcoApplicatie
                 toggleCheckboxes(cbname, name.Name, false);
             }
         }
-
         private void cbEmcEut_Click(object sender, RoutedEventArgs e)
         {
             toggle_click(cbEmcEut, "cbEmcEut");
@@ -201,22 +189,18 @@ namespace BarcoApplicatie
         {
             toggle_click(cbEnviromental, "cbEnviromental");
         }
-
         private void cbReliability_Click(object sender, RoutedEventArgs e)
         {
             toggle_click(cbReliability, "cbReliability");
         }
-
         private void cbProductSafety_Click(object sender, RoutedEventArgs e)
         {
             toggle_click(cbProductSafety, "cbProductSafety");
         }
-
         private void cbPackaging_Click(object sender, RoutedEventArgs e)
         {
             toggle_click(cbPackaging, "cbPackaging");
         }
-
         private void cbGreenCompilance_Click(object sender, RoutedEventArgs e)
         {
             toggle_click(cbGreenCompilance, "cbGreenCompilance");
