@@ -28,7 +28,7 @@
         <Label Content="GROSS WEIGHT (kg)" HorizontalAlignment="Left" Margin="44,274,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="EXPECTED END DATE" HorizontalAlignment="Left" Margin="43,317,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="BATTERIES INSIDE" HorizontalAlignment="Left" Margin="50,348,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <TextBox x:Name="txtRequesterInitials1" HorizontalAlignment="Left" Margin="233,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtRequesterInitials" HorizontalAlignment="Left" Margin="233,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
 
             <TextBox.RenderTransform>
                 <TransformGroup>
@@ -56,7 +56,7 @@
                 <Style/>
             </DatePicker.CalendarStyle>-->
         </DatePicker>
-        <TextBox x:Name="txtProjectNumber1" HorizontalAlignment="Left" Margin="233,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
+        <TextBox x:Name="txtProjectNumber" HorizontalAlignment="Left" Margin="233,166,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -227,7 +227,7 @@
             </TextBox.RenderTransform>
         </TextBox>
         <Label Content="LINK TO TESTPLAN" HorizontalAlignment="Left" Margin="48,0,0,0" VerticalAlignment="Center" Foreground="White"/>
-        <TextBox x:Name="txtLinkToTestplan1"  HorizontalAlignment="Left" Margin="233,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="614" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="22">
+        <TextBox x:Name="txtLinkToTestplan"  HorizontalAlignment="Left" Margin="233,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="614" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="22">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -462,7 +462,7 @@
         <Label Content="GREEN COMPILANCE" HorizontalAlignment="Left" Margin="51,598,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="EUT DORE SEEN AVAILABILITY DATE" HorizontalAlignment="Left" Margin="1,626,0,0" VerticalAlignment="Top" Foreground="White" Width="202"/>
         <Label Content="Special remarks (optional):" HorizontalAlignment="Left" Margin="49,666,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <TextBox x:Name="txtSpecialRemarks1" HorizontalAlignment="Left" Margin="54,697,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="420" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="116">
+        <TextBox x:Name="txtSpecialRemarks" HorizontalAlignment="Left" Margin="54,697,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="420" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="116">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -526,7 +526,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <DatePicker x:Name="DateEut7" HorizontalAlignment="Left" Height="26" Margin="211,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10" Foreground="White">
+        <DatePicker x:Name="DateEut1" HorizontalAlignment="Left" Height="26" Margin="211,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10" Foreground="White">
             <DatePicker.Resources>
                 <Style TargetType="{x:Type DatePickerTextBox}">
                     <Setter Property="Background" Value="#FF45494A" />
@@ -536,7 +536,7 @@
                 <Style/>
             </DatePicker.CalendarStyle>
         </DatePicker>
-        <DatePicker x:Name="DateEut8" HorizontalAlignment="Left" Height="26" Margin="302,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10" Foreground="White">
+        <DatePicker x:Name="DateEut2" HorizontalAlignment="Left" Height="26" Margin="302,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10" Foreground="White">
             <DatePicker.Resources>
                 <Style TargetType="{x:Type DatePickerTextBox}">
                     <Setter Property="Background" Value="#FF45494A" />
@@ -546,7 +546,7 @@
                 <Style/>
             </DatePicker.CalendarStyle>
         </DatePicker>
-        <DatePicker x:Name="DateEut9" HorizontalAlignment="Left" Height="26" Margin="393,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10" Foreground="White">
+        <DatePicker x:Name="DateEut3" HorizontalAlignment="Left" Height="26" Margin="393,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10" Foreground="White">
             <DatePicker.Resources>
                 <Style TargetType="{x:Type DatePickerTextBox}">
                     <Setter Property="Background" Value="#FF45494A" />
@@ -556,7 +556,7 @@
                 <Style/>
             </DatePicker.CalendarStyle>
         </DatePicker>
-        <DatePicker x:Name="DateEut10" HorizontalAlignment="Left" Height="26" Margin="484,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10" Foreground="White" >
+        <DatePicker x:Name="DateEut4" HorizontalAlignment="Left" Height="26" Margin="484,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10" Foreground="White" >
             <DatePicker.Resources>
                 <Style TargetType="{x:Type DatePickerTextBox}">
                     <Setter Property="Background" Value="#FF45494A" />
@@ -566,7 +566,7 @@
                 <Style/>
             </DatePicker.CalendarStyle>
         </DatePicker>
-        <DatePicker x:Name="DateEut11" HorizontalAlignment="Left" Height="26" Margin="575,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10" Foreground="White" >
+        <DatePicker x:Name="DateEut5" HorizontalAlignment="Left" Height="26" Margin="575,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10" Foreground="White" >
             <DatePicker.Resources>
                 <Style TargetType="{x:Type DatePickerTextBox}">
                     <Setter Property="Background" Value="#FF45494A" />
@@ -576,7 +576,7 @@
                 <Style/>
             </DatePicker.CalendarStyle>
         </DatePicker>
-        <DatePicker x:Name="DateEut12" HorizontalAlignment="Left" Height="26" Margin="666,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10" Foreground="White" >
+        <DatePicker x:Name="DateEut6" HorizontalAlignment="Left" Height="26" Margin="666,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10" Foreground="White" >
             <DatePicker.Resources>
                 <Style TargetType="{x:Type DatePickerTextBox}">
                     <Setter Property="Background" Value="#FF45494A" />
