@@ -11,13 +11,18 @@ namespace BarcoApplicatie
         {
 
         }
-
+        /*
         public string txtRequesterInitials { get; set; }
         public string txtProjectNumber { get; set; }
         public string txtEutPartnumber1 { get; set; }
         public string txtNetWeight1 { get; set; }
         public string txtGrossWeight1 { get; set; }
-        /*
+
+
+
+
+        
+
         public void RequesterInitials(string txtrequesterinitials)
         {
             txtRequesterInitials = txtrequesterinitials.ToUpper();
@@ -28,7 +33,7 @@ namespace BarcoApplicatie
                 
             }
         }
-        */
+        
         public void EutPartnumber(string txteutpartnr)
         {
             txtEutPartnumber1 = txteutpartnr;
@@ -59,5 +64,6 @@ namespace BarcoApplicatie
                 changeweight = changeweight.Remove(changeweight.Length - 1);
             }
         }
+        */
     }
 }

@@ -80,36 +80,64 @@ namespace BarcoApplicatie
             }
         }
         */
-        public void EutPartnumber(string txteutpartnr)
-        {
-            txteutpartnr = txtEutPartnumber1.Text;
-            if (System.Text.RegularExpressions.Regex.IsMatch(txteutpartnr, "[^0-9-A-Z-.]"))
-            {
-                MessageBox.Show("Please enter only numbers.");
-                txteutpartnr = txteutpartnr.Remove(txteutpartnr.Length - 1);
-            }
-        }
 
         public void ChangeWeight(string changeweight)
         {
             txtNetWeight1.Text = changeweight;
             txtGrossWeight2.Text = changeweight;
-            if (System.Text.RegularExpressions.Regex.IsMatch(changeweight, "[^0-9-,]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(changeweight, "[^0-9*,]"))
             {
-                MessageBox.Show("Please enter only numbers.");
+                WeightErrorLabel.Content = "Please enter numbers only.";
                 changeweight = changeweight.Remove(changeweight.Length - 1);
             }
         }
 
-        private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
+        public void EutPartnumber1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtRequesterInitials.Text, "[^A-Z-a-z]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtEutPartnumber1.Text, "[^A-Z-a-z]"))
             {
-                MessageBox.Show("Please enter only letters.");
-                txtRequesterInitials.Text = txtRequesterInitials.Text.Remove(txtRequesterInitials.Text.Length - 1);
+                MessageBox.Show("Please enter only numbers.");
+                //txtEutPartnumber1.Text.Remove(txtEutPartnumber1.Length - 1);
             }
+        }
+
+
+
+
+        // functie om de input te controleren
+        public void ControlInput(string canBe, TextBox box, Label label, string content)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(box.Text, canBe))
+            {
+                label.Content = content;
+                box.Text = box.Text.Remove(box.Text.Length - 1);
+            }
+            
+        }
+
+        // elk tekstvak de input met de functie controleren en aanpassen
+        private void txtRequesterInitials_TextChanged (object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^A-Z-a-z]", txtRequesterInitials, InitialErrorLabel, "Please enter letters only.");
+
             txtRequesterInitials.Text.ToUpper();
         }
+
+        private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtProjectNumber, ProjectNumberErrorLabel, "Please enter numbers only.");
+        }
+
+        private void txtProjectName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^A-Z-a-z-0-9]", txtProjectNumber, ProjectNumberErrorLabel, "Please enter letters and numbers only.");
+
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtProjectNumber.Text, "[^0-9]"))
+            {
+                ProjectNumberErrorLabel.Content = "Please enter numbers only.";
+                txtProjectNumber.Text = txtProjectNumber.Text.Remove(txtProjectNumber.Text.Length - 1);
+            }
+        }
+
     }
 }

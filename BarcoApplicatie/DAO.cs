@@ -11,6 +11,7 @@ namespace BarcoApplicatie
     //===========  Koen =============
     class DAO
     {
+
         private static readonly DAO instance = new DAO();
 
         public static DAO Instance()
