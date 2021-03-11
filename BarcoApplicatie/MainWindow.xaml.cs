@@ -28,14 +28,14 @@ namespace BarcoApplicatie
         public MainWindow()
         {
             InitializeComponent();
-
-            BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
-            capturedPhoto.Source = bitmapImage;
-
             dao = DAO.Instance();
 
             insertDivisionIntoComboBox();
             insertJobNatureIntoComboBox();
+
+            BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
+            capturedPhoto.Source = bitmapImage;
+
         }
 
         //Koen
@@ -64,18 +64,18 @@ namespace BarcoApplicatie
         //Koen
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
-            dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text, 
-                txtProjectName.Text, txtEutPartnumber1.Text, ExpectedEndDate.SelectedDate, 
-                txtGrossWeight1.Text, txtNetWeight1.Text, Checkbox_Yes);
             ViewJobrequest ViewJobrequest = new ViewJobrequest();
             ViewJobrequest.Show();
         }
+            dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text, 
+                txtProjectName.Text, txtEutPartnumber1.Text, ExpectedEndDate.SelectedDate, 
+                txtGrossWeight1.Text, txtNetWeight1.Text, Checkbox_Yes);
 
-        dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
             HomeScreen HomeScreen = new HomeScreen();
             HomeScreen.Show();
+            dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         }
     }
 }
