@@ -464,66 +464,6 @@
         <Button x:Name="btnAcceptJob" Click="btnSendJob_Click" Content="ACCEPT JOB REQUEST" HorizontalAlignment="Left" Height="47" Margin="579,697,0,0" VerticalAlignment="Top" Width="269" Foreground="White" Background="#FF3E8603"/>
         <Label Content="PVG" HorizontalAlignment="Left" Margin="786,446,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>
         <Label Content="RESPONSIBLE" HorizontalAlignment="Left" Margin="761,463,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>
-        <TextBox x:Name="txtPvgResponsibleEmc" HorizontalAlignment="Left" Margin="757,485,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="24">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="txtEutPartnumber1_Copy2" HorizontalAlignment="Left" Margin="757,531,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="24">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="txtEutPartnumber1_Copy3" HorizontalAlignment="Left" Margin="757,555,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="22">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="txtEutPartnumber1_Copy4" HorizontalAlignment="Left" Margin="757,577,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="24">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="txtEutPartnumber1_Copy5" HorizontalAlignment="Left" Margin="757,601,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="22">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="txtPvgEnviromental" HorizontalAlignment="Left" Margin="757,509,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="22">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
         <DatePicker x:Name="DateEut1" HorizontalAlignment="Left" Height="26" Margin="211,623,0,0" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Text="#FFFFFF" ForceCursor="True" FontSize="10">
             <DatePicker.Resources>
                 <Style TargetType="{x:Type DatePickerTextBox}">
@@ -615,31 +555,19 @@
                 <Style/>
             </DatePicker.CalendarStyle>
         </DatePicker>
+        <ComboBox x:Name="cmbDivision" HorizontalAlignment="Left" Height="20" Margin="233,104,0,0" VerticalAlignment="Top" Width="120" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B">
+
+        </ComboBox>
         <Image x:Name="capturedPhoto" Width="200" Height="75" Margin="2,-7,700,762"/>
-        <TextBox x:Name="txtDivision" HorizontalAlignment="Left" Margin="233,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
-
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <TextBox x:Name="txtJobNature" HorizontalAlignment="Left" Margin="233,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White">
-
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
         <Button x:Name="btnRefuseJob" Click="btnSendJob_Click" Content="REFUSE JOB REQUEST" HorizontalAlignment="Left" Height="47" Margin="579,766,0,0" VerticalAlignment="Top" Width="269" Foreground="White" Background="#FFF10000"/>
         <Button x:Name="btnHome" Click="btnHome_Click" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Height="56" Margin="1,0,0,0" VerticalAlignment="Top" Width="202"/>
-        
+        <ComboBox x:Name="cmbPvgResposibleEmc" HorizontalAlignment="Left" Height="24" Margin="757,485,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False"/>
+        <ComboBox x:Name="cmbPvgResponsibleEnviromental" HorizontalAlignment="Left" Height="24" Margin="757,508,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False"/>
+        <ComboBox x:Name="cmbPvgRepsonsibleReliability" HorizontalAlignment="Left" Height="24" Margin="757,531,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False"/>
+        <ComboBox x:Name="cmbPvgResponsibleProductSafety" HorizontalAlignment="Left" Height="24" Margin="757,554,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False"/>
+        <ComboBox x:Name="cmbPvgResponsiblePackaging" HorizontalAlignment="Left" Height="24" Margin="757,577,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False"/>
+        <ComboBox x:Name="cmbPvgResponsibleGreenCompilance" HorizontalAlignment="Left" Height="24" Margin="757,599,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False">
+        </ComboBox>
+        <ComboBox x:Name="cmbJobNature" HorizontalAlignment="Left" Height="20" Margin="233,135,0,0" VerticalAlignment="Top" Width="120" Background="#FFEF00CF" Foreground="#FFFF00DD" BorderBrush="#FFEF00CF" OpacityMask="#FFFF00E7"/>
     </Grid>
 </Window>
