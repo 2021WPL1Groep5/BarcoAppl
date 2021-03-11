@@ -92,6 +92,8 @@ namespace BarcoApplicatie
                     DateEut4.SelectedDate, DateEut5.SelectedDate,
                     DateEut6.SelectedDate, cbEmcEut1, cbEmcEut2,
                     cbEmcEut3, cbEmcEut4, cbEmcEut5, cbEmcEut6);
+
+                dao.addTestDivision("EMC");
             }
             if (cbEnviromental.IsChecked == true)
             {
@@ -99,6 +101,9 @@ namespace BarcoApplicatie
                     DateEut4.SelectedDate, DateEut5.SelectedDate,
                     DateEut6.SelectedDate, cbEnviromental1, cbEnviromental2,
                     cbEnviromental3, cbEnviromental4, cbEnviromental5, cbEnviromental6);
+
+
+                dao.addTestDivision("ENV");
             }
             if (cbReliability.IsChecked == true)
             {
@@ -106,6 +111,8 @@ namespace BarcoApplicatie
                     DateEut4.SelectedDate, DateEut5.SelectedDate,
                     DateEut6.SelectedDate, cbReliability1, cbReliability2,
                     cbReliability3, cbReliability4, cbReliability5, cbReliability6);
+
+                dao.addTestDivision("REL");
             }
             if (cbProductSafety.IsChecked == true)
             {
@@ -113,6 +120,8 @@ namespace BarcoApplicatie
                     DateEut4.SelectedDate, DateEut5.SelectedDate,
                     DateEut6.SelectedDate, cbProductSafety1, cbProductSafety2,
                     cbProductSafety3, cbProductSafety4, cbProductSafety5, cbProductSafety6);
+
+                dao.addTestDivision("SAF");
             }
             if (cbGreenCompilance.IsChecked == true)
             {
@@ -120,7 +129,10 @@ namespace BarcoApplicatie
                     DateEut4.SelectedDate, DateEut5.SelectedDate,
                     DateEut6.SelectedDate, cbGreenCompilance1, cbGreenCompilance2,
                     cbGreenCompilance3, cbGreenCompilance4, cbGreenCompilance5, cbGreenCompilance6);
+
+                dao.addTestDivision("ECO");
             }
+
         }
     }
 }

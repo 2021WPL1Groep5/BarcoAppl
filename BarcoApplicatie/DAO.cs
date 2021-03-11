@@ -110,11 +110,12 @@ namespace BarcoApplicatie
             context.SaveChanges();
         }
 
-        public void addEUTOmschrijving(string omschrijving)
+        public void addTestDivision(string testDivision)
         {
-            Eut eut = new Eut();
-            eut.OmschrijvingEut = omschrijving;
-            context.Eut.Add(eut);
+            RqRequestDetail requestDetail = new RqRequestDetail();
+            requestDetail.Testdivisie = testDivision;
+
+            context.RqRequestDetail.Add(requestDetail);
             context.SaveChanges();
         }
     }
