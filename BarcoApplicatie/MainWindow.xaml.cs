@@ -114,7 +114,7 @@ namespace BarcoApplicatie
 
         public void EutPartnumber(string txteutpartnr)
         {
-            txteutpartnr = txtEutPartnumber1.Text;
+            txteutpartnr = txtEutPartnumber6.Text;
             if (System.Text.RegularExpressions.Regex.IsMatch(txteutpartnr, "[^0-9-A-Z-.]"))
             {
                 MessageBox.Show("Please enter only numbers.");
@@ -124,8 +124,8 @@ namespace BarcoApplicatie
 
         public void ChangeWeight(string changeweight)
         {
-            txtNetWeight1.Text = changeweight;
-            txtGrossWeight2.Text = changeweight;
+            txtNetWeight6.Text = changeweight;
+            txtGrossWeight6.Text = changeweight;
             if (System.Text.RegularExpressions.Regex.IsMatch(changeweight, "[^0-9-,]"))
             {
                 MessageBox.Show("Please enter only numbers.");
@@ -135,21 +135,102 @@ namespace BarcoApplicatie
 
         private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtRequesterInitials.Text, "[^A-Z-a-z]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtRequesterInitials1.Text, "[^A-Z-a-z]"))
             {
                 MessageBox.Show("Please enter only letters.");
-                txtRequesterInitials.Text = txtRequesterInitials.Text.Remove(txtRequesterInitials.Text.Length - 1);
+                txtRequesterInitials1.Text = txtRequesterInitials1.Text.Remove(txtRequesterInitials1.Text.Length - 1);
             }
-            txtRequesterInitials.Text.ToUpper();
+            txtRequesterInitials1.Text.ToUpper();
         }
 
         private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtProjectNumber.Text, "[^0-9-E-.]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtProjectNumber1.Text, "[^0-9-.-E]"))
             {
                 MessageBox.Show("Please enter only letters.");
-                txtProjectNumber.Text = txtProjectNumber.Text.Remove(txtProjectNumber.Text.Length - 1);
+                txtProjectNumber1.Text = txtProjectNumber1.Text.Remove(txtProjectNumber1.Text.Length - 1);
             }
+        }
+
+        private void txtProjectName1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        
+        private void txtEutPartnumber6_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtEutPartnumber7_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtEutPartnumber8_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtEutPartnumber9_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtEutPartnumber10_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtNetWeight6_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtNetWeight7_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtNetWeight8_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtNetWeight9_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtNetWeight10_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtGrossWeight6_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtGrossWeight7_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtGrossWeight8_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtGrossWeight9_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void txtGrossWeight10_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
