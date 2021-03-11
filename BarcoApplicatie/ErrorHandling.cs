@@ -22,6 +22,12 @@ namespace BarcoApplicatie
                         {
                             yield return (T)child;
                         }
+    {
+        public string txtRequesterInitials { get; set; }
+        public string txtProjectNumber { get; set; }
+        public string txtEutPartnumber1 { get; set; }
+        public string txtNetWeight1 { get; set; }
+        public string txtGrossWeight1 { get; set; }
 
                         foreach (T childOfChild in FindVisualChildren<T>(child))
                         {
@@ -32,6 +38,20 @@ namespace BarcoApplicatie
             }
 
             internal static IEnumerable<T> FindVisualChildren<T>(ErrorHandling errorHandling)
+        public void RequesterInitials(string txtrequesterinitials)
+        {
+            txtRequesterInitials = txtrequesterinitials.ToUpper();
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtrequesterinitials, "[^A-Z]"))
+            {
+                MessageBox.Show("Please enter only letters.");
+                //txtrequesterinitials = txtrequesterinitials.Remove(txtrequesterinitials.Length - 1);
+            }
+        }
+
+        public void EutPartnumber(string txteutpartnr)
+        {
+            txtEutPartnumber1 = txteutpartnr;
+            if (System.Text.RegularExpressions.Regex.IsMatch(txteutpartnr, "[^0-9-A-Z-.]"))
             {
                 throw new NotImplementedException();
             }
