@@ -10,16 +10,17 @@ namespace BarcoApplicatie
         public void errorhandling()
         {
 
-        //public void PVGresponsible()
-        //{
-        //    //this is not available in MainWindow
-        //    cmbPvgResposibleEmc.IsEnabled = false;
-        //    cmbPvgResponsibleEnviromental.IsEnabled = false;
-        //    cmbPvgRepsonsibleReliability.IsEnabled = false;
-        //    cmbPvgResponsibleProductSafety.IsEnabled = false;
-        //    cmbPvgResponsiblePackaging.IsEnabled = false;
-        //    cmbPvgResponsibleGreenCompilance.IsEnabled = false;
-        //}
+            //public void PVGresponsible()
+            //{
+            //    //this is not available in MainWindow
+            //    cmbPvgResposibleEmc.IsEnabled = false;
+            //    cmbPvgResponsibleEnviromental.IsEnabled = false;
+            //    cmbPvgRepsonsibleReliability.IsEnabled = false;
+            //    cmbPvgResponsibleProductSafety.IsEnabled = false;
+            //    cmbPvgResponsiblePackaging.IsEnabled = false;
+            //    cmbPvgResponsibleGreenCompilance.IsEnabled = false;
+            //}
 
+        }
     }
 }
