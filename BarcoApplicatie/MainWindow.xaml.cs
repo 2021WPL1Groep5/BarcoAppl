@@ -131,7 +131,8 @@ namespace BarcoApplicatie
 
             txtRequesterInitials1.Text.ToUpper();
         }
-
+        
+        
         private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
         {
             ControlInput("[^A-Z-a-z-0-9]", txtProjectNumber1 , projectNumberErrorLabel, "Please enter numbers and letters only.");
@@ -239,5 +240,6 @@ namespace BarcoApplicatie
         {
 
         }
+        
     }
 }
