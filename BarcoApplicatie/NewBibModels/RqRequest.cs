@@ -7,7 +7,6 @@ namespace BarcoApplicatie.NewBibModels
     {
         public RqRequest()
         {
-            RqOptionel = new HashSet<RqOptionel>();
             RqRequestDetail = new HashSet<RqRequestDetail>();
         }
 
@@ -27,7 +26,6 @@ namespace BarcoApplicatie.NewBibModels
         public string NetWeight { get; set; }
         public bool? Battery { get; set; }
 
-        public virtual ICollection<RqOptionel> RqOptionel { get; set; }
         public virtual ICollection<RqRequestDetail> RqRequestDetail { get; set; }
     }
 }

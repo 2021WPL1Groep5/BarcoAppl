@@ -5,11 +5,6 @@ namespace BarcoApplicatie.NewBibModels
 {
     public partial class RqRequestDetail
     {
-        public RqRequestDetail()
-        {
-            Eut = new HashSet<Eut>();
-        }
-
         public int IdRqDetail { get; set; }
         public string Testdivisie { get; set; }
         public string Pvgresp { get; set; }
@@ -17,6 +12,5 @@ namespace BarcoApplicatie.NewBibModels
 
         public virtual RqRequest IdRequestNavigation { get; set; }
         public virtual RqTestDevision TestdivisieNavigation { get; set; }
-        public virtual ICollection<Eut> Eut { get; set; }
     }
 }

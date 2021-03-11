@@ -41,8 +41,28 @@ namespace BarcoApplicatie.NewBibModels
 
                 entity.Property(e => e.Id).HasColumnName("id");
 
-                entity.Property(e => e.AvailableDate)
-                    .HasColumnName("available_date")
+                entity.Property(e => e.AvailableDateEut1)
+                    .HasColumnName("available_date_EUT1")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.AvailableDateEut2)
+                    .HasColumnName("available_date_EUT2")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.AvailableDateEut3)
+                    .HasColumnName("available_date_EUT3")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.AvailableDateEut4)
+                    .HasColumnName("available_date_EUT4")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.AvailableDateEut5)
+                    .HasColumnName("available_date_EUT5")
+                    .HasColumnType("datetime");
+
+                entity.Property(e => e.AvailableDateEut6)
+                    .HasColumnName("available_date_EUT6")
                     .HasColumnType("datetime");
 
                 entity.Property(e => e.IdRqDetail).HasColumnName("id_rq_detail");
@@ -50,12 +70,6 @@ namespace BarcoApplicatie.NewBibModels
                 entity.Property(e => e.OmschrijvingEut)
                     .HasColumnName("omschrijvingEUT")
                     .HasMaxLength(50);
-
-                entity.HasOne(d => d.IdRqDetailNavigation)
-                    .WithMany(p => p.Eut)
-                    .HasForeignKey(d => d.IdRqDetail)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("EUT_Rq_RequestDetail_FK");
             });
 
             modelBuilder.Entity<Person>(entity =>
@@ -136,12 +150,6 @@ namespace BarcoApplicatie.NewBibModels
                 entity.Property(e => e.Remarks)
                     .HasColumnName("remarks")
                     .HasMaxLength(1000);
-
-                entity.HasOne(d => d.IdRequestNavigation)
-                    .WithMany(p => p.RqOptionel)
-                    .HasForeignKey(d => d.IdRequest)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("Rq_Optionel_Rq_Request_FK");
             });
 
             modelBuilder.Entity<RqRequest>(entity =>
