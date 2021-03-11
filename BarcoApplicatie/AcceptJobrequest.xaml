@@ -568,6 +568,11 @@
         <ComboBox x:Name="cmbPvgResponsiblePackaging" HorizontalAlignment="Left" Height="24" Margin="757,577,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False"/>
         <ComboBox x:Name="cmbPvgResponsibleGreenCompilance" HorizontalAlignment="Left" Height="24" Margin="757,599,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False">
         </ComboBox>
+        
         <ComboBox x:Name="cmbJobNature" HorizontalAlignment="Left" Height="20" Margin="233,135,0,0" VerticalAlignment="Top" Width="120" Background="#FFEF00CF" Foreground="#FFFF00DD" BorderBrush="#FFEF00CF" OpacityMask="#FFFF00E7"/>
+        <Label x:Name="numbersErrorLabel" Content="" Margin="438,291,112,513" Foreground="#FFF10000"/>
+        <Label x:Name="initialsErrorLabel" Content="" Margin="356,69,194,735" Foreground="#FFF10000"/>
+        <Label x:Name="projectNumberErrorLabel" Content="" Margin="356,162,194,642" Foreground="#FFF10000"/>
+        <Label x:Name="projectNameErrorLabel" Content="" Margin="356,193,194,611" Foreground="#FFF10000"/>
     </Grid>
 </Window>
