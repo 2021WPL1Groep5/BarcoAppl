@@ -1,4 +1,4 @@
-﻿using BarcoApplicatie.BibModels;
+﻿using BarcoApplicatie.NewBibModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +21,10 @@ namespace BarcoApplicatie
 
         private DAO()
         {
-            this.context = new BarcoDBContext();
+            this.context = new BarcoContext();
         }
 
-        private BarcoDBContext context;
+        private BarcoContext context;
 
         public List<RqBarcoDivision> getAllDivisions()
         {
@@ -53,8 +53,8 @@ namespace BarcoApplicatie
             request.EutPartnumbers = partNumber;
             request.ExpectedEnddate = date;
             request.InternRequest = false;
-            request.GrossWeight = Convert.ToInt16(grossWeight);
-            request.NetWeight = Convert.ToInt16(netWeight);
+            request.GrossWeight = grossWeight;
+            request.NetWeight = netWeight;
 
             if (checkbox.IsChecked == true)
             {

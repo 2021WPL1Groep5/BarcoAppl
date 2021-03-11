@@ -6,7 +6,7 @@ using System.Windows;
 namespace BarcoApplicatie
 {
     class ErrorHandling
-    {
+    {/*
         public void errorhandling()
         {
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BarcoApplicatie.BibModels
+namespace BarcoApplicatie.NewBibModels
 {
     public partial class RqBarcoDivisionPerson
     {

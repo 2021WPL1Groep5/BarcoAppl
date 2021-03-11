@@ -19,4 +19,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="GUI\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+
 </Project>

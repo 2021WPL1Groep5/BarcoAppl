@@ -2,15 +2,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace BarcoApplicatie.BibModels
+namespace BarcoApplicatie.NewBibModels
 {
-    public partial class BarcoDBContext : DbContext
+    public partial class BarcoContext : DbContext
     {
-        public BarcoDBContext()
+        public BarcoContext()
         {
         }
 
-        public BarcoDBContext(DbContextOptions<BarcoDBContext> options)
+        public BarcoContext(DbContextOptions<BarcoContext> options)
             : base(options)
         {
         }
@@ -24,7 +24,6 @@ namespace BarcoApplicatie.BibModels
         public virtual DbSet<RqRequest> RqRequest { get; set; }
         public virtual DbSet<RqRequestDetail> RqRequestDetail { get; set; }
         public virtual DbSet<RqTestDevision> RqTestDevision { get; set; }
-        public virtual DbSet<TestDevision> TestDevision { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -164,7 +163,7 @@ namespace BarcoApplicatie.BibModels
 
                 entity.Property(e => e.EutPartnumbers)
                     .HasColumnName("EUT_Partnumbers")
-                    .HasMaxLength(50);
+                    .HasMaxLength(500);
 
                 entity.Property(e => e.EutProjectname)
                     .HasColumnName("EUT_Projectname")
@@ -174,13 +173,13 @@ namespace BarcoApplicatie.BibModels
                     .HasColumnName("expectedEnddate")
                     .HasColumnType("datetime");
 
-                entity.Property(e => e.GrossWeight).HasColumnName("grossWeight");
+                entity.Property(e => e.GrossWeight)
+                    .HasColumnName("grossWeight")
+                    .HasMaxLength(200);
 
                 entity.Property(e => e.HydraProjectNr)
                     .HasColumnName("hydraProjectNr")
                     .HasMaxLength(15);
-
-                entity.Property(e => e.InternRequest).HasColumnName("InternRequest????????");
 
                 entity.Property(e => e.JobNature)
                     .HasColumnName("jobNature")
@@ -195,7 +194,9 @@ namespace BarcoApplicatie.BibModels
                     .HasColumnName("JR_Status")
                     .HasMaxLength(30);
 
-                entity.Property(e => e.NetWeight).HasColumnName("netWeight");
+                entity.Property(e => e.NetWeight)
+                    .HasColumnName("netWeight")
+                    .HasMaxLength(200);
 
                 entity.Property(e => e.RequestDate)
                     .HasColumnName("request_date")
@@ -221,7 +222,7 @@ namespace BarcoApplicatie.BibModels
                 entity.Property(e => e.Pvgresp)
                     .IsRequired()
                     .HasColumnName("PVGresp")
-                    .HasMaxLength(1);
+                    .HasMaxLength(30);
 
                 entity.Property(e => e.Testdivisie)
                     .IsRequired()
@@ -255,17 +256,6 @@ namespace BarcoApplicatie.BibModels
                 entity.Property(e => e.Naam)
                     .HasColumnName("naam")
                     .HasMaxLength(50);
-            });
-
-            modelBuilder.Entity<TestDevision>(entity =>
-            {
-                entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .ValueGeneratedNever();
-
-                entity.Property(e => e.Name)
-                    .IsRequired()
-                    .HasMaxLength(510);
             });
 
             OnModelCreatingPartial(modelBuilder);
