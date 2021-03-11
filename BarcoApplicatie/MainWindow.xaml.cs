@@ -61,6 +61,7 @@ namespace BarcoApplicatie
         }
 
         //Koen
+        /*
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
             ViewJobrequest ViewJobrequest = new ViewJobrequest();
@@ -70,7 +71,7 @@ namespace BarcoApplicatie
                 txtProjectName1.Text, txtEutPartnumber6.Text, ExpectedEndDate.SelectedDate,
                 txtGrossWeight6.Text, txtNetWeight6.Text, Checkbox_Yes);
         }
-            
+        */    
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
@@ -112,123 +113,129 @@ namespace BarcoApplicatie
         }
         */
 
-        public void EutPartnumber(string txteutpartnr)
+
+        public void ControlInput(string canBe, TextBox box, Label label, string content)
         {
-            txteutpartnr = txtEutPartnumber6.Text;
-            if (System.Text.RegularExpressions.Regex.IsMatch(txteutpartnr, "[^0-9-A-Z-.]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(box.Text, canBe))
             {
-                MessageBox.Show("Please enter only numbers.");
-                txteutpartnr = txteutpartnr.Remove(txteutpartnr.Length - 1);
+                label.Content = content;
+                box.Text = box.Text.Remove(box.Text.Length - 1);
             }
+
         }
 
-        public void ChangeWeight(string changeweight)
-        {
-            txtNetWeight6.Text = changeweight;
-            txtGrossWeight6.Text = changeweight;
-            if (System.Text.RegularExpressions.Regex.IsMatch(changeweight, "[^0-9-,]"))
-            {
-                MessageBox.Show("Please enter only numbers.");
-                changeweight = changeweight.Remove(changeweight.Length - 1);
-            }
-        }
-
+        // elk tekstvak de input met de functie controleren en aanpassen
         private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtRequesterInitials1.Text, "[^A-Z-a-z]"))
-            {
-                MessageBox.Show("Please enter only letters.");
-                txtRequesterInitials1.Text = txtRequesterInitials1.Text.Remove(txtRequesterInitials1.Text.Length - 1);
-            }
+            ControlInput("[^A-Z-a-z]", txtRequesterInitials1, initialsErrorLabel, "Please enter letters only.");
+
             txtRequesterInitials1.Text.ToUpper();
         }
 
         private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtProjectNumber1.Text, "[^0-9-.-E]"))
-            {
-                MessageBox.Show("Please enter only letters.");
-                txtProjectNumber1.Text = txtProjectNumber1.Text.Remove(txtProjectNumber1.Text.Length - 1);
-            }
+            ControlInput("[^A-Z-a-z-0-9]", txtProjectNumber1 , projectNumberErrorLabel, "Please enter numbers and letters only.");
         }
+
+       
+        public void EutPartnumber(string txteutpartnr)
+        {
+           
+        }
+
+        public void ChangeWeight(string changeweight)
+        {
+            
+        }
+
+      
+
+       
 
         private void txtProjectName1_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            
         }
-
+       
         
-        private void txtEutPartnumber6_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtEutPartnumber1_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtEutPartnumber1, numbersErrorLabel, "Please enter numbers only.");
         }
 
-        private void txtEutPartnumber7_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtEutPartnumber2_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtEutPartnumber2, numbersErrorLabel, "Please enter numbers only.");
         }
 
-        private void txtEutPartnumber8_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtEutPartnumber3_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtEutPartnumber3, numbersErrorLabel, "Please enter numbers only.");
         }
 
-        private void txtEutPartnumber9_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtEutPartnumber4_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtEutPartnumber4, numbersErrorLabel, "Please enter numbers only.");
         }
 
-        private void txtEutPartnumber10_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtEutPartnumber5_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtEutPartnumber5, numbersErrorLabel, "Please enter numbers only.");
         }
 
-        private void txtNetWeight6_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtNetWeight1_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtNetWeight1, numbersErrorLabel, "Please enter numbers only.");
+            
         }
 
-        private void txtNetWeight7_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtNetWeight2_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtNetWeight2, numbersErrorLabel, "Please enter numbers only.");
         }
 
-        private void txtNetWeight8_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtNetWeight3_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtNetWeight3, numbersErrorLabel, "Please enter numbers only.");
         }
 
-        private void txtNetWeight9_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtNetWeight4_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtNetWeight4, numbersErrorLabel, "Please enter numbers only.");
         }
 
-        private void txtNetWeight10_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtNetWeight5_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtNetWeight5, numbersErrorLabel, "Please enter numbers only.");
         }
 
-        private void txtGrossWeight6_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtGrossWeight1_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtGrossWeight1, numbersErrorLabel, "Please enter numbers only.");
+            
         }
 
-        private void txtGrossWeight7_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtGrossWeight2_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtGrossWeight2, numbersErrorLabel, "Please enter numbers only.");
         }
 
-        private void txtGrossWeight8_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtGrossWeight3_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtGrossWeight3, numbersErrorLabel, "Please enter numbers only.");
         }
 
-        private void txtGrossWeight9_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtGrossWeight4_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            ControlInput("[^0-9]", txtGrossWeight4, numbersErrorLabel, "Please enter numbers only.");
         }
 
-        private void txtGrossWeight10_TextChanged(object sender, TextChangedEventArgs e)
+        private void txtGrossWeight5_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ControlInput("[^0-9]", txtGrossWeight5, numbersErrorLabel, "Please enter numbers only.");
+        }
+
+        private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
 
         }

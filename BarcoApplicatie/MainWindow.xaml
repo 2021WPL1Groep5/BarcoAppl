@@ -75,7 +75,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtEutPartnumber6" HorizontalAlignment="Left" Margin="233,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtEutPartnumber6_TextChanged">
+        <TextBox x:Name="txtEutPartnumber1" HorizontalAlignment="Left" Margin="233,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtEutPartnumber1_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -85,7 +85,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtNetWeight6" HorizontalAlignment="Left" Margin="233,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtNetWeight6_TextChanged">
+        <TextBox x:Name="txtNetWeight1" HorizontalAlignment="Left" Margin="233,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtNetWeight1_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -95,7 +95,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtGrossWeight6" HorizontalAlignment="Left" Margin="233,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtGrossWeight6_TextChanged">
+        <TextBox x:Name="txtGrossWeight1" HorizontalAlignment="Left" Margin="233,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtGrossWeight1_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -105,7 +105,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtEutPartnumber7" HorizontalAlignment="Left" Margin="356,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtEutPartnumber7_TextChanged">
+        <TextBox x:Name="txtEutPartnumber2" HorizontalAlignment="Left" Margin="356,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtEutPartnumber2_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -115,7 +115,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtNetWeight7" HorizontalAlignment="Left" Margin="356,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtNetWeight7_TextChanged">
+        <TextBox x:Name="txtNetWeight2" HorizontalAlignment="Left" Margin="356,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtNetWeight2_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -125,7 +125,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtGrossWeight7" HorizontalAlignment="Left" Margin="356,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtGrossWeight7_TextChanged">
+        <TextBox x:Name="txtGrossWeight2" HorizontalAlignment="Left" Margin="356,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtGrossWeight2_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -135,7 +135,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtEutPartnumber8" HorizontalAlignment="Left" Margin="479,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtEutPartnumber8_TextChanged">
+        <TextBox x:Name="txtEutPartnumber3" HorizontalAlignment="Left" Margin="479,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtEutPartnumber3_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -145,7 +145,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtNetWeight8" HorizontalAlignment="Left" Margin="479,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtNetWeight8_TextChanged">
+        <TextBox x:Name="txtNetWeight3" HorizontalAlignment="Left" Margin="479,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtNetWeight3_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -155,7 +155,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtGrossWeight8"  HorizontalAlignment="Left" Margin="479,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtGrossWeight8_TextChanged">
+        <TextBox x:Name="txtGrossWeight3"  HorizontalAlignment="Left" Margin="479,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtGrossWeight3_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -165,7 +165,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtEutPartnumber9" HorizontalAlignment="Left" Margin="602,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtEutPartnumber9_TextChanged">
+        <TextBox x:Name="txtEutPartnumber4" HorizontalAlignment="Left" Margin="602,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtEutPartnumber4_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -175,7 +175,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtNetWeight9" HorizontalAlignment="Left" Margin="602,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtNetWeight9_TextChanged">
+        <TextBox x:Name="txtNetWeight4" HorizontalAlignment="Left" Margin="602,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtNetWeight4_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -185,7 +185,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtGrossWeight9" HorizontalAlignment="Left" Margin="602,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtGrossWeight9_TextChanged">
+        <TextBox x:Name="txtGrossWeight4" HorizontalAlignment="Left" Margin="602,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtGrossWeight4_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -195,7 +195,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtGrossWeight10" HorizontalAlignment="Left" Margin="725,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtGrossWeight10_TextChanged">
+        <TextBox x:Name="txtGrossWeight5" HorizontalAlignment="Left" Margin="725,277,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtGrossWeight5_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -205,7 +205,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtEutPartnumber10" HorizontalAlignment="Left" Margin="725,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtEutPartnumber10_TextChanged">
+        <TextBox x:Name="txtEutPartnumber5" HorizontalAlignment="Left" Margin="725,241,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtEutPartnumber5_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -215,7 +215,7 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="txtNetWeight10" HorizontalAlignment="Left" Margin="725,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtNetWeight10_TextChanged">
+        <TextBox x:Name="txtNetWeight5" HorizontalAlignment="Left" Margin="725,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" TextChanged="txtNetWeight5_TextChanged">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -611,5 +611,9 @@
             <ComboBox x:Name="cmbDivision_Copy8" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B"/>
         </ComboBox>
         <Button x:Name="btnHome" Click="btnHome_Click" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Height="56" Margin="1,0,0,0" VerticalAlignment="Top" Width="202"/>
+        <Label x:Name="numbersErrorLabel" Content="" Margin="438,291,112,513" Foreground="#FFF10000"/>
+        <Label x:Name="initialsErrorLabel" Content="" Margin="356,69,194,735" Foreground="#FFF10000"/>
+        <Label x:Name="projectNumberErrorLabel" Content="" Margin="356,162,194,642" Foreground="#FFF10000"/>
+        <Label x:Name="projectNameErrorLabel" Content="" Margin="356,193,194,611" Foreground="#FFF10000"/>
     </Grid>
 </Window>
