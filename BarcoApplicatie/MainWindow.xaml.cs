@@ -19,13 +19,8 @@ using System.Collections;
 namespace BarcoApplicatie
 {
 
-    public static class Utils {
-        /// <summary>
-        /// Form: http://stackoverflow.com/questions/974598/find-all-controls-in-wpf-window-by-type
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="depObj"></param>
-        /// <returns></returns>
+    public static class Utils 
+    {
         public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
         {
             if (depObj != null)
@@ -45,8 +40,6 @@ namespace BarcoApplicatie
                 }
             }
         }
-
-
     }
 
     /// <summary>
@@ -55,6 +48,7 @@ namespace BarcoApplicatie
     public partial class MainWindow : Window
     {
         private DAO dao;
+        private ErrorHandling errorHandling = new ErrorHandling();
 
         public MainWindow()
         {
@@ -67,9 +61,6 @@ namespace BarcoApplicatie
             BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
             capturedPhoto.Source = bitmapImage;
 
-            isEnabled();
-            //isEnabled1(cbGreenCompilance);
-            //isDisabled(cbGreenCompilance);
         }
 
         //Koen
@@ -126,85 +117,60 @@ namespace BarcoApplicatie
             cmbPvgResponsibleGreenCompilance.IsEnabled = false;
         }
 
-        //move to errorhandling
-        public void isEnabled()
-        {
-           // this.toggleCheckboxes("cbEmcEut", false);
-          /*  if (cbEmcEut.IsChecked == false)
-            {
-                cbEmcEut1.IsEnabled = false;
-                cbEmcEut2.IsEnabled = false;
-                cbEmcEut3.IsEnabled = false;
-                cbEmcEut4.IsEnabled = false;
-                cbEmcEut5.IsEnabled = false;
-                cbEmcEut6.IsEnabled = false;
-            }*/
-        }
-
-        public void isEnabled1(CheckBox name)
-        {
-            if (name.IsChecked == true)
-            {
-                int iNumber = 0;
-                for (int i = 0; i < 6; i++)
-                {
-                    iNumber++;
-                    string constantName = name.Name;
-                    string sName = name.Name;
-                    sName += Convert.ToString(iNumber);
-
-                    name.Name = sName;
-                    name.IsEnabled = true;
-                    name.Name = constantName;
-                }
-
-            }
-        }
-        public void isDisabled(CheckBox checkBox)
-        {
-            this.toggleCheckboxes("cbGreen","", false);
-           /* if (name.IsChecked == false)
-            {
-                int iNumber = 0;
-                for (int i = 0; i < 6; i++)
-                {
-                    iNumber++;
-                    string constantName = name.Name;
-                    string sName = name.Name;
-                    sName += Convert.ToString(iNumber);
-
-                    name.Name = sName;
-                    name.IsEnabled = false;
-                    name.Name = constantName;
-                }
-
-            }*/
-        }
-
-        private void cbGreenCompilance_Checked(object sender, RoutedEventArgs e)
-        {
-            //isEnabled1(cbGreenCompilance);
-        }
-
-        private void cbGreenCompilance_Unchecked(object sender, RoutedEventArgs e)
-        {
-            toggleCheckboxes("cbGreenCompilance", ((CheckBox)sender).Name, false);
-        }
-
-        private void toggleCheckboxes(string checkboxNamePart, string exceptions ,bool toggle)
+        //toggleCheckbox
+        public void toggleCheckboxes(string checkboxName, string exceptions ,bool toggle)
         {
             foreach (CheckBox checkBox in Utils.FindVisualChildren<CheckBox>(this))
             {
-                if( checkBox.Name.Contains(checkboxNamePart)) {
+                if( checkBox.Name.Contains(checkboxName)) {
                     if (!exceptions.Contains(checkBox.Name))
                     {
-                        checkBox.IsChecked = toggle;
                         checkBox.IsEnabled = toggle;
                     }
                 }
-
             }
         }
+
+        public void toggle_click(CheckBox name, string cbname)
+        {
+            if (name.IsChecked == true)
+            {
+                toggleCheckboxes(cbname, name.Name, true);
+            }
+            else
+            {
+                toggleCheckboxes(cbname, name.Name, false);
+            }
+        }
+
+        private void cbEmcEut_Click(object sender, RoutedEventArgs e)
+        {
+            errorHandling.toggle_click(cbEmcEut, "cbEmcEut");
+        }
+        private void cbEnviromental_Click(object sender, RoutedEventArgs e)
+        {
+            errorHandling.toggle_click(cbEnviromental, "cbEnviromental");
+        }
+
+        private void cbReliability_Click(object sender, RoutedEventArgs e)
+        {
+            errorHandling.toggle_click(cbReliability, "cbReliability");
+        }
+
+        private void cbProductSafety_Click(object sender, RoutedEventArgs e)
+        {
+            errorHandling.toggle_click(cbProductSafety, "cbProductSafety");
+        }
+
+        private void cbPackaging_Click(object sender, RoutedEventArgs e)
+        {
+            errorHandling.toggle_click(cbPackaging, "cbPackaging");
+        }
+
+        private void cbGreenCompilance_Click(object sender, RoutedEventArgs e)
+        {
+            errorHandling.toggle_click(cbGreenCompilance, "cbGreenCompilance");
+        }        
     }
 }
 
