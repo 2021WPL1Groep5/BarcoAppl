@@ -189,6 +189,7 @@ namespace BarcoApplicatie
         }
         private void cbEmcEut_Click(object sender, RoutedEventArgs e)
         {
+            //dateEmpty();
             toggle_click(cbEmcEut, "cbEmcEut");
         }
         private void cbEnviromental_Click(object sender, RoutedEventArgs e)
@@ -210,6 +211,14 @@ namespace BarcoApplicatie
         private void cbGreenCompilance_Click(object sender, RoutedEventArgs e)
         {
             toggle_click(cbGreenCompilance, "cbGreenCompilance");
+        }
+
+        private void dateEmpty()
+        {
+            if (cbEmcEut1.IsChecked == false && cbEnviromental1.IsChecked == false && cbReliability1.IsChecked == false && cbProductSafety1.IsChecked == false && cbPackaging1.IsChecked == false && cbGreenCompilance1.IsChecked == false)
+            {
+                DateEut1.IsEnabled = false;
+            }
         }
 
         ///////////////////////////////////////////errorHandling///////////////////////////////////////////
