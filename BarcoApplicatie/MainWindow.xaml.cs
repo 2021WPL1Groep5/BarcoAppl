@@ -19,28 +19,7 @@ using System.Collections;
 namespace BarcoApplicatie
 {
 
-    public static class Utils 
-    {
-        public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
-        {
-            if (depObj != null)
-            {
-                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
-                {
-                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
-                    if (child != null && child is T)
-                    {
-                        yield return (T)child;
-                    }
-
-                    foreach (T childOfChild in FindVisualChildren<T>(child))
-                    {
-                        yield return childOfChild;
-                    }
-                }
-            }
-        }
-    }
+    
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -63,8 +42,7 @@ namespace BarcoApplicatie
 
         }
 
-        //Koen
-        private void insertDivisionIntoComboBox()
+         private void insertDivisionIntoComboBox()
         {
             List<RqBarcoDivision> divisions = dao.getAllDivisions();
 
@@ -74,7 +52,6 @@ namespace BarcoApplicatie
             }
         }
 
-        //Koen
         private void insertJobNatureIntoComboBox()
         {
             List<RqJobNature> jobNatures = dao.getAllJobNatures();
@@ -85,7 +62,7 @@ namespace BarcoApplicatie
             }
         }
 
-        //Koen
+        ///////////////////////////////////////////buttonSendToDB///////////////////////////////////////////
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
             dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
@@ -156,8 +133,8 @@ namespace BarcoApplicatie
 
                 dao.addTestDivision("ECO");
             }
-
         }
+        ///////////////////////////////////////////logoHomeScreen///////////////////////////////////////////
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
@@ -166,8 +143,30 @@ namespace BarcoApplicatie
             dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         }
 
-        
-        //toggleCheckbox
+
+        ///////////////////////////////////////////toggleCheckbox///////////////////////////////////////////
+        public static class Utils
+        {
+            public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+            {
+                if (depObj != null)
+                {
+                    for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                    {
+                        DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                        if (child != null && child is T)
+                        {
+                            yield return (T)child;
+                        }
+
+                        foreach (T childOfChild in FindVisualChildren<T>(child))
+                        {
+                            yield return childOfChild;
+                        }
+                    }
+                }
+            }
+        }
         public void toggleCheckboxes(string checkboxName, string exceptions ,bool toggle)
         {
             foreach (CheckBox checkBox in Utils.FindVisualChildren<CheckBox>(this))
