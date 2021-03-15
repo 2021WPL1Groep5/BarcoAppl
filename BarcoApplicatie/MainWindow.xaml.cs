@@ -218,13 +218,13 @@ namespace BarcoApplicatie
         private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
         {
             ControlInput("[^A-Z-a-z]", txtRequesterInitials, initialsErrorLabel, "Please enter letters only.");
-            txtRequesterInitials.Text.ToUpper();
+            txtRequesterInitials.CharacterCasing = CharacterCasing.Upper;
         }
-        
+
         //deze functie toepassen op de verschillende inputvelden
         private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^A-Z-a-z-0-9]", txtProjectNumber , projectNumberErrorLabel, "Please enter numbers and letters only.");
+            ControlInput("[^A-Z-a-z-0-9-,]", txtProjectNumber , projectNumberErrorLabel, "Please enter numbers and letters only.");
         }
         
         private void txtEutPartnumber1_TextChanged(object sender, TextChangedEventArgs e)
@@ -254,52 +254,52 @@ namespace BarcoApplicatie
 
         private void txtNetWeight1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtNetWeight1, numbersErrorLabel, "Please enter numbers only."); 
+            ControlInput("[^0-9-,]", txtNetWeight1, numbersErrorLabel, "Please enter numbers only."); 
         }
 
         private void txtNetWeight2_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtNetWeight2, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,]", txtNetWeight2, numbersErrorLabel, "Please enter numbers only.");
         }
 
         private void txtNetWeight3_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtNetWeight3, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,]", txtNetWeight3, numbersErrorLabel, "Please enter numbers only.");
         }
 
         private void txtNetWeight4_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtNetWeight4, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,]", txtNetWeight4, numbersErrorLabel, "Please enter numbers only.");
         }
 
         private void txtNetWeight5_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtNetWeight5, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,]", txtNetWeight5, numbersErrorLabel, "Please enter numbers only.");
         }
 
         private void txtGrossWeight1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtGrossWeight1, numbersErrorLabel, "Please enter numbers only.");        
+            ControlInput("[^0-9-,]", txtGrossWeight1, numbersErrorLabel, "Please enter numbers only.");        
         }
 
         private void txtGrossWeight2_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtGrossWeight2, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,]", txtGrossWeight2, numbersErrorLabel, "Please enter numbers only.");
         }
 
         private void txtGrossWeight3_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtGrossWeight3, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,]", txtGrossWeight3, numbersErrorLabel, "Please enter numbers only.");
         }
 
         private void txtGrossWeight4_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtGrossWeight4, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,]", txtGrossWeight4, numbersErrorLabel, "Please enter numbers only.");
         }
 
         private void txtGrossWeight5_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtGrossWeight5, numbersErrorLabel, "Please enter numbers only.");
+            ControlInput("[^0-9-,]", txtGrossWeight5, numbersErrorLabel, "Please enter numbers only.");
         }
     }
 }
