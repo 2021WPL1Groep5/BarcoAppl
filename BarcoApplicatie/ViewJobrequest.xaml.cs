@@ -41,22 +41,6 @@ namespace BarcoApplicatie
             HomeScreen.Show();
         }
 
-        //private void insertInfoIntoList()
-        //{
-        //    List<RqRequest> rqRequests = dao.getRequest();
-
-        //    RqRequest rqRequest = new RqRequest();
-
-        //    string sDate = Convert.ToString(rqRequest.RequestDate);
-        //    string sNature = Convert.ToString(rqRequest.JobNature);
-        //    string sProjectName = Convert.ToString(rqRequest.EutProjectname);
-        //    string sEndDate = Convert.ToString(rqRequest.ExpectedEnddate);
-
-        //    string sOutput = sDate + sNature + sProjectName + sEndDate;
-
-        //    lbViewRequest.Items.Add(sOutput);
-        //}
-
         //Koen
         private void loadAllRequest()
         {
@@ -71,7 +55,8 @@ namespace BarcoApplicatie
         //Koen
         private void lbViewRequest_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            AcceptJobrequest acceptJobrequest = new AcceptJobrequest();
+            acceptJobrequest.Show();
         }
     }
 }

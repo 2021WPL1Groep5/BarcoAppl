@@ -35,11 +35,6 @@ namespace BarcoApplicatie
         {
             return context.RqJobNature.ToList();
         }
-        //
-        //public List<RqRequest> getRequest()
-        //{
-        //    return context.RqRequest.ToList();
-        //}
 
         public List<RqRequest> getAllRequests()
         {
