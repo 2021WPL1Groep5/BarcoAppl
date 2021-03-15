@@ -1,4 +1,4 @@
-﻿using BarcoApplicatie.NewBibModels;
+﻿using BarcoApplicatie.BibModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -43,14 +43,14 @@ namespace BarcoApplicatie
 
             RqRequest rqRequest = new RqRequest();
 
-            string sDate = rqRequest.RequestDate.ToString();
-            string sNature = rqRequest.JobNature.ToString();
-            string sProjectName = rqRequest.EutProjectname.ToString();
-            string sEndDate = rqRequest.ExpectedEnddate.ToString();
+            string sDate = Convert.ToString(rqRequest.RequestDate);
+            string sNature = Convert.ToString(rqRequest.JobNature);
+            string sProjectName = Convert.ToString(rqRequest.EutProjectname);
+            string sEndDate = Convert.ToString(rqRequest.ExpectedEnddate);
 
-            string sOutput = sDate +sNature + sProjectName + sEndDate;
+            string sOutput = sDate + sNature + sProjectName + sEndDate;
 
-            ListBox.Items.Add(sOutput);
+            lbViewRequest.Items.Add(sOutput);
         }
     }
 }
