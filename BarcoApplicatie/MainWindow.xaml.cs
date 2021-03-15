@@ -25,6 +25,7 @@ namespace BarcoApplicatie
     {
         private DAO dao;
         private ErrorHandling errorHandling = new ErrorHandling();
+        private MainViewModel viewModel;
 
         public MainWindow()
         {
@@ -36,6 +37,11 @@ namespace BarcoApplicatie
 
             BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
             capturedPhoto.Source = bitmapImage;
+
+            viewModel = new MainViewModel(
+            new JobrequestDataService());
+            DataContext = viewModel;
+            viewModel.Load();
 
         }
         ///////////////////////////////////////////loadDataIntoGUI///////////////////////////////////////////
