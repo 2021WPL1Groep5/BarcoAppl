@@ -257,25 +257,8 @@ namespace BarcoApplicatie
         }
 
        
-        public void EutPartnumber(string txteutpartnr)
-        {
-           
-        }
+        
 
-        public void ChangeWeight(string changeweight)
-        {
-            
-        }
-
-      
-
-       
-
-        private void txtProjectName1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-        }
-       
         
         private void txtEutPartnumber1_TextChanged(object sender, TextChangedEventArgs e)
         {
