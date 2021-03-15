@@ -87,6 +87,7 @@ namespace BarcoApplicatie
         }
 
         ///////////////////////////////////////////loadDataIntoGUI///////////////////////////////////////////
+        //Koen
         private void insertDivisionIntoComboBox()
         {
             List<RqBarcoDivision> divisions = dao.getAllDivisions();
@@ -97,6 +98,7 @@ namespace BarcoApplicatie
             }
         }
 
+        //Koen
         private void insertJobNatureIntoComboBox()
         {
             List<RqJobNature> jobNatures = dao.getAllJobNatures();
@@ -108,8 +110,16 @@ namespace BarcoApplicatie
         }
 
         ///////////////////////////////////////////buttonSendToDB///////////////////////////////////////////
+        //Koen
+        private void openViewJobRequestScreen()
+        {
+            ViewJobrequest viewJR = new ViewJobrequest();
+            viewJR.Show();
+        }
+
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
+
             checkFilled();
 
             dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
@@ -132,8 +142,8 @@ namespace BarcoApplicatie
                "Net5: " + txtNetWeight5.Text + "; ",
                Checkbox_Yes, DateEut1.SelectedDate, cbEmcEut1, txtLinkToTestplan.Text, txtSpecialRemarks.Text);
 
-            HomeScreen.Show();
-            
+            openViewJobRequestScreen();
+
         }
         ///////////////////////////////////////////logoHomeScreen///////////////////////////////////////////
 
