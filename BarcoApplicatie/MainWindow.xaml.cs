@@ -244,17 +244,10 @@ namespace BarcoApplicatie
             ControlInput("[^A-Z-a-z-0-9]", txtProjectNumber , projectNumberErrorLabel, "Please enter numbers and letters only.");
         }
 
+       
+        
 
-        public void EutPartnumber(string txteutpartnr)
-        {
-           
-        }
-
-        public void ChangeWeight(string changeweight)
-        {
-            
-        }
-   
+        
         private void txtEutPartnumber1_TextChanged(object sender, TextChangedEventArgs e)
         {
             ControlInput("[^0-9]", txtEutPartnumber1, numbersErrorLabel, "Please enter numbers only.");
