@@ -36,15 +36,21 @@ namespace BarcoApplicatie
             return context.RqJobNature.ToList();
         }
         //
-        public List<RqRequest> getRequest()
+        //public List<RqRequest> getRequest()
+        //{
+        //    return context.RqRequest.ToList();
+        //}
+
+        public List<RqRequest> getAllRequests()
         {
             return context.RqRequest.ToList();
         }
-        //
         public void saveChanges()
         {
             context.SaveChanges();
         }
+
+
 
         public void Request(string initials, string divisions, string jobNature, string projectName, 
             string partNumber, DateTime? date, string grossWeight, string netWeight, CheckBox checkbox,

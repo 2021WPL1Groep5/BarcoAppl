@@ -54,7 +54,7 @@
         <Label Content="EUT Projectname" HorizontalAlignment="Left" Margin="543,53,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="Request date" HorizontalAlignment="Left" Margin="15,53,0,0" VerticalAlignment="Top" Foreground="White"/>
         <Label Content="End date" HorizontalAlignment="Left" Margin="819,53,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <ListBox x:Name="lbViewRequest" Margin="0,76,0,0" BorderThickness="0.5,0.25" Background="Transparent" BorderBrush="#FF707070" Foreground="White"/>
+        <ListBox x:Name="lbViewRequest" Margin="0,76,0,0" BorderThickness="0.5,0.25" Background="Transparent" BorderBrush="#FF707070" Foreground="White" SelectionChanged="lbViewRequest_SelectionChanged"/>
         <Button x:Name="btnHome" Click="btnHome_Click" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Height="56" Margin="1,0,0,0" VerticalAlignment="Top" Width="202"/>
     </Grid>
 </Window>

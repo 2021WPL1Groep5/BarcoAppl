@@ -76,6 +76,7 @@ namespace BarcoApplicatie
         }
 
         ///////////////////////////////////////////loadDataIntoGUI///////////////////////////////////////////
+        //Koen
         private void insertDivisionIntoComboBox()
         {
             List<RqBarcoDivision> divisions = dao.getAllDivisions();
@@ -86,6 +87,7 @@ namespace BarcoApplicatie
             }
         }
 
+        //Koen
         private void insertJobNatureIntoComboBox()
         {
             List<RqJobNature> jobNatures = dao.getAllJobNatures();
@@ -97,41 +99,15 @@ namespace BarcoApplicatie
         }
 
         ///////////////////////////////////////////buttonSendToDB///////////////////////////////////////////
+        //Koen
+        private void openViewJobRequestScreen()
+        {
+            ViewJobrequest viewJR = new ViewJobrequest();
+            viewJR.Show();
+        }
+
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
-            checkFilled();
-
-            if (cbEmcEut.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, cbEmcEut1);
-
-                dao.addTestDivision("EMC");
-            }
-            if (cbEnviromental.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, cbEnviromental1);
-
-
-                dao.addTestDivision("ENV");
-            }
-            if (cbReliability.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, cbReliability1);
-
-                dao.addTestDivision("REL");
-            }
-            if (cbProductSafety.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, cbProductSafety1);
-
-                dao.addTestDivision("SAF");
-            }
-            if (cbGreenCompilance.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, cbGreenCompilance1);
-
-                dao.addTestDivision("ECO");
-            }
 
             dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
                txtProjectName.Text,
@@ -152,6 +128,8 @@ namespace BarcoApplicatie
                "Net4: " + txtNetWeight4.Text + "; " +
                "Net5: " + txtNetWeight5.Text + "; ",
                Checkbox_Yes, DateEut1.SelectedDate, cbEmcEut1, txtLinkToTestplan.Text, txtSpecialRemarks.Text);
+
+            openViewJobRequestScreen();
 
         }
         ///////////////////////////////////////////logoHomeScreen///////////////////////////////////////////

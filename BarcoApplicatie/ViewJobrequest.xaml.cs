@@ -25,7 +25,10 @@ namespace BarcoApplicatie
 
             dao = DAO.Instance();
 
-            insertInfoIntoList();
+            //insertInfoIntoList();
+
+
+            loadAllRequest();
 
             BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
             capturedPhoto.Source = bitmapImage;
@@ -37,20 +40,37 @@ namespace BarcoApplicatie
             HomeScreen.Show();
         }
 
-        private void insertInfoIntoList()
+        //private void insertInfoIntoList()
+        //{
+        //    List<RqRequest> rqRequests = dao.getRequest();
+
+        //    RqRequest rqRequest = new RqRequest();
+
+        //    string sDate = Convert.ToString(rqRequest.RequestDate);
+        //    string sNature = Convert.ToString(rqRequest.JobNature);
+        //    string sProjectName = Convert.ToString(rqRequest.EutProjectname);
+        //    string sEndDate = Convert.ToString(rqRequest.ExpectedEnddate);
+
+        //    string sOutput = sDate + sNature + sProjectName + sEndDate;
+
+        //    lbViewRequest.Items.Add(sOutput);
+        //}
+
+        //Koen
+        private void loadAllRequest()
         {
-            List<RqRequest> rqRequests = dao.getRequest();
+            var requests = dao.getAllRequests();
 
-            RqRequest rqRequest = new RqRequest();
+            foreach (RqRequest request in requests)
+            {
+                lbViewRequest.Items.Add(request.ExpectedEnddate);
+            }
+        }
 
-            string sDate = Convert.ToString(rqRequest.RequestDate);
-            string sNature = Convert.ToString(rqRequest.JobNature);
-            string sProjectName = Convert.ToString(rqRequest.EutProjectname);
-            string sEndDate = Convert.ToString(rqRequest.ExpectedEnddate);
+        //Koen
+        private void lbViewRequest_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
-            string sOutput = sDate + sNature + sProjectName + sEndDate;
-
-            lbViewRequest.Items.Add(sOutput);
         }
     }
 }
