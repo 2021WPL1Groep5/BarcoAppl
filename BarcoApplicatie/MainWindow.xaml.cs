@@ -148,15 +148,12 @@ namespace BarcoApplicatie
             }
         }
         ///////////////////////////////////////////logoHomeScreen///////////////////////////////////////////
-
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
             HomeScreen HomeScreen = new HomeScreen();
             HomeScreen.Show();
             dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         }
-
-
         ///////////////////////////////////////////toggleCheckbox///////////////////////////////////////////
         public static class Utils
         {
@@ -192,7 +189,6 @@ namespace BarcoApplicatie
                 }
             }
         }
-
         public void toggle_click(CheckBox name, string cbname)
         {
             if (name.IsChecked == true)
