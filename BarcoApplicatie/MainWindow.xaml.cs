@@ -1,4 +1,4 @@
-﻿using BarcoApplicatie.BibModels;
+﻿using BarcoApplicatie.NewBibModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -86,7 +86,6 @@ namespace BarcoApplicatie
         }
 
         //Koen
-        /*
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
             dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
@@ -219,7 +218,7 @@ namespace BarcoApplicatie
         }
 
 
-        /*
+        
         public void RequesterInitials(string txtrequesterinitials)
         {
               txtRequesterInitials.Text = txtrequesterinitials.ToUpper();
@@ -231,7 +230,7 @@ namespace BarcoApplicatie
                 txtRequesterInitials.Text = txtrequesterinitials.ToUpper();
             }
         }
-        */
+        
 
 
         public void ControlInput(string canBe, TextBox box, Label label, string content)
@@ -247,15 +246,15 @@ namespace BarcoApplicatie
         // elk tekstvak de input met de functie controleren en aanpassen
         private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^A-Z-a-z]", txtRequesterInitials1, initialsErrorLabel, "Please enter letters only.");
+            ControlInput("[^A-Z-a-z]", txtRequesterInitials, initialsErrorLabel, "Please enter letters only.");
 
-            txtRequesterInitials1.Text.ToUpper();
+            txtRequesterInitials.Text.ToUpper();
         }
         
         
         private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^A-Z-a-z-0-9]", txtProjectNumber1 , projectNumberErrorLabel, "Please enter numbers and letters only.");
+            ControlInput("[^A-Z-a-z-0-9]", txtProjectNumber , projectNumberErrorLabel, "Please enter numbers and letters only.");
         }
 
        
@@ -354,11 +353,6 @@ namespace BarcoApplicatie
         private void txtGrossWeight5_TextChanged(object sender, TextChangedEventArgs e)
         {
             ControlInput("[^0-9]", txtGrossWeight5, numbersErrorLabel, "Please enter numbers only.");
-        }
-
-        private void btnSendJob_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
