@@ -221,19 +221,6 @@ namespace BarcoApplicatie
             }
         }
 
-        ///////////////////////////////////////////errorHandling///////////////////////////////////////////
-
-        public void RequesterInitials(string txtrequesterinitials)
-        {
-              txtRequesterInitials.Text = txtrequesterinitials.ToUpper();
-            
-            if (System.Text.RegularExpressions.Regex.IsMatch(txtrequesterinitials, "[^A-Z-a-z]"))
-            {
-                MessageBox.Show("Please enter only letters.");
-                txtrequesterinitials = txtrequesterinitials.Remove(txtrequesterinitials.Length - 1);
-                txtRequesterInitials.Text = txtrequesterinitials.ToUpper();
-            }
-        }
         public void ControlInput(string canBe, TextBox box, Label label, string content)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(box.Text, canBe))
@@ -248,14 +235,12 @@ namespace BarcoApplicatie
             ControlInput("[^A-Z-a-z]", txtRequesterInitials, initialsErrorLabel, "Please enter letters only.");
             txtRequesterInitials.Text.ToUpper();
         }
+        
+        //deze functie toepassen op de verschillende inputvelden
         private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
         {
             ControlInput("[^A-Z-a-z-0-9]", txtProjectNumber , projectNumberErrorLabel, "Please enter numbers and letters only.");
         }
-
-       
-        
-
         
         private void txtEutPartnumber1_TextChanged(object sender, TextChangedEventArgs e)
         {
