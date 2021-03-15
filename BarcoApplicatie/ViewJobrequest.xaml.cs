@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BarcoApplicatie.BibModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,6 +18,8 @@ namespace BarcoApplicatie
     /// </summary>
     public partial class ViewJobrequest : Window
     {
+        private DAO dao;
+
         public ViewJobrequest()
         {
             InitializeComponent();
@@ -30,5 +33,6 @@ namespace BarcoApplicatie
             HomeScreen HomeScreen = new HomeScreen();
             HomeScreen.Show();
         }
+
     }
 }

@@ -42,10 +42,15 @@ namespace BarcoApplicatie
         }
 
         public void Request(string initials, string divisions, string jobNature, string projectName, 
-            string partNumber, DateTime? date, string grossWeight, string netWeight, CheckBox checkbox)
+            string partNumber, DateTime? date, string grossWeight, string netWeight, CheckBox checkbox,
+            DateTime? dateEUT, CheckBox checkBoxEUT, string link, string remarks)
         {
+
+            //Add request
+
             RqRequest request = new RqRequest();
-            request.JrNumber = "0002";
+            request.JrNumber = "0001";
+            request.HydraProjectNr = "0001";
             request.Requester = initials;
             request.BarcoDivision = divisions;
             request.JobNature = jobNature;
@@ -60,33 +65,43 @@ namespace BarcoApplicatie
             {
                 request.Battery = true;
             }
-
             context.RqRequest.Add(request);
             context.SaveChanges();
 
-        }
 
-        public void addingOptionalInput(string link, string remarks)
-        {
+            //Add request Detail
+
+            RqRequestDetail requestDetail = new RqRequestDetail();
+
+            requestDetail.IdRequest = request.IdRequest;
+            requestDetail.Testdivisie = "EMC";
+            context.RqRequestDetail.Add(requestDetail);
+            context.SaveChanges();
+
+            //Add EUT
+
+            Eut eut = new Eut();
+            if (checkBoxEUT.IsChecked == true)
+            {
+                eut.AvailableDate = dateEUT;
+                eut.OmschrijvingEut = "EUT1";
+            }
+            
+            eut.IdRqDetail = requestDetail.IdRqDetail;
+            context.Eut.Add(eut);
+            context.SaveChanges();
+
+            //Add Optional remarks
+
             RqOptionel optional = new RqOptionel();
             optional.Link = link;
             optional.Remarks = remarks;
 
+            optional.IdRequest = request.IdRequest;
             context.RqOptionel.Add(optional);
             context.SaveChanges();
         }
 
-        public void addEUT(DateTime? dateEUT, CheckBox checkBoxEUT1)
-        {
-            Eut eut = new Eut();
-
-            if (checkBoxEUT1.IsChecked == true)
-            {
-                eut.AvailableDate = dateEUT;
-            }
-            context.Eut.Add(eut);
-            context.SaveChanges();
-        }
 
         public void addTestDivision(string testDivision)
         {
