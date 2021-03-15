@@ -58,5 +58,6 @@
         <ListBox x:Name="lbViewRequest" Margin="0,76,0,0" BorderThickness="0.5,0.25" Background="Transparent" BorderBrush="#FF707070" Foreground="White" SelectionChanged="lbViewRequest_SelectionChanged"/>
         <Button x:Name="btnHome" Click="btnHome_Click" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Height="56" Margin="1,0,0,0" VerticalAlignment="Top" Width="202"/>
         <Image Width="200" x:Name="capturedPhoto" Margin="2,-7,700,762" Height="75"/>
+        <Button Content="REMOVE" HorizontalAlignment="Left" Height="56" Margin="762,0,0,0" VerticalAlignment="Top" Width="140" Background="#FFF10000" Foreground="White" BorderBrush="#FF3C3F41" Click="Button_Click" BorderThickness="2,2,2,2"/>
     </Grid>
 </Window>
