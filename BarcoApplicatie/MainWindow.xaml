@@ -40,7 +40,7 @@
             </TextBox.RenderTransform>
         </TextBox>
         <Label Content="NATURE OF TEST(S) TO PERFORM" HorizontalAlignment="Left" Margin="25,463,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <ComboBox x:Name="cmbDivision" HorizontalAlignment="Left" Height="18" Margin="233,104,0,0" VerticalAlignment="Top" Width="120" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B">
+        <ComboBox x:Name="cmbDivision" HorizontalAlignment="Left" Height="18" Margin="233,104,0,0" VerticalAlignment="Top" Width="120" Background="Black" Foreground="Black" BorderBrush="Black" OpacityMask="Black">
         </ComboBox>
         <DatePicker x:Name="ExpectedEndDate" HorizontalAlignment="Left" Height="26" Margin="233,317,0,0" VerticalAlignment="Top" Width="120" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="13.464,2.782" Foreground="White" Text="#FFFFFF" ForceCursor="True">
             <DatePicker.CalendarStyle>
@@ -471,8 +471,8 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="btnSendJob" Click="btnSendJob_Click" Content="SEND JOB REQUEST TO PVG" HorizontalAlignment="Left" Height="116" Margin="579,688,0,0" VerticalAlignment="Top" Width="269" Foreground="White" Background="#FFF10000"/>
-        <ComboBox x:Name="cmbJobNature" HorizontalAlignment="Left" Height="18" Margin="233,135,0,0" VerticalAlignment="Top" Width="120" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" />
+        <Button x:Name="btnSendJob" Click="btnSendJob_Click" Content="SEND JOB REQUEST TO PVG" HorizontalAlignment="Left" Height="116" Margin="579,697,0,0" VerticalAlignment="Top" Width="269" Foreground="White" Background="#FFF10000"/>
+        <ComboBox x:Name="cmbJobNature" HorizontalAlignment="Left" Height="18" Margin="233,135,0,0" VerticalAlignment="Top" Width="120" Background="Black" Foreground="Black" BorderBrush="Black" OpacityMask="Black" />
         <Label Content="PVG" HorizontalAlignment="Left" Margin="786,446,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>
         <Label Content="RESPONSIBLE" HorizontalAlignment="Left" Margin="761,463,0,0" VerticalAlignment="Top" Foreground="White" Height="27"/>
         <TextBox x:Name="txtEutPartnumber1_Copy1" HorizontalAlignment="Left" Margin="757,531,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="91" Background="#FF45494A" BorderBrush="#FF707070" RenderTransformOrigin="0.5,0.5" Foreground="White" Height="24">
@@ -599,18 +599,15 @@
             </DatePicker.CalendarStyle>
         </DatePicker>
         <Image x:Name="capturedPhoto" Width="200" Height="75" Margin="2,-7,700,762"/>
-        <ComboBox x:Name="cmbPvgResposibleEmc" HorizontalAlignment="Left" Height="24" Margin="757,486,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False"/>
-        <ComboBox x:Name="cmbPvgResponsibleEnviromental" HorizontalAlignment="Left" Height="24" Margin="757,508,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False"/>
-        <ComboBox x:Name="cmbPvgRepsonsibleReliability" HorizontalAlignment="Left" Height="24" Margin="757,531,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False"/>
-        <ComboBox x:Name="cmbPvgResponsibleProductSafety" HorizontalAlignment="Left" Height="24" Margin="757,554,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False">
-            <ComboBox x:Name="cmbDivision_Copy4" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B"/>
-        </ComboBox>
-        <ComboBox x:Name="cmbPvgResponsiblePackaging" HorizontalAlignment="Left" Height="24" Margin="757,577,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False">
-            <ComboBox x:Name="cmbDivision_Copy6" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B"/>
-        </ComboBox>
-        <ComboBox x:Name="cmbPvgResponsibleGreenCompilance" HorizontalAlignment="Left" Height="24" Margin="757,599,0,0" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B" IsEnabled="False">
-            <ComboBox x:Name="cmbDivision_Copy8" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="91" Background="#FFEF00CF" Foreground="#FF89207B" BorderBrush="#FFEF00CF" OpacityMask="#FF88007B"/>
-        </ComboBox>
+        <ComboBox x:Name="cmbPvgResposibleEmc" HorizontalAlignment="Left" Height="24" Margin="757,486,0,0" VerticalAlignment="Top" Width="91" Background="Black" Foreground="Black" BorderBrush="Black" OpacityMask="Black" IsEnabled="False"/>
+        <ComboBox x:Name="cmbPvgResponsibleEnviromental" HorizontalAlignment="Left" Height="24" Margin="757,508,0,0" VerticalAlignment="Top" Width="91" Background="Black" Foreground="Black" BorderBrush="Black" OpacityMask="Black" IsEnabled="False"/>
+        <ComboBox x:Name="cmbPvgRepsonsibleReliability" HorizontalAlignment="Left" Height="24" Margin="757,531,0,0" VerticalAlignment="Top" Width="91" Background="Black" Foreground="Black" BorderBrush="Black" OpacityMask="Black" IsEnabled="False"/>
+        <ComboBox x:Name="cmbPvgResponsibleProductSafety" HorizontalAlignment="Left" Height="24" Margin="757,554,0,0" VerticalAlignment="Top" Width="91" Background="Black" Foreground="Black" BorderBrush="Black" OpacityMask="Black" IsEnabled="False"/>
+
+        <ComboBox x:Name="cmbPvgResponsiblePackaging" HorizontalAlignment="Left" Height="24" Margin="757,577,0,0" VerticalAlignment="Top" Width="91" Background="Black" Foreground="Black" BorderBrush="Black" OpacityMask="Black" IsEnabled="False"/>
+
+        <ComboBox x:Name="cmbPvgResponsibleGreenCompilance" HorizontalAlignment="Left" Height="24" Margin="757,599,0,0" VerticalAlignment="Top" Width="91" Background="Black" Foreground="Black" BorderBrush="Black" OpacityMask="Black" IsEnabled="False"/>
+
         <Button x:Name="btnHome" Click="btnHome_Click" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Height="56" Margin="1,0,0,0" VerticalAlignment="Top" Width="202"/>
         <Label x:Name="initialsErrorLabel"  Content="" HorizontalAlignment="Left" Height="25" Margin="368,68,0,0" VerticalAlignment="Top" Width="283" Foreground="Red" >
 
