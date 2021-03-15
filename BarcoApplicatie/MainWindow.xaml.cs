@@ -151,9 +151,8 @@ namespace BarcoApplicatie
                "Net3: " + txtNetWeight3.Text + "; " +
                "Net4: " + txtNetWeight4.Text + "; " +
                "Net5: " + txtNetWeight5.Text + "; ",
-               Checkbox_Yes);
+               Checkbox_Yes, DateEut1.SelectedDate, cbEmcEut1, txtLinkToTestplan.Text, txtSpecialRemarks.Text);
 
-            dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         }
         ///////////////////////////////////////////logoHomeScreen///////////////////////////////////////////
 
@@ -161,7 +160,6 @@ namespace BarcoApplicatie
         {
             HomeScreen HomeScreen = new HomeScreen();
             HomeScreen.Show();
-            dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
         }
 
         ///////////////////////////////////////////boolCheckbox///////////////////////////////////////////
