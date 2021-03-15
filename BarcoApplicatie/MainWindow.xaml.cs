@@ -25,6 +25,8 @@ namespace BarcoApplicatie
     {
         private DAO dao;
         private ErrorHandling errorHandling = new ErrorHandling();
+        HomeScreen HomeScreen = new HomeScreen();
+
 
         public MainWindow()
         {
@@ -65,7 +67,16 @@ namespace BarcoApplicatie
 
         public void checkFilled()
         {
-            if (txtRequesterInitials.Text.Length > 0 && cmbDivision.SelectedIndex > -1 && cmbJobNature.SelectedIndex > -1 && txtProjectNumber.Text.Length > 0 && txtProjectName.Text.Length > 0 && txtEutPartnumber1.Text.Length > 0 && txtNetWeight1.Text.Length > 0 && txtGrossWeight1.Text.Length > 0 && ExpectedEndDate.Text.Length > 0 && Checkbox_Yes.IsChecked == true || Checkbox_No.IsChecked == true && txtLinkToTestplan.Text.Length > 0)
+            if (txtRequesterInitials.Text.Length > 0 && 
+                cmbDivision.SelectedIndex > -1 && 
+                cmbJobNature.SelectedIndex > -1 && 
+                txtProjectNumber.Text.Length > 0 && 
+                txtProjectName.Text.Length > 0 && 
+                txtEutPartnumber1.Text.Length > 0 && 
+                txtNetWeight1.Text.Length > 0 && 
+                txtGrossWeight1.Text.Length > 0 && 
+                ExpectedEndDate.Text.Length > 0 && 
+                txtLinkToTestplan.Text.Length > 0)
             {
 
             }
@@ -101,38 +112,6 @@ namespace BarcoApplicatie
         {
             checkFilled();
 
-            if (cbEmcEut.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, cbEmcEut1);
-
-                dao.addTestDivision("EMC");
-            }
-            if (cbEnviromental.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, cbEnviromental1);
-
-
-                dao.addTestDivision("ENV");
-            }
-            if (cbReliability.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, cbReliability1);
-
-                dao.addTestDivision("REL");
-            }
-            if (cbProductSafety.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, cbProductSafety1);
-
-                dao.addTestDivision("SAF");
-            }
-            if (cbGreenCompilance.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, cbGreenCompilance1);
-
-                dao.addTestDivision("ECO");
-            }
-
             dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
                txtProjectName.Text,
                "part1: " + txtEutPartnumber1.Text + "; " +
@@ -153,12 +132,13 @@ namespace BarcoApplicatie
                "Net5: " + txtNetWeight5.Text + "; ",
                Checkbox_Yes, DateEut1.SelectedDate, cbEmcEut1, txtLinkToTestplan.Text, txtSpecialRemarks.Text);
 
+            HomeScreen.Show();
+            
         }
         ///////////////////////////////////////////logoHomeScreen///////////////////////////////////////////
 
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
-            HomeScreen HomeScreen = new HomeScreen();
             HomeScreen.Show();
         }
 
