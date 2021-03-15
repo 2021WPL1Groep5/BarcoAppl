@@ -30,13 +30,6 @@ namespace BarcoApplicatie
             }
         }
 
-        /*
-        public Person SelectedPerson
-        {
-            get { return selectedPerson; }
-            set { selectedPerson = value; }
-        }*/
-
         public RqRequest SelectedRequest
         {
             get { return SelectedRequest; }
