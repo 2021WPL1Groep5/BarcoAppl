@@ -197,11 +197,11 @@ namespace BarcoApplicatie
             toggle_click(cbGreenCompilance, "cbGreenCompilance");
         }
 
-        private void dateEmpty(CheckBox cbEmcEut, CheckBox cbEnviromental, CheckBox cbReliability, CheckBox cbProductSafety, CheckBox cbPackaging, CheckBox cbGreenCompilance)
+        private void dateEmpty(DatePicker DateEut, CheckBox cbEmcEut, CheckBox cbEnviromental, CheckBox cbReliability, CheckBox cbProductSafety, CheckBox cbPackaging, CheckBox cbGreenCompilance)
         {
-            if (cbEmcEut1.IsChecked == false && cbEnviromental1.IsChecked == false && cbReliability1.IsChecked == false && cbProductSafety1.IsChecked == false && cbPackaging1.IsChecked == false && cbGreenCompilance1.IsChecked == false)
+            if (cbEmcEut.IsChecked == false && cbEnviromental.IsChecked == false && cbReliability.IsChecked == false && cbProductSafety.IsChecked == false && cbPackaging.IsChecked == false && cbGreenCompilance.IsChecked == false)
             {
-                DateEut1.IsEnabled = false;
+                DateEut.IsEnabled = false;
             }
         }
         ///////////////////////////////////////////errorHandling///////////////////////////////////////////
