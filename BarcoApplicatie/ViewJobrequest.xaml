@@ -8,53 +8,56 @@
         Title="ViewJobrequest" Height="840" Width="900" WindowStartupLocation="CenterScreen">
 
     <Grid Background="#FF3C3F41" OpacityMask="White" Margin="-2,0,0,-6">
+        
         <Border BorderThickness="1" BorderBrush="#FFF10000" HorizontalAlignment="Center" Height="56" VerticalAlignment="Top" Width="913" Background="#FFF10000"/>
-        <Border BorderThickness="0.5,0.5,0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,56,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,76,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,96,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,116,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,136,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,156,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,176,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,196,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,216,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,236,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,256,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,276,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,296,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,316,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,336,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,356,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,376,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,396,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,416,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,436,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,456,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,476,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,496,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,516,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,536,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,556,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,576,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,596,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,616,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,636,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,656,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,676,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,696,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,716,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,736,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,756,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,776,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,796,0,0" />
-        <Border BorderThickness="0.5,0.25" Background="#FF45494A" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,816,0,0" />
+        <Border BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" BorderThickness="0.5,0.5,0.5,0.25" Background="#FF45494A" Margin="0,56,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,76,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,96,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,116,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,136,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,156,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,176,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,196,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,216,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,236,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,256,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,276,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,296,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,316,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,336,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,356,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,376,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,396,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,416,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,436,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,456,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,476,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,496,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,516,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,536,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,556,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,576,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,596,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,616,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,636,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,656,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,676,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,696,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,716,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,736,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,756,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,776,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF3C3F41" Margin="0,796,0,0" />
+        <Border BorderThickness="0.5,0.25" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Background="#FF45494A" Margin="0,816,0,0" />
         <Border BorderThickness="0.5,0.25" Background="#FF3C3F41" BorderBrush="#FF707070" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="902" Margin="0,836,0,0" />
-        <Label Content="Job nature" HorizontalAlignment="Left" Margin="278,53,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="EUT Projectname" HorizontalAlignment="Left" Margin="543,53,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <Label Content="Request date" HorizontalAlignment="Left" Margin="15,53,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Label
+        VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" Content="Job nature" Margin="278,53,0,0" />
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Content="EUT Projectname" Margin="543,53,0,0"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Content="Request date" Margin="15,53,0,0"/>
         <Label Content="End date" HorizontalAlignment="Left" Margin="819,53,0,0" VerticalAlignment="Top" Foreground="White"/>
-        <ListBox Margin="0,76,0,0" BorderThickness="0.5,0.25" Background="Transparent" BorderBrush="#FF707070" Foreground="White"/>
-        <Image x:Name="capturedPhoto" Width="200" Height="75" Margin="1,-5,701,760"/>
+        <ListBox x:Name="lbViewRequest" Margin="0,76,0,0" BorderThickness="0.5,0.25" Background="Transparent" BorderBrush="#FF707070" Foreground="White"/>
+        
         <Button x:Name="btnHome" Click="btnHome_Click" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Height="56" Margin="1,0,0,0" VerticalAlignment="Top" Width="202"/>
+        <Image Width="200" x:Name="capturedPhoto" Margin="2,-7,700,762" Height="75"/>
     </Grid>
 </Window>
