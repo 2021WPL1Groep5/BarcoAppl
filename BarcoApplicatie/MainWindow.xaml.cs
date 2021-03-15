@@ -36,8 +36,45 @@ namespace BarcoApplicatie
 
             BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
             capturedPhoto.Source = bitmapImage;
-
         }
+        ///////////////////////////////////////////Checkbox YesorNo///////////////////////////////////////////
+        public void yesOrNo()
+        {
+            if (Checkbox_No.IsChecked == true)
+            {
+                Checkbox_Yes.IsChecked = false;
+            }
+
+            else if (Checkbox_Yes.IsChecked == true)
+            {
+                Checkbox_No.IsChecked = false;
+            }
+        }
+
+        private void Checkbox_No_Click(object sender, RoutedEventArgs e)
+        {
+            yesOrNo();
+        }
+
+        private void Checkbox_Yes_Click(object sender, RoutedEventArgs e)
+        {
+            yesOrNo();
+        }
+
+        ///////////////////////////////////////////functionNoEmptyData///////////////////////////////////////////
+
+        public void checkFilled()
+        {
+            if (txtRequesterInitials.Text.Length > 0 && cmbDivision.SelectedIndex > -1 && cmbJobNature.SelectedIndex > -1 && txtProjectNumber.Text.Length > 0 && txtProjectName.Text.Length > 0 && txtEutPartnumber1.Text.Length > 0 && txtNetWeight1.Text.Length > 0 && txtGrossWeight1.Text.Length > 0 && ExpectedEndDate.Text.Length > 0 && Checkbox_Yes.IsChecked == true || Checkbox_No.IsChecked == true && txtLinkToTestplan.Text.Length > 0)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Fill in all fields please.");
+            }
+        }
+
         ///////////////////////////////////////////loadDataIntoGUI///////////////////////////////////////////
         private void insertDivisionIntoComboBox()
         {
@@ -48,7 +85,6 @@ namespace BarcoApplicatie
                 cmbDivision.Items.Add(division.Afkorting);
             }
         }
-
 
         private void insertJobNatureIntoComboBox()
         {
@@ -63,6 +99,8 @@ namespace BarcoApplicatie
         ///////////////////////////////////////////buttonSendToDB///////////////////////////////////////////
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
+            checkFilled();
+
             if (cbEmcEut.IsChecked == true)
             {
                 dao.addEUT(DateEut1.SelectedDate, cbEmcEut1);
@@ -459,6 +497,7 @@ namespace BarcoApplicatie
         {
             errorHandling.ControlInput("[^0-9]", txtGrossWeight5, numbersErrorLabel, "Please enter numbers only.");
         }
+
     }
 }
 
