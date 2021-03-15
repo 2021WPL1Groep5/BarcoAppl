@@ -143,6 +143,7 @@ namespace BarcoApplicatie
                Checkbox_Yes, DateEut1.SelectedDate, cbEmcEut1, txtLinkToTestplan.Text, txtSpecialRemarks.Text);
 
             openViewJobRequestScreen();
+            
 
         }
         ///////////////////////////////////////////logoHomeScreen///////////////////////////////////////////

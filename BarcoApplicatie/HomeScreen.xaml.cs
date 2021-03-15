@@ -17,15 +17,16 @@ namespace BarcoApplicatie
     /// </summary>
     public partial class HomeScreen : Window
     {
+        ViewAcceptJobrequest ViewAcceptJobrequest = new ViewAcceptJobrequest();
+        ViewJobrequest ViewJobrequest = new ViewJobrequest();
+
         public HomeScreen()
         {
             InitializeComponent();
 
             BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));
             capturedPhoto.Source = bitmapImage;
-        }
-
-       
+        } 
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
@@ -35,13 +36,11 @@ namespace BarcoApplicatie
 
         private void Confirm_Click(object sender, RoutedEventArgs e)
         {
-            ViewAcceptJobrequest ViewAcceptJobrequest = new ViewAcceptJobrequest();
             ViewAcceptJobrequest.Show();
         }
 
         private void View_Click(object sender, RoutedEventArgs e)
         {
-            ViewJobrequest ViewJobrequest = new ViewJobrequest();
             ViewJobrequest.Show();
         }
     }
