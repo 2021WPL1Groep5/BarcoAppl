@@ -18,9 +18,6 @@ using System.Collections;
 
 namespace BarcoApplicatie
 {
-
-    
-
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -41,8 +38,8 @@ namespace BarcoApplicatie
             capturedPhoto.Source = bitmapImage;
 
         }
-
-         private void insertDivisionIntoComboBox()
+        ///////////////////////////////////////////loadDataIntoGUI///////////////////////////////////////////
+        private void insertDivisionIntoComboBox()
         {
             List<RqBarcoDivision> divisions = dao.getAllDivisions();
 
@@ -179,7 +176,6 @@ namespace BarcoApplicatie
                 }
             }
         }
-
         public void toggle_click(CheckBox name, string cbname)
         {
             if (name.IsChecked == true)
@@ -213,11 +209,11 @@ namespace BarcoApplicatie
         }
         private void cbGreenCompilance_Click(object sender, RoutedEventArgs e)
         {
-
+            toggle_click(cbGreenCompilance, "cbGreenCompilance");
         }
 
+        ///////////////////////////////////////////errorHandling///////////////////////////////////////////
 
-        
         public void RequesterInitials(string txtrequesterinitials)
         {
               txtRequesterInitials.Text = txtrequesterinitials.ToUpper();
@@ -229,9 +225,6 @@ namespace BarcoApplicatie
                 txtRequesterInitials.Text = txtrequesterinitials.ToUpper();
             }
         }
-        
-
-
         public void ControlInput(string canBe, TextBox box, Label label, string content)
         {
             if (System.Text.RegularExpressions.Regex.IsMatch(box.Text, canBe))
@@ -239,24 +232,19 @@ namespace BarcoApplicatie
                 label.Content = content;
                 box.Text = box.Text.Remove(box.Text.Length - 1);
             }
-
         }
-
         // elk tekstvak de input met de functie controleren en aanpassen
         private void txtRequesterInitials_TextChanged(object sender, TextChangedEventArgs e)
         {
             ControlInput("[^A-Z-a-z]", txtRequesterInitials, initialsErrorLabel, "Please enter letters only.");
-
             txtRequesterInitials.Text.ToUpper();
         }
-        
-        
         private void txtProjectNumber_TextChanged(object sender, TextChangedEventArgs e)
         {
             ControlInput("[^A-Z-a-z-0-9]", txtProjectNumber , projectNumberErrorLabel, "Please enter numbers and letters only.");
         }
 
-       
+
         public void EutPartnumber(string txteutpartnr)
         {
            
@@ -266,17 +254,7 @@ namespace BarcoApplicatie
         {
             
         }
-
-      
-
-       
-
-        private void txtProjectName1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-        }
-       
-        
+   
         private void txtEutPartnumber1_TextChanged(object sender, TextChangedEventArgs e)
         {
             ControlInput("[^0-9]", txtEutPartnumber1, numbersErrorLabel, "Please enter numbers only.");
@@ -304,8 +282,7 @@ namespace BarcoApplicatie
 
         private void txtNetWeight1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtNetWeight1, numbersErrorLabel, "Please enter numbers only.");
-            
+            ControlInput("[^0-9]", txtNetWeight1, numbersErrorLabel, "Please enter numbers only."); 
         }
 
         private void txtNetWeight2_TextChanged(object sender, TextChangedEventArgs e)
@@ -330,8 +307,7 @@ namespace BarcoApplicatie
 
         private void txtGrossWeight1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            ControlInput("[^0-9]", txtGrossWeight1, numbersErrorLabel, "Please enter numbers only.");
-            
+            ControlInput("[^0-9]", txtGrossWeight1, numbersErrorLabel, "Please enter numbers only.");        
         }
 
         private void txtGrossWeight2_TextChanged(object sender, TextChangedEventArgs e)
