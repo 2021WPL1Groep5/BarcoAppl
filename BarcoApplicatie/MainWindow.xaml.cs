@@ -109,6 +109,17 @@ namespace BarcoApplicatie
             }
         }
 
+        public void checkFilled()
+        {
+            if (txtRequesterInitials.Text.Length > 0 && cmbDivision.SelectedIndex > -1 && cmbJobNature.SelectedIndex > -1 && txtProjectNumber.Text.Length > 0 && txtProjectName.Text.Length > 0 && txtEutPartnumber1.Text.Length > 0 && txtNetWeight1.Text.Length > 0 && txtGrossWeight1.Text.Length > 0 && ExpectedEndDate.Text.Length > 0 && Checkbox_Yes.IsChecked == true || Checkbox_No.IsChecked == true && txtLinkToTestplan.Text.Length > 0)
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("Fill in all fields please.");
+            }
+        }
         ///////////////////////////////////////////buttonSendToDB///////////////////////////////////////////
         //Koen
         private void openViewJobRequestScreen()
@@ -147,7 +158,6 @@ namespace BarcoApplicatie
 
         }
         ///////////////////////////////////////////logoHomeScreen///////////////////////////////////////////
-
         private void btnHome_Click(object sender, RoutedEventArgs e)
         {
             HomeScreen.Show();
