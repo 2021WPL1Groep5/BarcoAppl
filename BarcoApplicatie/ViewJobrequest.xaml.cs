@@ -1,5 +1,6 @@
 ﻿using BarcoApplicatie.BibModels;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -39,26 +40,37 @@ namespace BarcoApplicatie
         }
 
         //Koen
+        //private void updateListBox(ListBox listBox, string display, string value, IEnumerable source)
+        //{
+        //    listBox.DisplayMemberPath = display;
+        //    listBox.SelectedValuePath = value;
+        //    listBox.ItemsSource = source;
+        //}
+
+        //Koen
         private void loadAllRequest()
         {
-            var requests = dao.getAllRequests();
+            List<RqRequest> requests = dao.getAllRequests();
+            //updateListBox(lbViewRequest, "expectedEnddate", "id_request", requests);
 
-            foreach (RqRequest request in requests)
+            foreach (var request in requests)
             {
                 lbViewRequest.Items.Add(request.ExpectedEnddate);
             }
         }
 
         //Koen
-        private void lbViewRequest_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void btnRemove_Click(object sender, RoutedEventArgs e)
+        {
+            dao.removeJobRequest(Convert.ToDateTime(lbViewRequest.SelectedValue));
+            loadAllRequest();
+        }
+
+        //Koen
+        private void btnShow_Click(object sender, RoutedEventArgs e)
         {
             AcceptJobrequest acceptJobrequest = new AcceptJobrequest();
             acceptJobrequest.Show();
-        }
-
-        private void btnRemove_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

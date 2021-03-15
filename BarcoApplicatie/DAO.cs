@@ -1,4 +1,5 @@
 ﻿using BarcoApplicatie.BibModels;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,22 +46,30 @@ namespace BarcoApplicatie
             context.SaveChanges();
         }
 
-        public RqRequest getRequestWithID(int id)
+        public RqRequest getRequestWithDate(DateTime? date)
         {
-            return context.RqRequest.FirstOrDefault(r => r.IdRequest == id);
+            return context.RqRequest.FirstOrDefault(r => r.ExpectedEnddate == date);
         }
 
-        public void removeJobRequest(int id)
+        public void removeJobRequest(DateTime? date)
         {
-            context.RqRequest.Remove(getRequestWithID(id));
+            context.RqRequest.Remove(getRequestWithDate(date));
             saveChanges();
         }
 
 
         public void Request(string initials, string divisions, string jobNature, string projectName, 
             string partNumber, DateTime? date, string grossWeight, string netWeight, CheckBox checkbox,
-            DateTime? dateEUT, CheckBox checkBoxEUT, string link, string remarks)
+            DateTime? dateEUT1, CheckBox checkBoxEUT1, 
+            DateTime? dateEUT2, CheckBox checkBoxEUT2,
+             DateTime? dateEUT3, CheckBox checkBoxEUT3,
+              DateTime? dateEUT4, CheckBox checkBoxEUT4,
+               DateTime? dateEUT5, CheckBox checkBoxEUT5,
+                DateTime? dateEUT6, CheckBox checkBoxEUT6,
+            string link, string remarks, string testdivision)
         {
+            //omschrijving voor in EUT tabel
+            string omschrijving = "";
 
             //Add request
 
@@ -90,19 +99,53 @@ namespace BarcoApplicatie
             RqRequestDetail requestDetail = new RqRequestDetail();
 
             requestDetail.IdRequest = request.IdRequest;
-            requestDetail.Testdivisie = "EMC";
+            requestDetail.Testdivisie = testdivision;
             context.RqRequestDetail.Add(requestDetail);
             context.SaveChanges();
 
             //Add EUT
 
             Eut eut = new Eut();
-            if (checkBoxEUT.IsChecked == true)
+            if (checkBoxEUT1.IsChecked == true)
             {
-                eut.AvailableDate = dateEUT;
-                eut.OmschrijvingEut = "EUT1";
+                omschrijving += "EUT1, ";
+                eut.AvailableDate = dateEUT1;
+                eut.OmschrijvingEut = omschrijving;
             }
-            
+
+            if (checkBoxEUT2.IsChecked == true)
+            {
+                omschrijving += "EUT2, ";
+                eut.AvailableDate = dateEUT2;
+                eut.OmschrijvingEut = omschrijving;
+            }
+            if (checkBoxEUT3.IsChecked == true)
+            {
+                omschrijving += "EUT3, ";
+                eut.AvailableDate = dateEUT3;
+                eut.OmschrijvingEut = omschrijving;
+            }
+
+            if (checkBoxEUT4.IsChecked == true)
+            {
+                omschrijving += "EUT4, ";
+                eut.AvailableDate = dateEUT4;
+                eut.OmschrijvingEut = omschrijving;
+            }
+            if (checkBoxEUT5.IsChecked == true)
+            {
+                omschrijving += "EUT5, ";
+                eut.AvailableDate = dateEUT5;
+                eut.OmschrijvingEut = omschrijving;
+            }
+
+            if (checkBoxEUT6.IsChecked == true)
+            {
+                omschrijving += "EUT6, ";
+                eut.AvailableDate = dateEUT6;
+                eut.OmschrijvingEut = omschrijving;
+            }
+
             eut.IdRqDetail = requestDetail.IdRqDetail;
             context.Eut.Add(eut);
             context.SaveChanges();

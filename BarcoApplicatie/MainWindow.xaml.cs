@@ -121,7 +121,9 @@ namespace BarcoApplicatie
 
             checkFilled();
 
-            dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
+            if (cbEmcEut.IsChecked == true)
+            {
+               dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
                txtProjectName.Text,
                "part1: " + txtEutPartnumber1.Text + "; " +
                "part2: " + txtEutPartnumber2.Text + "; " +
@@ -139,7 +141,165 @@ namespace BarcoApplicatie
                "Net3: " + txtNetWeight3.Text + "; " +
                "Net4: " + txtNetWeight4.Text + "; " +
                "Net5: " + txtNetWeight5.Text + "; ",
-               Checkbox_Yes, DateEut1.SelectedDate, cbEmcEut1, txtLinkToTestplan.Text, txtSpecialRemarks.Text);
+               Checkbox_Yes, 
+               DateEut1.SelectedDate, cbEmcEut1, 
+               DateEut2.SelectedDate, cbEmcEut2,
+               DateEut3.SelectedDate, cbEmcEut3,
+               DateEut4.SelectedDate, cbEmcEut4,
+               DateEut5.SelectedDate, cbEmcEut5,
+               DateEut6.SelectedDate, cbEmcEut6,
+               txtLinkToTestplan.Text, txtSpecialRemarks.Text, "EMC");
+            }
+
+            if (cbEnviromental.IsChecked == true)
+            {
+               dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
+               txtProjectName.Text,
+               "part1: " + txtEutPartnumber1.Text + "; " +
+               "part2: " + txtEutPartnumber2.Text + "; " +
+               "part3: " + txtEutPartnumber3.Text + "; " +
+               "part4: " + txtEutPartnumber4.Text + "; " +
+               "part5: " + txtEutPartnumber5.Text + "; ",
+               ExpectedEndDate.SelectedDate,
+               "Gross1: " + txtGrossWeight1.Text + "; " +
+               "Gross2: " + txtGrossWeight2.Text + "; " +
+               "Gross3: " + txtGrossWeight3.Text + "; " +
+               "Gross4: " + txtGrossWeight4.Text + "; " +
+               "Gross5: " + txtGrossWeight4.Text + "; ",
+               "Net1: " + txtNetWeight1.Text + "; " +
+               "Net2: " + txtNetWeight2.Text + "; " +
+               "Net3: " + txtNetWeight3.Text + "; " +
+               "Net4: " + txtNetWeight4.Text + "; " +
+               "Net5: " + txtNetWeight5.Text + "; ",
+               Checkbox_Yes, 
+               DateEut1.SelectedDate, cbEnviromental1,
+               DateEut2.SelectedDate, cbEnviromental2,
+               DateEut3.SelectedDate, cbEnviromental3,
+               DateEut4.SelectedDate, cbEnviromental4,
+               DateEut5.SelectedDate, cbEnviromental5,
+               DateEut6.SelectedDate, cbEnviromental6,
+               txtLinkToTestplan.Text, txtSpecialRemarks.Text, "ENV");
+            }
+
+            if (cbReliability.IsChecked == true)
+            {
+                dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
+                txtProjectName.Text,
+                "part1: " + txtEutPartnumber1.Text + "; " +
+                "part2: " + txtEutPartnumber2.Text + "; " +
+                "part3: " + txtEutPartnumber3.Text + "; " +
+                "part4: " + txtEutPartnumber4.Text + "; " +
+                "part5: " + txtEutPartnumber5.Text + "; ",
+                ExpectedEndDate.SelectedDate,
+                "Gross1: " + txtGrossWeight1.Text + "; " +
+                "Gross2: " + txtGrossWeight2.Text + "; " +
+                "Gross3: " + txtGrossWeight3.Text + "; " +
+                "Gross4: " + txtGrossWeight4.Text + "; " +
+                "Gross5: " + txtGrossWeight4.Text + "; ",
+                "Net1: " + txtNetWeight1.Text + "; " +
+                "Net2: " + txtNetWeight2.Text + "; " +
+                "Net3: " + txtNetWeight3.Text + "; " +
+                "Net4: " + txtNetWeight4.Text + "; " +
+                "Net5: " + txtNetWeight5.Text + "; ",
+                Checkbox_Yes,
+                DateEut1.SelectedDate, cbReliability1,
+                DateEut2.SelectedDate, cbReliability2,
+                DateEut3.SelectedDate, cbReliability3,
+                DateEut4.SelectedDate, cbReliability4,
+                DateEut5.SelectedDate, cbReliability5,
+                DateEut6.SelectedDate, cbReliability6,
+                txtLinkToTestplan.Text, txtSpecialRemarks.Text, "REL");
+            }
+
+            if (cbProductSafety.IsChecked == true)
+            {
+                dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
+                txtProjectName.Text,
+                "part1: " + txtEutPartnumber1.Text + "; " +
+                "part2: " + txtEutPartnumber2.Text + "; " +
+                "part3: " + txtEutPartnumber3.Text + "; " +
+                "part4: " + txtEutPartnumber4.Text + "; " +
+                "part5: " + txtEutPartnumber5.Text + "; ",
+                ExpectedEndDate.SelectedDate,
+                "Gross1: " + txtGrossWeight1.Text + "; " +
+                "Gross2: " + txtGrossWeight2.Text + "; " +
+                "Gross3: " + txtGrossWeight3.Text + "; " +
+                "Gross4: " + txtGrossWeight4.Text + "; " +
+                "Gross5: " + txtGrossWeight4.Text + "; ",
+                "Net1: " + txtNetWeight1.Text + "; " +
+                "Net2: " + txtNetWeight2.Text + "; " +
+                "Net3: " + txtNetWeight3.Text + "; " +
+                "Net4: " + txtNetWeight4.Text + "; " +
+                "Net5: " + txtNetWeight5.Text + "; ",
+                Checkbox_Yes,
+                DateEut1.SelectedDate, cbProductSafety1,
+                DateEut2.SelectedDate, cbProductSafety2,
+                DateEut3.SelectedDate, cbProductSafety3,
+                DateEut4.SelectedDate, cbProductSafety4,
+                DateEut5.SelectedDate, cbProductSafety5,
+                DateEut6.SelectedDate, cbProductSafety6,
+                txtLinkToTestplan.Text, txtSpecialRemarks.Text, "SAF");
+            }
+
+            if (cbPackaging.IsChecked == true)
+            {
+                dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
+                txtProjectName.Text,
+                "part1: " + txtEutPartnumber1.Text + "; " +
+                "part2: " + txtEutPartnumber2.Text + "; " +
+                "part3: " + txtEutPartnumber3.Text + "; " +
+                "part4: " + txtEutPartnumber4.Text + "; " +
+                "part5: " + txtEutPartnumber5.Text + "; ",
+                ExpectedEndDate.SelectedDate,
+                "Gross1: " + txtGrossWeight1.Text + "; " +
+                "Gross2: " + txtGrossWeight2.Text + "; " +
+                "Gross3: " + txtGrossWeight3.Text + "; " +
+                "Gross4: " + txtGrossWeight4.Text + "; " +
+                "Gross5: " + txtGrossWeight4.Text + "; ",
+                "Net1: " + txtNetWeight1.Text + "; " +
+                "Net2: " + txtNetWeight2.Text + "; " +
+                "Net3: " + txtNetWeight3.Text + "; " +
+                "Net4: " + txtNetWeight4.Text + "; " +
+                "Net5: " + txtNetWeight5.Text + "; ",
+                Checkbox_Yes,
+                DateEut1.SelectedDate, cbPackaging1,
+                DateEut2.SelectedDate, cbPackaging2,
+                DateEut3.SelectedDate, cbPackaging3,
+                DateEut4.SelectedDate, cbPackaging4,
+                DateEut5.SelectedDate, cbPackaging5,
+                DateEut6.SelectedDate, cbPackaging6,
+                txtLinkToTestplan.Text, txtSpecialRemarks.Text, "PAC");
+            }
+
+            if (cbGreenCompilance.IsChecked == true)
+            {
+                dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
+                txtProjectName.Text,
+                "part1: " + txtEutPartnumber1.Text + "; " +
+                "part2: " + txtEutPartnumber2.Text + "; " +
+                "part3: " + txtEutPartnumber3.Text + "; " +
+                "part4: " + txtEutPartnumber4.Text + "; " +
+                "part5: " + txtEutPartnumber5.Text + "; ",
+                ExpectedEndDate.SelectedDate,
+                "Gross1: " + txtGrossWeight1.Text + "; " +
+                "Gross2: " + txtGrossWeight2.Text + "; " +
+                "Gross3: " + txtGrossWeight3.Text + "; " +
+                "Gross4: " + txtGrossWeight4.Text + "; " +
+                "Gross5: " + txtGrossWeight4.Text + "; ",
+                "Net1: " + txtNetWeight1.Text + "; " +
+                "Net2: " + txtNetWeight2.Text + "; " +
+                "Net3: " + txtNetWeight3.Text + "; " +
+                "Net4: " + txtNetWeight4.Text + "; " +
+                "Net5: " + txtNetWeight5.Text + "; ",
+                Checkbox_Yes,
+                DateEut1.SelectedDate, cbGreenCompilance1,
+                DateEut2.SelectedDate, cbGreenCompilance2,
+                DateEut3.SelectedDate, cbGreenCompilance3,
+                DateEut4.SelectedDate, cbGreenCompilance4,
+                DateEut5.SelectedDate, cbGreenCompilance5,
+                DateEut6.SelectedDate, cbGreenCompilance6,
+                txtLinkToTestplan.Text, txtSpecialRemarks.Text, "ECO");
+            }
 
             openViewJobRequestScreen();
             
