@@ -52,6 +52,7 @@ namespace BarcoApplicatie
             }
         }
 
+
         private void insertJobNatureIntoComboBox()
         {
             List<RqJobNature> jobNatures = dao.getAllJobNatures();
