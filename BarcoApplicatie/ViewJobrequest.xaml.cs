@@ -55,5 +55,10 @@ namespace BarcoApplicatie
             AcceptJobrequest acceptJobrequest = new AcceptJobrequest();
             acceptJobrequest.Show();
         }
+
+        private void btnRemove_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
