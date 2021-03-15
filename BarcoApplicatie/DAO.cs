@@ -1,4 +1,4 @@
-﻿using BarcoApplicatie.NewBibModels;
+﻿using BarcoApplicatie.BibModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +21,10 @@ namespace BarcoApplicatie
 
         private DAO()
         {
-            this.context = new BarcoContext();
+            this.context = new Barco2021Context();
         }
 
-        private BarcoContext context;
+        private Barco2021Context context;
 
         public List<RqBarcoDivision> getAllDivisions()
         {
@@ -76,37 +76,14 @@ namespace BarcoApplicatie
             context.SaveChanges();
         }
 
-        public void addEUT(DateTime? dateEUT1, DateTime? dateEUT2, DateTime? dateEUT3, DateTime? dateEUT4,
-            DateTime? dateEUT5, DateTime? dateEUT6, CheckBox checkBoxEUT1, CheckBox checkBoxEUT2,
-            CheckBox checkBoxEUT3, CheckBox checkBoxEUT4, CheckBox checkBoxEUT5, CheckBox checkBoxEUT6)
+        public void addEUT(DateTime? dateEUT, CheckBox checkBoxEUT1)
         {
             Eut eut = new Eut();
 
             if (checkBoxEUT1.IsChecked == true)
             {
-                eut.AvailableDateEut1 = dateEUT1;
+                eut.AvailableDate = dateEUT;
             }
-            if (checkBoxEUT2.IsChecked == true)
-            {
-                eut.AvailableDateEut2 = dateEUT2;
-            }
-            if (checkBoxEUT3.IsChecked == true)
-            {
-                eut.AvailableDateEut3 = dateEUT3;
-            }
-            if (checkBoxEUT4.IsChecked == true)
-            {
-                eut.AvailableDateEut4 = dateEUT4;
-            }
-            if (checkBoxEUT5.IsChecked == true)
-            {
-                eut.AvailableDateEut5 = dateEUT5;
-            }
-            if (checkBoxEUT6.IsChecked == true)
-            {
-                eut.AvailableDateEut6 = dateEUT6;
-            }
-
             context.Eut.Add(eut);
             context.SaveChanges();
         }

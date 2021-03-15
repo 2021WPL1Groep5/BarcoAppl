@@ -1,4 +1,4 @@
-﻿using BarcoApplicatie.NewBibModels;
+﻿using BarcoApplicatie.BibModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,6 +62,38 @@ namespace BarcoApplicatie
         ///////////////////////////////////////////buttonSendToDB///////////////////////////////////////////
         private void btnSendJob_Click(object sender, RoutedEventArgs e)
         {
+            if (cbEmcEut.IsChecked == true)
+            {
+                dao.addEUT(DateEut1.SelectedDate, cbEmcEut1);
+
+                dao.addTestDivision("EMC");
+            }
+            if (cbEnviromental.IsChecked == true)
+            {
+                dao.addEUT(DateEut1.SelectedDate, cbEnviromental1);
+
+
+                dao.addTestDivision("ENV");
+            }
+            if (cbReliability.IsChecked == true)
+            {
+                dao.addEUT(DateEut1.SelectedDate, cbReliability1);
+
+                dao.addTestDivision("REL");
+            }
+            if (cbProductSafety.IsChecked == true)
+            {
+                dao.addEUT(DateEut1.SelectedDate, cbProductSafety1);
+
+                dao.addTestDivision("SAF");
+            }
+            if (cbGreenCompilance.IsChecked == true)
+            {
+                dao.addEUT(DateEut1.SelectedDate, cbGreenCompilance1);
+
+                dao.addTestDivision("ECO");
+            }
+
             dao.Request(txtRequesterInitials.Text, cmbDivision.Text, cmbJobNature.Text,
                txtProjectName.Text,
                "part1: " + txtEutPartnumber1.Text + "; " +
@@ -84,52 +116,7 @@ namespace BarcoApplicatie
 
             dao.addingOptionalInput(txtLinkToTestplan.Text, txtSpecialRemarks.Text);
 
-            if (cbEmcEut.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, DateEut2.SelectedDate, DateEut3.SelectedDate,
-                    DateEut4.SelectedDate, DateEut5.SelectedDate,
-                    DateEut6.SelectedDate, cbEmcEut1, cbEmcEut2,
-                    cbEmcEut3, cbEmcEut4, cbEmcEut5, cbEmcEut6);
 
-                dao.addTestDivision("EMC");
-            }
-            if (cbEnviromental.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, DateEut2.SelectedDate, DateEut3.SelectedDate,
-                    DateEut4.SelectedDate, DateEut5.SelectedDate,
-                    DateEut6.SelectedDate, cbEnviromental1, cbEnviromental2,
-                    cbEnviromental3, cbEnviromental4, cbEnviromental5, cbEnviromental6);
-
-
-                dao.addTestDivision("ENV");
-            }
-            if (cbReliability.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, DateEut2.SelectedDate, DateEut3.SelectedDate,
-                    DateEut4.SelectedDate, DateEut5.SelectedDate,
-                    DateEut6.SelectedDate, cbReliability1, cbReliability2,
-                    cbReliability3, cbReliability4, cbReliability5, cbReliability6);
-
-                dao.addTestDivision("REL");
-            }
-            if (cbProductSafety.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, DateEut2.SelectedDate, DateEut3.SelectedDate,
-                    DateEut4.SelectedDate, DateEut5.SelectedDate,
-                    DateEut6.SelectedDate, cbProductSafety1, cbProductSafety2,
-                    cbProductSafety3, cbProductSafety4, cbProductSafety5, cbProductSafety6);
-
-                dao.addTestDivision("SAF");
-            }
-            if (cbGreenCompilance.IsChecked == true)
-            {
-                dao.addEUT(DateEut1.SelectedDate, DateEut2.SelectedDate, DateEut3.SelectedDate,
-                    DateEut4.SelectedDate, DateEut5.SelectedDate,
-                    DateEut6.SelectedDate, cbGreenCompilance1, cbGreenCompilance2,
-                    cbGreenCompilance3, cbGreenCompilance4, cbGreenCompilance5, cbGreenCompilance6);
-
-                dao.addTestDivision("ECO");
-            }
         }
         ///////////////////////////////////////////logoHomeScreen///////////////////////////////////////////
 

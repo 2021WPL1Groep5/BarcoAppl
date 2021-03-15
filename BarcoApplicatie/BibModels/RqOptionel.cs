@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BarcoApplicatie.NewBibModels
+namespace BarcoApplicatie.BibModels
 {
     public partial class RqOptionel
     {
@@ -9,5 +9,7 @@ namespace BarcoApplicatie.NewBibModels
         public string Link { get; set; }
         public string Remarks { get; set; }
         public int IdRequest { get; set; }
+
+        public virtual RqRequest IdRequestNavigation { get; set; }
     }
 }

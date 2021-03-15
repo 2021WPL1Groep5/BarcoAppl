@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BarcoApplicatie.NewBibModels
+namespace BarcoApplicatie.BibModels
 {
     public partial class RqRequest
     {
         public RqRequest()
         {
+            RqOptionel = new HashSet<RqOptionel>();
             RqRequestDetail = new HashSet<RqRequestDetail>();
         }
 
@@ -24,8 +25,9 @@ namespace BarcoApplicatie.NewBibModels
         public bool? InternRequest { get; set; }
         public string GrossWeight { get; set; }
         public string NetWeight { get; set; }
-        public bool? Battery { get; set; }
+        public bool Battery { get; set; }
 
+        public virtual ICollection<RqOptionel> RqOptionel { get; set; }
         public virtual ICollection<RqRequestDetail> RqRequestDetail { get; set; }
     }
 }
