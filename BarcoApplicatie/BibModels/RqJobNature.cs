@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BarcoApplicatie.NewBibModels
+namespace BarcoApplicatie.BibModels
 {
     public partial class RqJobNature
     {
