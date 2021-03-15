@@ -180,26 +180,32 @@ namespace BarcoApplicatie
         private void cbEmcEut_Click(object sender, RoutedEventArgs e)
         {
             toggle_click(cbEmcEut, "cbEmcEut");
+            dateColumEmpty();
         }
         private void cbEnviromental_Click(object sender, RoutedEventArgs e)
         {
             toggle_click(cbEnviromental, "cbEnviromental");
+            dateColumEmpty();
         }
         private void cbReliability_Click(object sender, RoutedEventArgs e)
         {
             toggle_click(cbReliability, "cbReliability");
+            dateColumEmpty();
         }
         private void cbProductSafety_Click(object sender, RoutedEventArgs e)
         {
             toggle_click(cbProductSafety, "cbProductSafety");
+            dateColumEmpty();
         }
         private void cbPackaging_Click(object sender, RoutedEventArgs e)
         {
             toggle_click(cbPackaging, "cbPackaging");
+            dateColumEmpty();
         }
         private void cbGreenCompilance_Click(object sender, RoutedEventArgs e)
         {
             toggle_click(cbGreenCompilance, "cbGreenCompilance");
+            dateColumEmpty();
         }
         //Check if checkbox is empty for datePicker
         private void dateEmpty(DatePicker DateEut, CheckBox cbEmcEut, CheckBox cbEnviromental, CheckBox cbReliability, CheckBox cbProductSafety, CheckBox cbPackaging, CheckBox cbGreenCompilance)
@@ -212,6 +218,16 @@ namespace BarcoApplicatie
             {
                 DateEut.IsEnabled = true;
             }
+        }
+        //Checks every colum if there empty
+        private void dateColumEmpty()
+        {
+            dateEmpty(DateEut1, cbEmcEut1, cbEnviromental1, cbReliability1, cbProductSafety1, cbPackaging1, cbGreenCompilance1);
+            dateEmpty(DateEut2, cbEmcEut2, cbEnviromental2, cbReliability2, cbProductSafety2, cbPackaging2, cbGreenCompilance2);
+            dateEmpty(DateEut3, cbEmcEut3, cbEnviromental3, cbReliability3, cbProductSafety3, cbPackaging3, cbGreenCompilance3);
+            dateEmpty(DateEut4, cbEmcEut4, cbEnviromental4, cbReliability4, cbProductSafety4, cbPackaging4, cbGreenCompilance4);
+            dateEmpty(DateEut5, cbEmcEut5, cbEnviromental5, cbReliability5, cbProductSafety5, cbPackaging5, cbGreenCompilance5);
+            dateEmpty(DateEut6, cbEmcEut6, cbEnviromental6, cbReliability6, cbProductSafety6, cbPackaging6, cbGreenCompilance6);
         }
         //EUT1 checkbox
         private void cbEmcEut1_Click(object sender, RoutedEventArgs e)
