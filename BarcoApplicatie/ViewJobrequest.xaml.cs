@@ -25,9 +25,6 @@ namespace BarcoApplicatie
 
             dao = DAO.Instance();
 
-            //insertInfoIntoList();
-
-
             loadAllRequest();
 
             BitmapImage bitmapImage = new BitmapImage(new Uri(AppDomain.CurrentDomain.BaseDirectory + "../../../Images/barcoLogo.png"));

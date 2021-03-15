@@ -45,6 +45,16 @@ namespace BarcoApplicatie
             context.SaveChanges();
         }
 
+        public RqRequest getRequestWithID(int id)
+        {
+            return context.RqRequest.FirstOrDefault(r => r.IdRequest == id);
+        }
+
+        public void removeJobRequest(int id)
+        {
+            context.RqRequest.Remove(getRequestWithID(id));
+            saveChanges();
+        }
 
 
         public void Request(string initials, string divisions, string jobNature, string projectName, 
